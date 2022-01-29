@@ -8,7 +8,7 @@ function onDeviceReady(event) {
     console.log($elBtnLogIn);
 
     // Save form DB
-    let myDB = new PouchDB("myComics");
+    // let myDB = new PouchDB("myComics");
 
     // Save form Variables
     const $elmSaveComic = $('#cbSaveFrm');
@@ -72,99 +72,7 @@ function onDeviceReady(event) {
         deleteDB();
     });
 
-    // Update Entry Feature
-
-    // View Page Event Listeners
-
-    // Placeholder for Edit  button
-
-
-    // $('#btnEditComicInfo').click(function () {
-    //     let tableLength = $('#pgViewTable tr').length - 1;
-    //     console.log("We at the start")
-    //     for (i = 0; i < tableLength; i++) {
-    //         let rowIdUpdate = "";
-    //         if ($("#rowSelect" + [i]).is(':checked') == true) {
-    //             rowIdUpdate = $('#rowSelect' + [i]).parent().parent().attr('id');
-
-    //             //insert update function
-    //             updateComicsRow(rowIdUpdate);
-    //         } else {
-    //             return console.log("User did not select any check boxes")
-
-    //         }
-    //     }
-
-    // });
-
-    // Update Comic Entries
-    // function updateComicsRow(rowIdUpdate) {
-    //     console.log("This is the value rowIdUpdate: " +rowIdUpdate)
-    //     myDB.get(doc(rowIdUpdate), function (failure, success) {
-    //         if (failure) {
-    //             console.log("Error getting the comic for update. Error Message: " + failure.message);
-    //         } else {
-    //             console.log("Success getting the comic: " + success.title);
-    //             $(":mobile-pagecontainer").pagecontainer("change", "#pgEditComic");
-    //             $("#")
-
-    //             $('#cbTitleEdit').val(success.title);
-    //                 // $('#cbVolEdit')
-    //                 // $('#cbYearEdit')
-    //                 // $('#cbPublisherEdit')
-    //                 // $("#cbNotesEdit")
-    //                 // "title": $cbTitleVal,
-    //                 // "number": $cbVolVal,
-    //                 // "year": $cbYearVal,
-    //                 // "publisher": $cbPublisherVal,
-    //                 // "notes": $cbNotesVal
-    //         };
-    //     });
-
-    // }
-
-
-    // #pgView Delete button event listener
-
-    // $('#btnDeleteComic').click(function () {
-    //     let tableLength = $('#pgViewTable tr').length - 1;
-
-    //     for (i = 0; i < tableLength; i++) {
-    //         let rowIdDelete = "";
-    //         if ($("#rowSelect" + [i]).is(':checked') == true) {
-    //             rowIdDelete = $('#rowSelect' + [i]).parent().parent().attr('id');
-    //             // MAKE SURE THE USER KNOWS THIS DELETING IS PERMANENT CALL
-    //             userConfirmation(rowIdDelete);
-    //         } else {
-    //             return console.log("User did not select any check boxes")
-
-    //         }
-    //     }
-
-    // });
-
-    // User Confirmation Function  For Deleting Rows
-    // function userConfirmation(rowIdDelete) {
-    //     let results = window.confirm("Are you Sure?  Deleting Cannot be undone.");
-
-    //     if (results == true) {
-    //         deleteComicsRow(rowIdDelete);
-    //     } else {
-    //         fnViewComics();
-    //         return console.log("User cancelled delete at Confirmation window")
-    //     };
-
-    // }
-
-    // This function allows the user to delete individual rows of selected databases
-    // function deleteComicsRow(rowIdDelete) {
-    //     myDB.get(rowIdDelete).then(function (doc) {
-    //         myDB.remove(doc);
-    //         fnViewComics();
-
-    //     });
-
-    // }
+    
 
     // This function allows the user to completely delete the my.DB
     function deleteDB() {
@@ -334,7 +242,7 @@ function onDeviceReady(event) {
         // set local Storage with user signup details
         localStorage.setItem('dataKey', JSON.stringify(dataStore));
 
-        $(":mobile-pagecontainer").pagecontainer("change", "#pgUserLogin");
+        $(":mobile-pagecontainer").pagecontainer("change", "#pgInstructions");
     };
 
     // Super Simple Logout
@@ -434,51 +342,3 @@ function onDeviceReady(event) {
 function goBack() {
     window.history.back();
 }
-
-// Just Playing with these.
-// const myCar = {
-//     color: "red",
-//     topSpeed: 300,
-//     model: "mustang",
-//     company: "ford",
-//     price: "50000",
-//     turnOn: function () { console.log("started") },
-//     drive: function () { console.log("You are driving") },
-//     works() { console.log("This works") }
-// };
-
-// var test1 = ["one", "two", "three"]
-// var keyStore = [];
-// addEventListener("keypress", (e) => {
-//     console.log(e.key);
-//     keyStore.push(e.key);
-//     keyStore.forEach(element => {
-//         console.log(element);
-
-//     });
-// });
-
-// function readSingleFile(e) {
-//     var file = e.target.files[0];
-//     if (!file) {
-//         return;
-//     }
-//     var reader = new FileReader();
-//     reader.onload = function (e) {
-//         var contents = e.target.result;
-//         displayContents(contents);
-//     };
-//     reader.readAsText(file);
-// }
-
-// function displayContents(contents) {
-//     var element = document.getElementById('file-content');
-//     element.textContent = contents;
-// }
-
-// document.getElementById('file-input')
-//     .addEventListener('change', readSingleFile, false);
-
-// <input type="file" id="file-input" />
-//<h3>Contents of the file:</h3>
-//<pre id="file-content"></pre>
