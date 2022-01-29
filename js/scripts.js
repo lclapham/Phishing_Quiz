@@ -29,6 +29,12 @@ function onDeviceReady(event) {
         uLogout();
     })
 
+
+    // User Button Listner
+    $('.answer-btn').click(function () {
+        calcAnswer();
+    })
+
     // Save Page Reset Button To clear form
     $('#cbResetFrmBtn').click(function () {
         // reset all field in save form
@@ -37,11 +43,26 @@ function onDeviceReady(event) {
     });
 
     //Listen for view page to be selected and refresh list
-    $('.navView').click(function () {
-        console.log('naveView is working');
-        fnViewComics();
-    })
+    // $('.navView').click(function () {
+    //     console.log('naveView is working');
+    //     fnViewComics();
+    // })
 
+
+
+    // This function will calculate the results of each question
+    function calcAnswer() {
+        var checked = document.querySelectorAll('input:checked');
+
+        if (checked.length === 0) {
+            // there are no checked checkboxes
+            console.log('no checkboxes checked');
+        } else {
+            // there are some checked checkboxes
+            console.log(checked.length + ' checkboxes checked');
+        }
+        console.log("CalcAnswer is working")
+    }
     // CB Save Form Listner
     $elmSaveComic.submit(function (event) {
         event.preventDefault(event);
@@ -72,7 +93,7 @@ function onDeviceReady(event) {
         deleteDB();
     });
 
-    
+
 
     // This function allows the user to completely delete the my.DB
     // function deleteDB() {
@@ -124,7 +145,7 @@ function onDeviceReady(event) {
     //     $(":mobile-pagecontainer").pagecontainer("change", "#pgEditComic", { "role": "dialog" });
     // };
     // function fnEditComicCancel() {
-        
+
     //     console.log("We In cancel")
     //     $("#pgEditComic").dialog("close");
     // }
@@ -194,11 +215,11 @@ function onDeviceReady(event) {
     //     });
     // }
 
-    $("#btnDeleteComic").on("click", fnEditComicDelete);
+    // $("#btnDeleteComic").on("click", fnEditComicDelete);
 
-    $('#viewComics').on("click", "tr.btnShowComicInfo", function () { fnEditComic($(this)); });
-    $('#fmEditComicInfo').submit(function (event) { fnEditComicConfirm(event); });
-    $('#cbCancelBtn').on("click", fnEditComicCancel);
+    // $('#viewComics').on("click", "tr.btnShowComicInfo", function () { fnEditComic($(this)); });
+    // $('#fmEditComicInfo').submit(function (event) { fnEditComicConfirm(event); });
+    // $('#cbCancelBtn').on("click", fnEditComicCancel);
 
     //////////////////////// Functions mainLogin, Signup, Logout, View Comics, Delete Comics
     function mainLogin(event) {
@@ -321,18 +342,18 @@ function onDeviceReady(event) {
     //     let aComic = fnPrepComic();
     //     console.log(aComic);
 
-        // Function to put the comic book configured data into PouchDB
-        // myDB.put(aComic, function (failure, success) {
-        //     if (failure) {
-        //         console.log("Error: " + failure.message);
-        //         window.alert("Comic book already Saved");
-        //     } else {
-        //         window.alert("One Comic Saved!")
-        //         console.log("comic Saved!" + success.ok);
-        //         $elmSaveComic[0].reset();
+    // Function to put the comic book configured data into PouchDB
+    // myDB.put(aComic, function (failure, success) {
+    //     if (failure) {
+    //         console.log("Error: " + failure.message);
+    //         window.alert("Comic book already Saved");
+    //     } else {
+    //         window.alert("One Comic Saved!")
+    //         console.log("comic Saved!" + success.ok);
+    //         $elmSaveComic[0].reset();
 
-        //     }
-        // });
+    //     }
+    // });
 
     // };
 

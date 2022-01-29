@@ -125,11 +125,8 @@
         <main>
 
             <nav data-role="navbar">
-
                 <button><a href="#pgQuiz" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Next</a> </button>
-
-
             </nav>
 
         </main>
@@ -144,7 +141,7 @@
     <!-- All of the pages below are blanks with a number for the page. Each page is a single question. The results of the question shall be recorded in local storage. The next button increments the number to the next page -->
 
     <!-- Quiz Pages -->
-    <!-- Question # 1 -->
+    <!-- Question #1 -->
     <section data-theme="b" data-role="page" id="pgQuestion01" data-fullscreen="true">
         <!-- Navbar setup Start -->
         <header data-role="header">
@@ -158,14 +155,14 @@
                 <P>this is where the quiz email will go</P>
             </div>
 
-            <input type="checkbox" id="yesPhishing" name="phishing" value="0">
-            <label for="yesPhishing"> Suspected phishing Email</label><br>
-            <input type="checkbox" id="noPhishing" name="notPhishing" value="1">
-            <label for="noPhishing">Email appears to be valid</label><br>
+            <input type="checkbox" id="yesPhishing01" name="phishing" value="0">
+            <label for="yesPhishing01"> Suspected phishing Email</label><br>
+            <input type="checkbox" id="noPhishing01" name="notPhishing" value="1">
+            <label for="noPhishing01">Email appears to be valid</label><br>
 
             <nav data-role="navbar">
 
-                <button><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
+                <button id="quizBTN" class="answer-btn"><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Next</a> </button>
                 <!-- Need to record results. Make a function that has a data libaray of results -->
             </nav>
@@ -174,11 +171,12 @@
 
         <!-- Footer Start -->
         <footer data-role="footer" data-position="fixed">
-            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+            <h4>227 InfoSec, Inc. 2022</h4>
         </footer>
     </section>
 
     <!-- Question #2 -->
+
     <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
         <!-- Navbar setup Start -->
         <header data-role="header">
@@ -192,14 +190,14 @@
                 <P>this is where the quiz email will go</P>
             </div>
 
-            <input type="checkbox" id="yesPhishing" name="phishing" value="0">
-            <label for="yesPhishing"> Suspected phishing Email</label><br>
-            <input type="checkbox" id="noPhishing" name="notPhishing" value="1">
-            <label for="noPhishing">Email appears to be valid</label><br>
+            <input type="checkbox" id="yesPhishing02" name="phishing" value="0">
+            <label for="yesPhishing02"> Suspected phishing Email</label><br>
+            <input type="checkbox" id="noPhishing02" name="notPhishing" value="1">
+            <label for="noPhishing02">Email appears to be valid</label><br>
 
             <nav data-role="navbar">
 
-                <button><a href="#pgQuestion03" data-icon="bars" class="ui-btn-icon-bottom navView"
+                <button id="quizBTN" class="answer-btn"><a href="#pgResults" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Next</a> </button>
                 <!-- Need to record results. Make a function that has a data libaray of results -->
             </nav>
@@ -211,7 +209,37 @@
             <h4>227 InfoSec, Inc. 2022&copy;</h4>
         </footer>
     </section>
-   
+
+    
+
+    <!-- Results Page -->
+    <section data-theme="b" data-role="page" id="pgResults" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h3>Your Results:</h3>
+        </header>
+
+        <!-- Quiz Nav -->
+        <main>
+            <div id="passingScore">Passed</div>
+            <div id="passingScore">Failed</div>
+
+
+            <nav data-role="navbar">
+
+                <button><a href="#pgQuestion03" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade">Submit Results</a> </button>
+                <!-- Need to record results. Make a function that has a data libaray of results -->
+            </nav>
+
+        </main>
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
 </body>
 
 <script src="//cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
