@@ -17,10 +17,10 @@
     <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <link rel="stylesheet" href="css/style.css">
 
-<!-- jquery cdn files -->
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- jquery cdn files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <title>Phishing Quiz</title>
 </head>
@@ -35,12 +35,14 @@
         </header>
         <article>
             <div class="img-container">
-                <p>This page is the initial page--essentially the index.html</p>
+                <p>Welcome to the 227 InfoSec phishing training quiz. You will need to register with your name and
+                    email. This registration will be used to record your quiz results. Please select the "Sign Up"
+                    button to register.</p>
                 <img class="responsiveImage" src="Need Image" alt="Welcome-logo" width="300" height="400">
             </div>
 
             <div class="userBtns">
-                <a href="#pgSignUp"><button>Sign Up</button></a>
+                <a href="#pgSignUp"><button>Register</button></a>
             </div>
         </article>
         <footer data-role="footer" data-position="fixed">
@@ -92,13 +94,10 @@
 
         <!-- Home Page Body Start -->
         <main>
-           
             <nav data-role="navbar">
-                
-                   <button><a href="#pgView" data-icon="bars" class="ui-btn-icon-bottom navView"
+
+                <button><a href="#pgQuestion01" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Start Quiz</a> </button>
-                  
-               
             </nav>
 
         </main>
@@ -109,6 +108,88 @@
             <h4>227 InfoSec, Inc. 2022&copy;</h4>
         </footer>
     </section>
+
+    <!-- Home Page Start INSTRUCTIONS -->
+    <section data-theme="c" data-role="page" id="pgQuiz" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h1>The Phishing Quiz</h1>
+
+            <P>Insert Questions Here</P>
+        </header>
+
+        <!-- Home Page Body Start -->
+        <main>
+
+            <nav data-role="navbar">
+
+                <button><a href="#pgQuiz" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade">Next</a> </button>
+
+
+            </nav>
+
+        </main>
+
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
+    <!-- All of the pages below are blanks with a number for the page. Each page is a single question. The results of the question shall be recorded in local storage. The next button increments the number to the next page -->
+
+    <!-- Quiz Pages -->
+    <!-- Question # 1 -->
+    <section data-theme="c" data-role="page" id="pgQuestion01" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <P>Question #1</P>
+        </header>
+
+        <!-- Quiz Nav -->
+        <main>
+            <nav data-role="navbar">
+
+                <button><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade">Next</a> </button>
+                        <!-- Need to record results. Make a function that has a data libaray of results -->
+            </nav>
+
+        </main>
+
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+<!-- Question #2 -->
+    <section data-theme="c" data-role="page" id="pgQuestion02" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <P>Question 2</P>
+        </header>
+
+        <!-- Quiz Nav -->
+        <main>
+            <nav data-role="navbar">
+
+                <button><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade">Next</a> </button>
+                        <!-- Need to record results. Make a function that has a data libaray of results -->
+            </nav>
+
+        </main>
+
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
 
 </body>
 
