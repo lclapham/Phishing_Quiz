@@ -1,11 +1,12 @@
 .ui-body {
-    /* max-height: 100vh;
-    max-width: 491px; */
+    max-height: 100vh;
+    max-width: 491px;
     /* max-height: 100vh;
     max-width:90vw; */
+    margin: 0 auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     padding: 0;
     scroll-behavior:smooth;
     overflow: visible !important;
