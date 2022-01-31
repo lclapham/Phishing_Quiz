@@ -1,5 +1,6 @@
 .em-template {
     background: #ececec;
+    border: 5px solid green;
 }
 
 .em-nav {
@@ -22,17 +23,20 @@
   .em-nav .ui-btn-icon-left::after {
       top: 75px;
 }
+
+.em-template p,
   .em-template h4,
   .em-template h5 {
       color: #000000;
       text-shadow: none;
-      margin: 0;
+      margin: 0 20px;
   }
   /* .em-image-div img {
       float: none;
   } */
   .em-dot {
     margin-top: 10px;
+    margin-left: 20px;
     height: 32px;
     width: 32px;
     background-color: #E00054;
