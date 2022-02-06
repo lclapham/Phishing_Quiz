@@ -95,8 +95,6 @@
 
         <!-- Home Page Body Start -->
         <main>
-
-
             <p>You will be presented a number of emails. Some of these emails will be legitimate and some of them will
                 be examples of phishing. Your job is to identify the parts of the emails that are suspect and determine
                 the appropriate action.</p>
@@ -182,14 +180,14 @@
             </div>
 
 
-            <input class="answers" type="checkbox" id="Phishing01" name="phishing" value="true">
-            <label for="yesPhishing01"> Suspected phishing Email</label><br>
-            <input class="answers" type="checkbox" id="Phishing02" name="notPhishing" value="flase">
-            <label for="noPhishing01">Email appears to be valid</label><br>
+            <input class="answers" type="checkbox" id="Phishing00" name="phishing" value="A">
+            <label for="Phishing00"> Suspected phishing Email</label><br>
+            <input class="answers" type="checkbox" id="Phishing01" name="notPhishing" value="B">
+            <label for="Phishing01">Email appears to be valid</label><br>
 
             <nav data-role="navbar">
 
-                <button id="quizBTN" class="answer-btn"><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
+                <button id="0" class="answer-btn"><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Next</a> </button>
                 <!-- Need to record results. Make a function that has a data libaray of results -->
             </nav>
@@ -217,14 +215,14 @@
                 <p>this is where the quiz email will go</p>
             </div>
 
-            <input type="checkbox" id="Phishing03" name="phishing" value="true">
-            <label for="yesPhishing02"> Suspected phishing Email</label><br>
-            <input type="checkbox" id="Phishing04" name="notPhishing" value="false">
-            <label for="noPhishing02">Email appears to be valid</label><br>
+            <input class="answers" type="checkbox" id="Phishing02" name="phishing" value="A">
+            <label for="Phishing02"> Suspected phishing Email</label><br>
+            <input class="answers" type="checkbox" id="Phishing03" name="notPhishing" value="B">
+            <label for="Phishing03">Email appears to be valid</label><br>
 
             <nav data-role="navbar">
 
-                <button id="quizBTN" class="answer-btn"><a href="#pgResults" data-icon="bars" class="ui-btn-icon-bottom navView"
+                <button id="1" class="answer-btn"><a href="#pgResults" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Next</a> </button>
                 <!-- Need to record results. Make a function that has a data libaray of results -->
             </nav>
@@ -248,10 +246,8 @@
 
         <!-- Quiz Nav -->
         <main>
-            <div id="passingScore">Passed</div>
-            <div id="passingScore">Failed</div>
-
-
+            <div id="yourScore"></div>
+        
             <nav data-role="navbar">
 
                 <button><a href="#pgQuestion03" data-icon="bars" class="ui-btn-icon-bottom navView"

@@ -1,5 +1,5 @@
 document.addEventListener("deviceready", onDeviceReady(), false);
-function onDeviceReady(event) {
+function onDeviceReady() {
 
     console.log("Device Ready");
 
@@ -11,16 +11,15 @@ function onDeviceReady(event) {
     // let myDB = new PouchDB("myComics");
 
     //This is an array for checking the answers.
-    answerArr = [[1], [1]];
-    results = 0;
-    let answerTotal = 0
+    const answerArr = [['A'], ['B']];
+    correctAnswers = 0;
     // Save form Variables
     const $elmSaveComic = $('#cbSaveFrm');
 
     /////////////////// Setup Listing Events
     // User Login Form Event
-    $('#myLoginForm').submit(function (event) {
-        mainLogin(event);
+    $('#myLoginForm').submit(function () {
+        mainLogin();
     });
 
     // User Signup FORM Listner
@@ -33,10 +32,11 @@ function onDeviceReady(event) {
         uLogout();
     })
 
-
     // User Button Listner
     $('.answer-btn').click(function () {
-        calcAnswer();
+        questionNumber = this.id;
+        console.log("This is the element id " + this.id);
+        calcAnswer(questionNumber);
     })
 
     // Save Page Reset Button To clear form
@@ -51,61 +51,24 @@ function onDeviceReady(event) {
     //     console.log('naveView is working');
     //     fnViewComics();
     // })
-
-
+   
 
     // This function will calculate the results of each question
-    function calcAnswer() {
-        var totalInput = document.querySelectorAll('input');
-        console.log("This is the total number of Check boxes " + totalInput)
-        var checked = document.querySelectorAll('input:checked');
-        // activePage = $(":mobile-pagecontainer").pagecontainer("getActivePage");
-        // console.log("This is the active page "+activePage)
-        // document.getElementsByClassName('answers')[1].value
-        if (checked.length === 0) {
-            // there are no checked checkboxes
-            alert('You must select an answer to continue');
-            $(":mobile-pagecontainer").pagecontainer("getActivePage");
-        } else {
-            // there are some checked checkboxes
-            console.log(checked.length + ' checkboxes checked');
-            for (let i = 1; i < 2; i++) {
-
-                if (document.getElementById('yesPhishing0' + [i]).checked === true && (document.getElementById('yesPhishing0' + [i]).value = "true")) {
-                    answerTotal = answerTotal + 1
-                    console.log("Calculated total is " + answerTotal)
-                } else {
-                    console.log("got that wrong")
-                    console.log("Calculated total is " + answerTotal)
-                }
-
+    function calcAnswer(e) {
+        console.log("In calc function")
+        checkboxes = document.getElementsByClassName('answers');
+        for (let i = 0; i <= checkboxes.length; i++) {
+            console.log("how many correct answers "+ correctAnswers)
+            if (checkboxes[i].checked == true && checkboxes[i].value === answerArr[e][0]) {
+                console.log("The corect value is " + checkboxes[i].value)
+                correctAnswers += 1
+                console.log("total answers correct " + correctAnswers)
             }
         }
-        console.log("CalcAnswer is working " + answerTotal)
     }
+
     // CB Save Form Listner
-    $elmSaveComic.submit(function (event) {
-        event.preventDefault(event);
-        //Use these variables to check if user filled out form.
-        let $cbTitleVal = $('#cbTitle').val(),
-            $cbVolVal = $('#cbVol').val(),
-            $cbYearVal = $('#cbYear').val(),
-            $cbPublisherVal = $('#cbPublisher').val();
-
-
-        if ($cbTitleVal == "") {
-            window.alert("You must fill in Title to proceed");
-        } else if (($cbVolVal == "") || ($cbYearVal == "") || ($cbPublisherVal == "")) {
-            let confimrationChk = window.confirm("You are missing key fields are you sure you want to save?")
-            if (confimrationChk < 1) {
-            } else {
-                fnSaveComic(event);
-            }
-        } else {
-            fnSaveComic(event);
-        }
-
-    });
+   
 
     // Options Page Event Listeners
     $('#dataBaseDeleteBtn').click(function () {
@@ -298,39 +261,39 @@ function onDeviceReady(event) {
         }
     }
     // Load data from DB to present on Comic Book View page 
-    function fnViewComics() {
-        console.log("fnViewComics() is running");
-        myDB.allDocs({ "ascending": true, "include_docs": true },
-            function (failure, success) {
-                if (failure) {
-                    console.log("Failure retrieving data: " + failure);
-                } else {
-                    console.log("Success, there is data : " + success);
-                }
+    // function fnViewComics() {
+    //     console.log("fnViewComics() is running");
+    //     myDB.allDocs({ "ascending": true, "include_docs": true },
+    //         function (failure, success) {
+    //             if (failure) {
+    //                 console.log("Failure retrieving data: " + failure);
+    //             } else {
+    //                 console.log("Success, there is data : " + success);
+    //             }
 
-                if (success.rows[0] === undefined) {
-                    $("#viewComics").html("No comics saved, yet");
-                } else {
-                    console.log("Comics to display: " + success.rows.length);
-                }
+    //             if (success.rows[0] === undefined) {
+    //                 $("#viewComics").html("No comics saved, yet");
+    //             } else {
+    //                 console.log("Comics to display: " + success.rows.length);
+    //             }
 
-                // let comicData = "<table id='pgViewTable'><tr><th>Name</th><th>Vol/Issue #</th><th>Year</th><th>Publisher</th><th>Notes</th><th>Select</th></tr>"
-                let comicData = "<table id='pgViewTable'><tr><th>Name</th><th>Vol #</th><th>Year</th><th>Publisher</th><th>Notes</th></tr>"
+    //             // let comicData = "<table id='pgViewTable'><tr><th>Name</th><th>Vol/Issue #</th><th>Year</th><th>Publisher</th><th>Notes</th><th>Select</th></tr>"
+    //             let comicData = "<table id='pgViewTable'><tr><th>Name</th><th>Vol #</th><th>Year</th><th>Publisher</th><th>Notes</th></tr>"
 
-                for (let i = 0; i < success.rows.length; i++) {
-                    comicData += "<tr class='btnShowComicInfo' id='" + success.rows[i].doc._id + "'> <td>" +
-                        success.rows[i].doc.title +
-                        "</td><td>" + success.rows[i].doc.number +
-                        "</td><td>" + success.rows[i].doc.year +
-                        "</td><td>" + success.rows[i].doc.publisher +
-                        "</td><td>" + success.rows[i].doc.notes +
-                        "</td></tr>";
-                    console.log(success.rows[i].doc._id);
-                }
-                comicData += "</table>";
-                $("#viewComics").html(comicData);
-            });
-    }
+    //             for (let i = 0; i < success.rows.length; i++) {
+    //                 comicData += "<tr class='btnShowComicInfo' id='" + success.rows[i].doc._id + "'> <td>" +
+    //                     success.rows[i].doc.title +
+    //                     "</td><td>" + success.rows[i].doc.number +
+    //                     "</td><td>" + success.rows[i].doc.year +
+    //                     "</td><td>" + success.rows[i].doc.publisher +
+    //                     "</td><td>" + success.rows[i].doc.notes +
+    //                     "</td></tr>";
+    //                 console.log(success.rows[i].doc._id);
+    //             }
+    //             comicData += "</table>";
+    //             $("#viewComics").html(comicData);
+    //         });
+    // }
 
     // fnViewComics();
     // Comic book Save form database prep function
