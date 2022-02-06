@@ -10,6 +10,9 @@ function onDeviceReady(event) {
     // Save form DB
     // let myDB = new PouchDB("myComics");
 
+    //This is an array for checking the answers.
+    answerArr = [[1],[1]]
+
     // Save form Variables
     const $elmSaveComic = $('#cbSaveFrm');
 
@@ -53,10 +56,10 @@ function onDeviceReady(event) {
     // This function will calculate the results of each question
     function calcAnswer() {
         var checked = document.querySelectorAll('input:checked');
-
+// document.getElementsByClassName('answers')[1].value
         if (checked.length === 0) {
             // there are no checked checkboxes
-            console.log('no checkboxes checked');
+            alert('You must select an answer to continue');
         } else {
             // there are some checked checkboxes
             console.log(checked.length + ' checkboxes checked');
