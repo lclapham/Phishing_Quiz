@@ -11,8 +11,9 @@ function onDeviceReady(event) {
     // let myDB = new PouchDB("myComics");
 
     //This is an array for checking the answers.
-    answerArr = [[1],[1]]
-
+    answerArr = [[1], [1]];
+    results = 0;
+    let answerTotal = 0
     // Save form Variables
     const $elmSaveComic = $('#cbSaveFrm');
 
@@ -55,16 +56,32 @@ function onDeviceReady(event) {
 
     // This function will calculate the results of each question
     function calcAnswer() {
+        var totalInput = document.querySelectorAll('input');
+        console.log("This is the total number of Check boxes " + totalInput)
         var checked = document.querySelectorAll('input:checked');
-// document.getElementsByClassName('answers')[1].value
+        // activePage = $(":mobile-pagecontainer").pagecontainer("getActivePage");
+        // console.log("This is the active page "+activePage)
+        // document.getElementsByClassName('answers')[1].value
         if (checked.length === 0) {
             // there are no checked checkboxes
             alert('You must select an answer to continue');
+            $(":mobile-pagecontainer").pagecontainer("getActivePage");
         } else {
             // there are some checked checkboxes
             console.log(checked.length + ' checkboxes checked');
+            for (let i = 1; i < 2; i++) {
+
+                if (document.getElementById('yesPhishing0' + [i]).checked === true && (document.getElementById('yesPhishing0' + [i]).value = "true")) {
+                    answerTotal = answerTotal + 1
+                    console.log("Calculated total is " + answerTotal)
+                } else {
+                    console.log("got that wrong")
+                    console.log("Calculated total is " + answerTotal)
+                }
+
+            }
         }
-        console.log("CalcAnswer is working")
+        console.log("CalcAnswer is working " + answerTotal)
     }
     // CB Save Form Listner
     $elmSaveComic.submit(function (event) {
