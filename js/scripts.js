@@ -11,8 +11,8 @@ function onDeviceReady() {
     // let myDB = new PouchDB("myComics");
 
     //This is an array for checking the answers.
-    const answerArr = [['A'], ['B']];
-    correctAnswers = 0;
+    // const answerArr = [['A'], ['B']];
+    // var correctAnswers = 0;
     // Save form Variables
     const $elmSaveComic = $('#cbSaveFrm');
 
@@ -51,24 +51,9 @@ function onDeviceReady() {
     //     console.log('naveView is working');
     //     fnViewComics();
     // })
-   
-
-    // This function will calculate the results of each question
-    function calcAnswer(e) {
-        console.log("In calc function")
-        checkboxes = document.getElementsByClassName('answers');
-        for (let i = 0; i <= checkboxes.length; i++) {
-            console.log("how many correct answers "+ correctAnswers)
-            if (checkboxes[i].checked == true && checkboxes[i].value === answerArr[e][0]) {
-                console.log("The corect value is " + checkboxes[i].value)
-                correctAnswers += 1
-                console.log("total answers correct " + correctAnswers)
-            }
-        }
-    }
-
+    //Put it back here
     // CB Save Form Listner
-   
+
 
     // Options Page Event Listeners
     $('#dataBaseDeleteBtn').click(function () {
@@ -341,6 +326,38 @@ function onDeviceReady() {
     // };
 
 };
+
+const answerArr = ['A', ['B']]
+var correctAnswers = 0;
+
+
+// This function will calculate the results of each question
+function calcAnswer(e) {
+    console.log("In calc function")
+    checkboxes = document.getElementsByClassName('answers');
+    for (let i = 0; i <= checkboxes.length; i++) {
+        console.log("how many correct answers " + correctAnswers)
+        console.log()
+        if (checkboxes[i].checked == true && checkboxes[i].value === answerArr[e][0]) {
+            console.log("The corect value is " + checkboxes[i].value)
+            correctAnswers += 1;
+            console.log("total answers correct " + correctAnswers)
+            
+        }document.getElementById('yourScore').innerHTML = correctAnswers;
+    }
+    
+}
+    
+
+
+
+var global = "Global Variable"; //Define global variable outside of function
+
+function setGlobal() {
+    global = "Hello World!";
+};
+
+console.log("This is the global test " + global); //This will print out "Hello World"
 
 // Simple return to last page -->
 function goBack() {
