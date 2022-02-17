@@ -1,6 +1,6 @@
-.ui-body {
+body {
     max-height: 100vh;
-    max-width: 491px;
+    max-width: 900px;
     /* max-height: 100vh;
     max-width:90vw; */
     margin: 0 auto;
@@ -10,6 +10,8 @@
     padding: 0;
     scroll-behavior:smooth;
     overflow: visible !important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
 }
 .ui-content {
     padding: 0 1em;
