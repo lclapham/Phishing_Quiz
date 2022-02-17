@@ -40,7 +40,7 @@
                 <p>Welcome to the 227 InfoSec phishing training quiz. You will need to register with your name and
                     email. This registration will be used to record your quiz results. Please select the "Sign Up"
                     button to register.</p>
-                <img class="responsiveImage" src="Need Image" alt="Welcome-logo" >
+                <img class="responsiveImage" src="../Phishing_Quiz/images/welcome.jpg" alt="Welcome-logo">
                 <!-- width="300" height="400" -->
             </div>
 
@@ -101,7 +101,7 @@
             <nav data-role="navbar">
                 <!-- #pgQuestion01 -->
 
-                <button><a href="../Phishing_Quiz/question1.html" data-icon="bars" class="ui-btn-icon-bottom navView"
+                <button><a href="#pgQuestion01" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Start Quiz</a> </button>
             </nav>
 
@@ -156,40 +156,53 @@
             <div class="em-template">
                 <div class="em-nav">
                     <ul>
-                      <li class="ui-icon-arrow-u-r ui-btn-icon-left"><a href="/reply">Reply</a></li>
-                      <li><a href="/replyall">Reply All</a></li>
-                      <li><a href="/forward">Forward</a></li>
-                      <li><a href="/delete">Delete</a></li>
-                      <!-- <li><a href="/setflag">Set Flag</a></li> -->
+                        <li class="ui-icon-arrow-u-r ui-btn-icon-left"><a href="/reply">Reply</a></li>
+                        <li><a href="/replyall">Reply All</a></li>
+                        <li><a href="/forward">Forward</a></li>
+                        <li><a href="/delete">Delete</a></li>
+                        <!-- <li><a href="/setflag">Set Flag</a></li> -->
                     </ul>
-                </div>      
+                </div>
 
                 <h4>Re: Is this phishing?</h4>
 
                 <div class="em-from-div">
-                    <span class="em-dot"><p>JS</p></span>
+                    <span class="em-dot">
+                        <p>JS</p>
+                    </span>
                     <h5>
                         <strong>Joe Schmoe &lt;joe.schmoe@email.com&gt;</strong><br>
-                        1/12/22  10:10am
+                        1/12/22 10:10am
                     </h5>
                 </div>
 
                 <h5><br>To: Julie Mooly Cc: Francis Lantis</h5>
                 <p><br>hello,</p>
-                <p><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, iure. Autem nam accusamus mollitia nobis, ullam minus ex corrupti maxime odio veniam delectus unde recusandae, minima labore nulla sequi iste libero fugit voluptates, assumenda impedit quae eligendi animi sint? Delectus tempora cum, consequatur reprehenderit velit non aut veritatis temporibus natus?</p>
+                <p><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, iure. Autem nam accusamus
+                    mollitia nobis, ullam minus ex corrupti maxime odio veniam delectus unde recusandae, minima labore
+                    nulla sequi iste libero fugit voluptates, assumenda impedit quae eligendi animi sint? Delectus
+                    tempora cum, consequatur reprehenderit velit non aut veritatis temporibus natus?</p>
 
             </div>
 
-
-            <input class="answers" type="checkbox" id="Phishing00" name="phishing" value="A">
+<!-- 
+            <input class="answers answers1" type="checkbox" id="Phishing00" name="phishing" value="A">
             <label for="Phishing00"> Suspected phishing Email</label><br>
-            <input class="answers" type="checkbox" id="Phishing01" name="notPhishing" value="B">
-            <label for="Phishing01">Email appears to be valid</label><br>
+            <input class="answers answers1" type="checkbox" id="Phishing01" name="notPhishing" value="B">
+            <label for="Phishing01">Email appears to be valid</label><br> -->
 
             <nav data-role="navbar">
 
-                <button id="0" class="answer-btn"><a href="#pgQuestion02" data-icon="bars" class="ui-btn-icon-bottom navView"
-                        data-transition="fade">Next</a> </button>
+                <form action="">
+                    <input type="radio" id="01" name="question1" value="A">
+                    <label for="01">Phishing Email</label><br>
+                    <input type="radio" id="02" name="question1" value="B">
+                    <label for="02">Valid Email</label><br>
+                    <!-- <input type="submit" value="submit"> -->
+                </form>
+
+                <button id="0" class="answer-btn"><a href="#pgQuestion02" data-icon="bars"
+                        class="ui-btn-icon-bottom navView" data-transition="fade">Next</a> </button>
                 <!-- Need to record results. Make a function that has a data libaray of results -->
             </nav>
 
@@ -216,15 +229,15 @@
                 <p>this is where the quiz email will go</p>
             </div>
 
-            <input class="answers" type="checkbox" id="Phishing02" name="phishing" value="A">
+            <input class="answers answers2" type="checkbox" id="Phishing02" name="phishing" value="A">
             <label for="Phishing02"> Suspected phishing Email</label><br>
-            <input class="answers" type="checkbox" id="Phishing03" name="notPhishing" value="B">
+            <input class="answers answers2" type="checkbox" id="Phishing03" name="notPhishing" value="B">
             <label for="Phishing03">Email appears to be valid</label><br>
 
             <nav data-role="navbar">
 
-                <button id="1" class="answer-btn"><a href="#pgResults" data-icon="bars" class="ui-btn-icon-bottom navView"
-                        data-transition="fade">Next</a> </button>
+                <button id="1" class="answer-btn"><a href="#pgResults" data-icon="bars"
+                        class="ui-btn-icon-bottom navView" data-transition="fade">Next</a> </button>
                 <!-- Need to record results. Make a function that has a data libaray of results -->
             </nav>
 
@@ -236,7 +249,7 @@
         </footer>
     </section>
 
-    
+
 
     <!-- Results Page -->
     <section data-theme="b" data-role="page" id="pgResults" data-fullscreen="true">
@@ -248,7 +261,7 @@
         <!-- Quiz Nav -->
         <main>
             <div id="yourScore"></div>
-        
+
             <nav data-role="navbar">
 
                 <button><a href="#pgQuestion03" data-icon="bars" class="ui-btn-icon-bottom navView"

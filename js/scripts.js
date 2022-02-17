@@ -14,7 +14,7 @@ function onDeviceReady() {
     // const answerArr = [['A'], ['B']];
     // var correctAnswers = 0;
     // Save form Variables
-    const $elmSaveComic = $('#cbSaveFrm');
+    // const $elmSaveComic = $('#cbSaveFrm');
 
     /////////////////// Setup Listing Events
     // User Login Form Event
@@ -32,19 +32,29 @@ function onDeviceReady() {
         uLogout();
     })
 
+    $('#startBTN').click(function () {
+        window.location.replace("../Phishing_Quiz/question1.html")
+    })
+
+    $('.resultsBTN').click(function () {
+        console.log("Hitting the results button")
+        window.location.replace("../Phishing_Quiz/index.html#pgResults")
+    })
+
     // User Button Listner
     $('.answer-btn').click(function () {
-        questionNumber = this.id;
-        console.log("This is the element id " + this.id);
+        questionNumber = parseInt(this.id);
+
         calcAnswer(questionNumber);
+
     })
 
     // Save Page Reset Button To clear form
-    $('#cbResetFrmBtn').click(function () {
-        // reset all field in save form
-        $('#cbSaveFrm')[0].reset();
+    // $('#cbResetFrmBtn').click(function () {
+    //     // reset all field in save form
+    //     $('#cbSaveFrm')[0].reset();
 
-    });
+    // });
 
     //Listen for view page to be selected and refresh list
     // $('.navView').click(function () {
@@ -56,142 +66,14 @@ function onDeviceReady() {
 
 
     // Options Page Event Listeners
-    $('#dataBaseDeleteBtn').click(function () {
-        console.log('dataBaseDeleteBtn is working');
-        deleteDB();
-    });
+    // $('#dataBaseDeleteBtn').click(function () {
+    //     console.log('dataBaseDeleteBtn is working');
+    //     deleteDB();
+    // });
 
-
-
-    // This function allows the user to completely delete the my.DB
-    // function deleteDB() {
-    //     if (window.confirm("Proceeding will delete all stored comic book data")) {
-    //         console.log("User selected to delete my.DB")
-    //         if (window.confirm("Are you sure? This action cannot be undone")) {
-    //             console.log("User confirmed delete of my.DB")
-
-    //             // This deletes my.db
-    //             myDB.destroy(function (failure, success) {
-    //                 if (failure) {
-    //                     console.log("Error deleting my.DB " + failure.message);
-    //                 } else {
-    //                     console.log("Database delete: " + success.ok);
-    //                     // Recreate the database
-    //                     myDB = new PouchDB("myComics");
-    //                     // Call view to update DB screens
-    //                     fnViewComics();
-    //                 }
-    //             });
-
-    //         } else {
-    //             console.log("User cancelled my.DB deletion")
-    //         }
-    //     }
-    // }
-
-    // UPDATE DATABASE ENTRIES #pgEditComic
-    // let comicWIP = "";
-
-    // function fnEditComic(thisComic) {
-    //     console.log("Edit Comic Function Working" + thisComic.context.id);
-    //     myDB.get(thisComic.context.id, function (failure, success) {
-    //         if (failure) {
-    //             console.log("Error getting the comic for update. Error Message: " + failure.message);
-    //         } else {
-    //             console.log("Success getting the comic: " + success.title);
-    //             // $(":mobile-pagecontainer").pagecontainer("change", "#pgEditComic");
-    //             $('#cbTitleEdit').val(success.title);
-    //             $('#cbVolEdit').val(success.number);
-    //             $('#cbYearEdit').val(success.year);
-    //             $('#cbPublisherEdit').val(success.publisher);
-    //             $("#cbNotesEdit").val(success.notes);
-
-    //             comicWIP = success._id;
-    //         }
-
-    //     });
-    //     $(":mobile-pagecontainer").pagecontainer("change", "#pgEditComic", { "role": "dialog" });
-    // };
-    // function fnEditComicCancel() {
-
-    //     console.log("We In cancel")
-    //     $("#pgEditComic").dialog("close");
-    // }
-
-    // function fnEditComicConfirm(event) {
-    //     event.preventDefault();
-    //     console.log("fnEditComicConfirm is running with " + comicWIP);
-
-    //     let $valInTitleEdit = $('#cbTitleEdit').val(),
-    //         $valInNumberEdit = $("#cbVolEdit").val(),
-    //         $valInYearEdit = $('#cbYearEdit').val(),
-    //         $valInPublisherEdit = $('#cbPublisherEdit').val(),
-    //         $valInNotesEdit = $('#cbNotesEdit').val();
-
-    //     myDB.get(comicWIP, function (failure, success) {
-    //         if (failure) {
-    //             console.log("Error: " + failure.message);
-    //         } else {
-    //             console.log("About to update " + success._id)
-    //             myDB.put({
-    //                 "_id": success._id,
-    //                 "_rev": success._rev,
-    //                 "title": $valInTitleEdit,
-    //                 "number": $valInNumberEdit,
-    //                 "year": $valInYearEdit,
-    //                 "publisher": $valInPublisherEdit,
-    //                 "notes": $valInNotesEdit
-    //             }, function (failure, success) {
-    //                 if (failure) {
-    //                     console.log("Error: " + failure.message);
-    //                 } else {
-    //                     console.log("Updated comic: " + success.id);
-    //                     fnViewComics();
-    //                     $('#pgEditComic').dialog("close")
-    //                 }
-    //             });
-    //         };
-
-    //     });
-    // };
-
-
-    // Delete Rows Function
-
-    // function fnEditComicDelete() {
-    //     console.log("fnEditComicDelete() is running");
-    //     myDB.get(comicWIP, function (failure, success) {
-    //         if (failure) {
-    //             console.log("Error: " + failure.message);
-    //         } else {
-    //             console.log("Deleting: " + success._id);
-    //             if (window.confirm("Are you sure you want to delete the comic?")) {
-    //                 console.log("confirm Delete");
-    //                 myDB.remove(success, function (failure, success) {
-    //                     if (failure) {
-    //                         console.log("Couldn't Delete: " + failure.message);
-    //                     } else {
-    //                         console.log("Deleted Comic: " + success.ok);
-    //                         fnViewComics();
-    //                         $('#pgEditComic').dialog("close")
-    //                     }
-    //                 });
-    //             } else {
-    //                 console.log("Deletion Cancelled")
-    //             }
-    //         }
-    //     });
-    // }
-
-    // $("#btnDeleteComic").on("click", fnEditComicDelete);
-
-    // $('#viewComics').on("click", "tr.btnShowComicInfo", function () { fnEditComic($(this)); });
-    // $('#fmEditComicInfo').submit(function (event) { fnEditComicConfirm(event); });
-    // $('#cbCancelBtn').on("click", fnEditComicCancel);
-
-    //////////////////////// Functions mainLogin, Signup, Logout, View Comics, Delete Comics
+    //////////////////////// Functions mainLogin, Signup, Calculate, Results
     function mainLogin(event) {
-        console.log(event);
+        console.log("In mainLogain function " +event);
         event.preventDefault(event);
         console.log("mainLogin(event) is running");
 
@@ -245,119 +127,47 @@ function onDeviceReady() {
             $('#mySignUpForm')[0].reset();
         }
     }
-    // Load data from DB to present on Comic Book View page 
-    // function fnViewComics() {
-    //     console.log("fnViewComics() is running");
-    //     myDB.allDocs({ "ascending": true, "include_docs": true },
-    //         function (failure, success) {
-    //             if (failure) {
-    //                 console.log("Failure retrieving data: " + failure);
-    //             } else {
-    //                 console.log("Success, there is data : " + success);
-    //             }
-
-    //             if (success.rows[0] === undefined) {
-    //                 $("#viewComics").html("No comics saved, yet");
-    //             } else {
-    //                 console.log("Comics to display: " + success.rows.length);
-    //             }
-
-    //             // let comicData = "<table id='pgViewTable'><tr><th>Name</th><th>Vol/Issue #</th><th>Year</th><th>Publisher</th><th>Notes</th><th>Select</th></tr>"
-    //             let comicData = "<table id='pgViewTable'><tr><th>Name</th><th>Vol #</th><th>Year</th><th>Publisher</th><th>Notes</th></tr>"
-
-    //             for (let i = 0; i < success.rows.length; i++) {
-    //                 comicData += "<tr class='btnShowComicInfo' id='" + success.rows[i].doc._id + "'> <td>" +
-    //                     success.rows[i].doc.title +
-    //                     "</td><td>" + success.rows[i].doc.number +
-    //                     "</td><td>" + success.rows[i].doc.year +
-    //                     "</td><td>" + success.rows[i].doc.publisher +
-    //                     "</td><td>" + success.rows[i].doc.notes +
-    //                     "</td></tr>";
-    //                 console.log(success.rows[i].doc._id);
-    //             }
-    //             comicData += "</table>";
-    //             $("#viewComics").html(comicData);
-    //         });
-    // }
-
-    // fnViewComics();
-    // Comic book Save form database prep function
-    // function fnPrepComic() {
-    //     console.log("fnPrepComic() is running");
-
-    //     let $cbTitleVal = $('#cbTitle').val(),
-    //         $cbVolVal = $('#cbVol').val(),
-    //         $cbYearVal = $('#cbYear').val(),
-    //         $cbPublisherVal = $('#cbPublisher').val(),
-    //         $cbNotesVal = $("#cbNotes").val();
-
-    //     let tmpComic = {
-    //         "_id": $cbTitleVal.replace(/\W/g, "") + $cbYearVal + $cbVolVal,
-    //         "title": $cbTitleVal,
-    //         "number": $cbVolVal,
-    //         "year": $cbYearVal,
-    //         "publisher": $cbPublisherVal,
-    //         "notes": $cbNotesVal
-    //     };
-
-    //     return tmpComic;
-    // }
-
-    // Comic book Save function to store configured data
-    // function fnSaveComic(event) {
-    //     event.preventDefault(event);
-    //     console.log('fnSaveComic(event) is running');
-    //     let aComic = fnPrepComic();
-    //     console.log(aComic);
-
-    // Function to put the comic book configured data into PouchDB
-    // myDB.put(aComic, function (failure, success) {
-    //     if (failure) {
-    //         console.log("Error: " + failure.message);
-    //         window.alert("Comic book already Saved");
-    //     } else {
-    //         window.alert("One Comic Saved!")
-    //         console.log("comic Saved!" + success.ok);
-    //         $elmSaveComic[0].reset();
-
-    //     }
-    // });
-
-    // };
-
 };
 
-const answerArr = ['A', ['B']]
+const correctAnswerArr = ['A', ['B']]
+var answerArr = []
 var correctAnswers = 0;
-
+var numQuestions = 2;
 
 // This function will calculate the results of each question
 function calcAnswer(e) {
-    console.log("In calc function")
-    checkboxes = document.getElementsByClassName('answers');
-    for (let i = 0; i <= checkboxes.length; i++) {
-        console.log("how many correct answers " + correctAnswers)
-        console.log()
-        if (checkboxes[i].checked == true && checkboxes[i].value === answerArr[e][0]) {
-            console.log("The corect value is " + checkboxes[i].value)
-            correctAnswers += 1;
-            console.log("total answers correct " + correctAnswers)
-            
-        }document.getElementById('yourScore').innerHTML = correctAnswers;
+    if (document.getElementById(e + '1').checked) {
+        answerArr[e] = "A"
+        console.log(answerArr)
+    } else if (document.getElementById(e + '2').checked) {
+        console.log("b")
+        answerArr[e] = "B"
+        console.log(answerArr)
     }
+
+    if (answerArr[e] === correctAnswerArr[e]) {
+        alert("You got it right")
+        correctAnswers += 1
+        console.log("correct answers "+correctAnswers)
+    } else {
+        console.log("You got it wrong")
+    }
+
+    // document.getElementById('yourScore').innerHTML = correctAnswers;
     
 }
-    
+
+// function recordAnswers(e, correctAnswers) {
+//     indexes = parseint(numQuestions - 1);
+//     if (correctAnswerArr[e] === null) {
+//         correctAnswerArr[e] = e
+//     }
+
+// }
 
 
 
-var global = "Global Variable"; //Define global variable outside of function
 
-function setGlobal() {
-    global = "Hello World!";
-};
-
-console.log("This is the global test " + global); //This will print out "Hello World"
 
 // Simple return to last page -->
 function goBack() {
