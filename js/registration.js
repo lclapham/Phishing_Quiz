@@ -17,15 +17,12 @@ window.onload = (event) => {
             fName: $('#fName').val(),
             lName: $('#lName').val(),
             uEmail: $('#uEmail').val().toUpperCase(),
-            // uName: $('#uName').val(),
-            // uPassword: $('#uPassword').val()  // need to create a hash function and a check to make sure both pw's are the same.
-
         }
         // set local Storage with user signup details
         localStorage.setItem('dataKey', JSON.stringify(dataStore));
         console.log("You made it to the redirect point")
 
-        window.location.replace("./instructions.html");
+        window.location.replace("/Phishing_Quiz/pages/question1.html");
         // $(":mobile-pagecontainer").pagecontainer("change", "#pgInstructions");
     };
 
