@@ -5,7 +5,7 @@
 //     console.log("Device Ready");
 
 window.onload = (event) => {
-    console.log('page is fully loaded');
+    console.log('Registration page is fully loaded');
   
 
     ////////////////// Setup Variables
