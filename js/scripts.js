@@ -139,10 +139,10 @@ window.onload = (event) => {
     }
 };
 
-const correctAnswerArr = ['A','B']
+const correctAnswerArr = ['A','A','A','A','A','A','A','A','A','A',]
 var answerArr = []
 var correctAnswers = 0;
-var numQuestions = 2;
+var numQuestions = 10;
 
 // This function will calculate the results of each question
 function calcAnswer(e) {
