@@ -54,6 +54,201 @@
 
     </section>
 
+    <!-- Sign Up Page Start REGISTRATION-->
+    <section data-role="page" id="pgSignUp" data-theme="b" data-fullscreen="true">
+        <header data-role="header">
+            <h1>User Registration Page</h1>
+        </header>
+        <p>Enter your name and email. Failure to do so will result in recieving no credit.</p>
+        <main>
+            <article role="main" class="ui-content">
+                <form id="mySignUpForm">
+                    <fieldset>
+                        <label for="">First Name</label>
+                        <input id="fName" type="text">
+                        <label for="">Last Name</label>
+                        <input id="lName" type="text">
+
+                        <label for="Your Email">Email Address</label>
+                        <input id="uEmail" type="email">
+
+                    </fieldset>
+
+                    <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action" id="uSignUpBtn"
+                        type="submit">Register</button>
+                    <!-- This should take them to instructions page -->
+                </form>
+            </article>
+        </main>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
+    <!-- Home Page Start INSTRUCTIONS -->
+    <section data-theme="b" data-role="page" id="pgInstructions" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h1>The Phishing Quiz Instructions</h1>
+        </header>
+
+        <!-- Home Page Body Start -->
+        <main>
+            <p>You will be presented a number of emails. Some of these emails will be legitimate and some of them will
+                be examples of phishing. Your job is to identify the parts of the emails that are suspect and determine
+                the appropriate action.</p>
+            <nav data-role="navbar">
+                <!-- #pgQuestion01 -->
+
+                <button><a href="#pgQuestion01" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade">Start Quiz</a> </button>
+            </nav>
+
+        </main>
+
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
+    <!-- Home Page Start INSTRUCTIONS -->
+    <section data-theme="b" data-role="page" id="pgQuiz" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h1>The Phishing Quiz</h1>
+
+            <p>Insert Questions Here</p>
+        </header>
+
+        <!-- Home Page Body Start -->
+        <main>
+
+            <nav data-role="navbar">
+                <button><a href="#pgQuiz" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade">Next</a> </button>
+            </nav>
+
+        </main>
+
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
+    <!-- All of the pages below are blanks with a number for the page. Each page is a single question. The results of the question shall be recorded in local storage. The next button increments the number to the next page -->
+
+    <!-- Quiz Pages -->
+    <!-- Question #1 -->
+    <section data-theme="b" data-role="page" id="pgQuestion01" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h3>Question #1</h3>
+        </header>
+
+        <!-- Quiz Nav -->
+        <main>
+
+            <div class="em-template">
+                <div class="em-nav">
+                    <ul>
+                      <li class="ui-icon-arrow-u-r ui-btn-icon-left"><a href="/reply">Reply</a></li>
+                      <li><a href="/replyall">Reply All</a></li>
+                      <li><a href="/forward">Forward</a></li>
+                      <li class="ui-icon-delete ui-btn-icon-left"><a href="/delete">Delete</a></li>
+                      <!-- <li><a href="/setflag">Set Flag</a></li> -->
+                    </ul>
+                </div>      
+
+                <h4>Re: Is this phishing?</h4>
+
+                <div class="em-from-div">
+                    <span class="em-dot">
+                        <p>JS</p>
+                    </span>
+                    <h5>
+                        <strong>Joe Schmoe &lt;joe.schmoe@email.com&gt;</strong><br>
+                        1/12/22 10:10am
+                    </h5>
+                </div>
+
+                <h5><br>To: Julie Mooly Cc: Francis Lantis</h5>
+                <p><br>hello,</p>
+                <p><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, iure. Autem nam accusamus
+                    mollitia nobis, ullam minus ex corrupti maxime odio veniam delectus unde recusandae, minima labore
+                    nulla sequi iste libero fugit voluptates, assumenda impedit quae eligendi animi sint? Delectus
+                    tempora cum, consequatur reprehenderit velit non aut veritatis temporibus natus?</p>
+
+            </div>
+
+<!-- 
+            <input class="answers answers1" type="checkbox" id="Phishing00" name="phishing" value="A">
+            <label for="Phishing00"> Suspected phishing Email</label><br>
+            <input class="answers answers1" type="checkbox" id="Phishing01" name="notPhishing" value="B">
+            <label for="Phishing01">Email appears to be valid</label><br> -->
+
+            <nav data-role="navbar">
+
+                <form action="">
+                    <input type="radio" id="01" name="question1" value="A">
+                    <label for="01">Phishing Email</label><br>
+                    <input type="radio" id="02" name="question1" value="B">
+                    <label for="02">Valid Email</label><br>
+                    <!-- <input type="submit" value="submit"> -->
+                </form>
+
+                <button id="0" class="answer-btn"><a href="#pgQuestion02" data-icon="bars"
+                        class="ui-btn-icon-bottom navView" data-transition="fade">Next</a> </button>
+                <!-- Need to record results. Make a function that has a data libaray of results -->
+            </nav>
+
+        </main>
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022</h4>
+        </footer>
+    </section>
+
+    <!-- Question #2 -->
+
+    <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h3>Question #2</h3>
+        </header>
+
+        <!-- Quiz Nav -->
+        <main>
+
+            <div>
+                <p>this is where the quiz email will go</p>
+            </div>
+
+            <input class="answers answers2" type="checkbox" id="Phishing02" name="phishing" value="A">
+            <label for="Phishing02"> Suspected phishing Email</label><br>
+            <input class="answers answers2" type="checkbox" id="Phishing03" name="notPhishing" value="B">
+            <label for="Phishing03">Email appears to be valid</label><br>
+
+            <nav data-role="navbar">
+
+                <button id="1" class="answer-btn"><a href="#pgResults" data-icon="bars"
+                        class="ui-btn-icon-bottom navView" data-transition="fade">Next</a> </button>
+                <!-- Need to record results. Make a function that has a data libaray of results -->
+            </nav>
+
+        </main>
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+
 
 
 </body>

@@ -1,97 +1,100 @@
 .em-template {
-    background: #ececec;
-    /* border: 5px solid blue; */
+  background: #ececec;
+  /* border: 5px solid blue; */
+  font-family: arial,sans-ser;
+  font-size: .7em;
+  margin-top: 3em;
 }
 
 .em-nav {
-    width: 100%;
-    margin: 20px 0;
-  }
-  .em-nav ul{
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  width: 100%;
+  margin: 20px 0;
+}
+.em-nav ul{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  .em-nav ul li{
-    width: 20%;
-    float: left;
-  }
+.em-nav ul li{
+  width: 20%;
+  float: left;
+}
 
-  .em-nav .ui-btn-icon-left::after {
-      top: 75px;
+.em-nav .ui-btn-icon-left::after {
+    top: 75px;
 }
 
 .em-template p,
 .em-template h1,
-  .em-template h2,
-  .em-template h4,
-  .em-template h5 {
-      color: #000000;
-      text-shadow: none;
-      margin: 0 20px;
-  }
-  /* .em-image-div img {
-      float: none;
-  } */
-  .em-dot {
-    margin-top: 10px;
-    margin-left: 20px;
-    height: 50px;
-    width: 50px;
-    background-color: #E00054;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .em-dot p {
-      margin: 8px 12px;/*to center initials in dot*/
-      position: absolute;
-      font-size: x-large;
-  }
-  .em-from-div h4 {
-    margin: 10px 0 0px 15px;
+.em-template h2,
+.em-template h4,
+.em-template h5 {
+    color: #000000;
+    text-shadow: none;
+    margin: 0 20px;
+}
+/* .em-image-div img {
+    float: none;
+} */
+.em-dot {
+  margin-top: 10px;
+  margin-left: 20px;
+  height: 35px;
+  width: 35px;
+  background-color: #E00054;
+  border-radius: 50%;
+  display: inline-block;
+}
+.em-dot p {
+    margin: 8px 6px;/*to center initials in dot*/
     position: absolute;
-    display: inline-block;
-  }
-  /* Tooltip container */
-  .tooltip {
-    position: relative;
-    /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
-  }
-  
-.tooltip-button {
+    font-size: large;
+}
+.em-from-div h4 {
+  margin: 10px 0 0px 15px;
+  position: absolute;
+  display: inline-block;
+}
+/* Tooltip container */
+.tooltip {
   position: relative;
   /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
-  background-color: teal;
-  height: 50px;
-  width: 300px;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
-  padding: 20px 0 0px;
-  margin: 0 auto;
-  font-size: large;
+}
+
+.tooltip-button {
+position: relative;
+/* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+background-color: teal;
+height: 35px;
+width: 300px;
+text-align: center;
+color: white;
+border-radius: 10px;
+padding: 15px 0 0px;
+margin: 0 auto;
+font-size: large;
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext,
 .tooltip-button .tooltiptext {
-  visibility: hidden;
-  width: 250px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-  z-index: 1;
+visibility: hidden;
+width: 250px;
+background-color: white;
+color: black;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text - see examples below! */
+position: absolute;
+z-index: 1;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+visibility: visible;
 }
