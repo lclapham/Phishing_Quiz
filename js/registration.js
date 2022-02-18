@@ -1,13 +1,12 @@
 // window.onbeforeunload = function() { return "Your work will be lost."; };
-
-window.onload = (event) => {
-    console.log('page is fully loaded');
-  
-
 // document.addEventListener("deviceready", onDeviceReady(),false);
 // function onDeviceReady() {
    
 //     console.log("Device Ready");
+
+window.onload = (event) => {
+    console.log('page is fully loaded');
+  
 
     ////////////////// Setup Variables
     const $elBtnLogIn = $("#loginBtn");

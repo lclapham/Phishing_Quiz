@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>window.onbeforeunload = function() { return "Your work will be lost."; };</script>
+    <meta name="viewport"
+        content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/themes/Comic_book_theme_2.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+    <!-- <script src="js/jquery/jquery-1.11.1.min.js"></script> -->
+    <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+
+    <!-- jquery cdn files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/email.css">
+
+    <title>Phishing Quiz</title>
+</head>
+
+<body class="ui-body">
+
+       <!-- Question #1 -->
+    <section data-theme="b" data-role="page" id="pgQuestion01" data-fullscreen="true">
+        <!-- Navbar setup Start -->
+        <header data-role="header">
+            <h3>Question #1</h3>
+        </header>
+
+        <!-- Quiz Nav -->
+        <main>
+
+            <div class="em-template">
+                <div class="em-nav">
+                    <ul>
+                        <li class="ui-icon-arrow-u-r ui-btn-icon-left"><a href="/reply">Reply</a></li>
+                        <li><a href="/replyall">Reply All</a></li>
+                        <li><a href="/forward">Forward</a></li>
+                        <li><a href="/delete">Delete</a></li>
+                        <!-- <li><a href="/setflag">Set Flag</a></li> -->
+                    </ul>
+                </div>
+
+                <h4>Re: Is this phishing?</h4>
+
+                <div class="em-from-div">
+                    <span class="em-dot">
+                        <p>JS</p>
+                    </span>
+                    <h5>
+                        <strong>Joe Schmoe &lt;joe.schmoe@email.com&gt;</strong><br>
+                        1/12/22 10:10am
+                    </h5>
+                </div>
+
+                <h5><br>To: Julie Mooly Cc: Francis Lantis</h5>
+                <p><br>hello,</p>
+                <p><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, iure. Autem nam accusamus
+                    mollitia nobis, ullam minus ex corrupti maxime odio veniam delectus unde recusandae, minima labore
+                    nulla sequi iste libero fugit voluptates, assumenda impedit quae eligendi animi sint? Delectus
+                    tempora cum, consequatur reprehenderit velit non aut veritatis temporibus natus?</p>
+
+            </div>
+
+            <!-- 
+            <input class="answers answers1" type="checkbox" id="Phishing00" name="phishing" value="A">
+            <label for="Phishing00"> Suspected phishing Email</label><br>
+            <input class="answers answers1" type="checkbox" id="Phishing01" name="notPhishing" value="B">
+            <label for="Phishing01">Email appears to be valid</label><br> -->
+
+            <nav data-role="navbar">
+
+                <form action="">
+                    <input type="radio" id="01" name="question1" value="A">
+                    <label for="01">Phishing Email</label><br>
+                    <input type="radio" id="02" name="question1" value="B">
+                    <label for="02">Valid Email</label><br>
+                    <!-- <input type="submit" value="submit"> -->
+                </form>
+
+                <button id="0" class="answer-btn"><a href="question2.html" data-icon="bars"
+                        class="ui-btn-icon-bottom navView" data-transition="fade">Next</a> </button>
+                <!-- Need to record results. Make a function that has a data libaray of results -->
+            </nav>
+
+        </main>
+
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022</h4>
+        </footer>
+    </section>
+
+ 
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+</html>

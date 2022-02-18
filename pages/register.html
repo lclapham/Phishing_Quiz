@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport"
+        content="width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/themes/Comic_book_theme_2.css" />
+    <link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" />
+    <!-- <script src="js/jquery/jquery-1.11.1.min.js"></script> -->
+    <script src="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+
+    <!-- jquery cdn files -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/email.css">
+
+    <title>Phishing Quiz</title>
+</head>
+
+<body class="ui-body">
+
+      <!-- Sign Up Page Start REGISTRATION-->
+    <section data-role="page" id="pgSignUp" data-theme="b" data-fullscreen="true">
+        <header data-role="header">
+            <h1>User Registration Page</h1>
+        </header>
+        <p>Enter your name and email. Failure to do so will result in recieving no credit.</p>
+        <main>
+            <article role="main" class="ui-content">
+                <form id="mySignUpForm">
+                    <fieldset>
+                        <label for="">First Name</label>
+                        <input id="fName" type="text">
+                        <label for="">Last Name</label>
+                        <input id="lName" type="text">
+                        <label for="Your Email">Email Address</label>
+                        <input id="uEmail" type="email">
+                    </fieldset>
+<!-- 
+                    <a href="./instructions.html"> </a> -->
+                    <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action" id="uSignUpBtn" type="submit">Register</button>
+                    <!-- This should take them to instructions page -->
+                </form>
+            </article>
+        </main>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
+    </section>
+   
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/pouchdb@7.2.1/dist/pouchdb.min.js"></script>
+<script ref="preload" src="../js/registration.js"></script>
+
+
+</html>
