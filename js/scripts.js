@@ -1,9 +1,5 @@
 // window.onbeforeunload = function() { return "Your work will be lost."; };
 //This is a test.
-const correctAnswerArr = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',]
-let answerArr = []
-var correctAnswers = 0;
-var numQuestions = 10;
 
 window.onload = (event) => {
     console.log('Index.html and or Question pages are fully loaded');
@@ -12,7 +8,11 @@ window.onload = (event) => {
     const $elBtnLogIn = $("#loginBtn");
     console.log($elBtnLogIn);
 
-
+    const correctAnswerArr = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',]
+    answerArr = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x']
+    let correctAnswers
+    correctAnswers = 0;
+    var numQuestions = 10;
 
     /////////////////// Setup Listing Events
     // User Login Form Event
@@ -132,24 +132,42 @@ window.onload = (event) => {
 
     // This function will calculate the results of each question
     function calcAnswer(e) {
+        console.log("You are in calcAnswer")
+        event.preventDefault(event);
+
         console.log("Inside function, this is the index " + e);
         if (document.getElementById(e + '1').checked) {
-            answerArr[e] = "A"
-            console.log("This is what is in anserArr " +answerArr)
+            answerArr[e] = "A";
+            console.log("You made it to the redirect point")
+            console.log("This is what is in anserArr " + answerArr)
         } else if (document.getElementById(e + '2').checked) {
-            answerArr[e] = "B"
-            console.log("This is what is in anserArr " +answerArr)
+            answerArr[e] = "B";
+            console.log("This is what is in anserArr " + answerArr)
         }
 
         if (answerArr[e] === correctAnswerArr[e]) {
             console.log("You got it right")
-            correctAnswers += 1
+            let answerRight = 'c'
+            updateLocalStore(answerRight)
             console.log("correct answers " + correctAnswers)
         } else {
+            let answerWrong = 'x'
+            updateLocalStore(answerWrong)
             console.log("You got it wrong")
         }
     };
 
+
+    function updateLocalStore(answer) {
+        console.log("In updatlocalstore")
+
+        // localStorage.setItem('userRepo', answer);
+        var old = localStorage.getItem('userRepo');
+        if (old === null) old = "";
+        localStorage.setItem('userRepo', old + answer);
+    }
+
+    // appendToStorage('oldData', $i("textbox").value);
 };
 
 // Simple return to last page -->
