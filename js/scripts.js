@@ -154,7 +154,12 @@ window.onload = (event) => {
             let answerWrong = 'x'
             updateLocalStore(answerWrong)
             console.log("You got it wrong")
-        }
+        } 
+       console.log("Here is what e equals "+e)
+        let newPage =parseInt(e + 2);
+        console.log("here is what newPage equals "+newPage)
+        alert("going to new window"+newPage)
+         window.location.replace("../pages/question"+newPage+".html")
     };
 
 
