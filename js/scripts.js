@@ -1,27 +1,18 @@
 // window.onbeforeunload = function() { return "Your work will be lost."; };
 //This is a test.
+const correctAnswerArr = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',]
+let answerArr = []
+var correctAnswers = 0;
+var numQuestions = 10;
 
 window.onload = (event) => {
-    console.log('page is fully loaded');
-  
-
-// document.addEventListener("deviceready", onDeviceReady(),false);
-// function onDeviceReady() {
-   
-//     console.log("Device Ready");
+    console.log('Index.html and or Question pages are fully loaded');
 
     ////////////////// Setup Variables
     const $elBtnLogIn = $("#loginBtn");
     console.log($elBtnLogIn);
 
-    // Save form DB
-    // let myDB = new PouchDB("myComics");
 
-    //This is an array for checking the answers.
-    // const answerArr = [['A'], ['B']];
-    // var correctAnswers = 0;
-    // Save form Variables
-    // const $elmSaveComic = $('#cbSaveFrm');
 
     /////////////////// Setup Listing Events
     // User Login Form Event
@@ -81,7 +72,7 @@ window.onload = (event) => {
 
     //////////////////////// Functions mainLogin, Signup, Calculate, Results
     function mainLogin(event) {
-        console.log("In mainLogain function " +event);
+        console.log("In mainLogain function " + event);
         event.preventDefault(event);
         console.log("mainLogin(event) is running");
 
@@ -138,49 +129,30 @@ window.onload = (event) => {
             $('#mySignUpForm')[0].reset();
         }
     }
+
+    // This function will calculate the results of each question
+    function calcAnswer(e) {
+        console.log("Inside function, this is the index " + e);
+        if (document.getElementById(e + '1').checked) {
+            answerArr[e] = "A"
+            console.log("This is what is in anserArr " +answerArr)
+        } else if (document.getElementById(e + '2').checked) {
+            answerArr[e] = "B"
+            console.log("This is what is in anserArr " +answerArr)
+        }
+
+        if (answerArr[e] === correctAnswerArr[e]) {
+            console.log("You got it right")
+            correctAnswers += 1
+            console.log("correct answers " + correctAnswers)
+        } else {
+            console.log("You got it wrong")
+        }
+    };
+
 };
 
-const correctAnswerArr = ['A','A','A','A','A','A','A','A','A','A',]
-var answerArr = []
-var correctAnswers = 0;
-var numQuestions = 10;
-
-// This function will calculate the results of each question
-function calcAnswer(e) {
-    if (document.getElementById(e + '1').checked) {
-        answerArr[e] = "A"
-        console.log(answerArr)
-    } else if (document.getElementById(e + '2').checked) {
-        console.log("b")
-        answerArr[e] = "B"
-        console.log(answerArr)
-    }
-
-    if (answerArr[e] === correctAnswerArr[e]) {
-        alert("You got it right")
-        correctAnswers += 1
-        console.log("correct answers "+correctAnswers)
-    } else {
-        console.log("You got it wrong")
-    }
-
-    // document.getElementById('yourScore').innerHTML = correctAnswers;
-    
-}
-
-// function recordAnswers(e, correctAnswers) {
-//     indexes = parseint(numQuestions - 1);
-//     if (correctAnswerArr[e] === null) {
-//         correctAnswerArr[e] = e
-//     }
-
-// }
-
-
-
-
-
 // Simple return to last page -->
-function goBack() {
-    window.history.back();
-}
+// function goBack() {
+//     window.history.back();
+// }
