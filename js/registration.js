@@ -22,7 +22,7 @@ window.onload = (event) => {
         localStorage.setItem('dataKey', JSON.stringify(dataStore));
         console.log("You made it to the redirect point")
 
-        window.location.replace("/Phishing_Quiz/pages/instructions.html");
+        window.location.replace("../pages/instructions.html");
         // $(":mobile-pagecontainer").pagecontainer("change", "#pgInstructions");
     };
 
