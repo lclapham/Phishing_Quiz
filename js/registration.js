@@ -24,7 +24,8 @@ window.onload = (event) => {
 
         window.location.replace("../pages/instructions.html");
         // $(":mobile-pagecontainer").pagecontainer("change", "#pgInstructions");
-    };
+       
+    }; 
 
 };
 
