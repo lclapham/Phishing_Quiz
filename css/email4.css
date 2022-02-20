@@ -1,0 +1,117 @@
+.em-template {
+    background: white;
+    /* border: 5px solid rgb(61, 112, 232); */
+    font-family: arial,sans-ser;
+    font-size: .7em;
+    margin-top: 3em;
+
+    /* email4 specific */
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+
+.em-template p,
+.em-template h1,
+  .em-template h2,
+  .em-template h4,
+  .em-template h5 {
+      color: #000000;
+      text-shadow: none;
+      margin: 0 20px;
+  }
+  /* specific to email4 */
+  .em-template h1 {
+    background: rgb(61, 112, 232);
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+  }
+    /* dot with initials / re / to / from */
+    .em-dot {
+        margin-top: 10px;
+        margin-left: 20px;
+        height: 35px;
+        width: 35px;
+        background-color: #023890;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .em-dot p {
+          margin: 8px 4px;/*to center initials in dot*/
+          position: absolute;
+          font-size: large;
+          color: white;
+      }
+      .em-from-div h4 {
+        margin: 10px 0 0px 15px;
+        position: absolute;
+        display: inline-block;
+    /* email4 specific */
+        max-width: 500px;
+
+      }
+
+     .body {
+    /* email4 specific */
+        border: 2px solid rgb(61, 112, 232);
+        max-width: 500px;
+        margin: 0 100px;
+    }
+    .tjx-synchrony {
+        display: inline-block;
+    }
+    .tjx-synchrony img {
+        width: 40%;
+        padding: 0px 20px;
+    }
+    .googlemap {
+        margin: 0 20px;
+        height: 300px;
+ }
+    .googlemap img {
+        width: 100%;
+    }
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
+      }
+      
+    .tooltip-button {
+      position: relative;
+      border: 4px solid white;
+      height: 20px;
+      width: 200px;
+      text-align: center;
+      color: white;
+      /* padding: 10px 0 0px; */
+      margin: 0 auto;
+    /* email4 specific */
+    background-color: rgb(2, 171, 41);
+        font-size: large;
+        padding: 10px 0;
+    }
+    
+    /* Tooltip text */
+    .tooltip .tooltiptext,
+    .tooltip-button .tooltiptext {
+      visibility: hidden;
+      width: 250px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 5px 0;
+      border-radius: 6px;
+     
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    

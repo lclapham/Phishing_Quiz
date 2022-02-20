@@ -1,0 +1,93 @@
+.em-template {
+    background: white;
+    /* border: 5px solid rgb(61, 112, 232); */
+    font-family: arial,sans-ser;
+    font-size: .7em;
+    /* specific to email2 and 6*/
+    max-width: 700px;
+    margin: 0 100px;
+}
+.em-template p,
+.em-template h1,
+  .em-template h2,
+  .em-template h4,
+  .em-template h5 {
+      color: #000000;
+      text-shadow: none;
+      margin: 0 20px;
+  }
+
+      /* dot with initials / re / to / from */
+      .em-dot {
+        margin-top: 10px;
+        margin-left: 20px;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        display: inline-block;
+        /* specific to email6 */
+        background-color: #fd6823;
+      }
+      .em-dot p {
+          margin: 8px 12px;/*to center initials in dot*/
+          position: absolute;
+          font-size: large;
+          color: white;
+      }
+      .em-from-div h4 {
+        margin: 10px 0 0px 15px;
+        position: absolute;
+        display: inline-block;
+      }
+
+  /* Tooltip container */
+  .tooltip {
+    position: relative;
+  }
+  
+.tooltip-button {
+  position: relative;
+  border: 4px solid white;
+  width: 200px;
+  text-align: center;
+  color: white;
+  padding: 10px 0 0px;
+  margin: 0 auto;
+  /* specific to email6 */
+  background-color: #5E8ADE;
+  height: 25px;
+  font-weight: 600;
+
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext,
+.tooltip-button .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+  /* specific to email6*/
+  .dropbox img{
+    width: 5%;
+    float: none;
+    margin: 1em auto;
+    display: block;
+}
+.body {
+    border: 1px solid lightgray;
+  }
