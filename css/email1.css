@@ -1,9 +1,11 @@
 .em-template {
-  background: #ececec;
-  /* border: 5px solid blue; */
   font-family: arial,sans-ser;
   font-size: .7em;
   margin-top: 3em;
+  /* specific to email1 */
+      /* background: #ececec; */
+      border: 1px solid lightgray;
+
 }
 
 .em-nav {
@@ -39,6 +41,8 @@
 /* .em-image-div img {
     float: none;
 } */
+
+  /* dot with initials / re / to / from */
 .em-dot {
   margin-top: 10px;
   margin-left: 20px;
@@ -63,6 +67,14 @@
   position: relative;
   /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
 }
+  /* specific to email1 */
+.body {
+max-width: 800px;
+background: #ececec;
+margin: 0 auto;
+padding: 2em 0;
+}  
+
 
 .tooltip-button {
 position: relative;
