@@ -7,6 +7,6 @@ window.onload = (event) => {
             resultPercent += 10;
         }
     }
-    document.getElementById('userResults').Text = "You Scored a " + resultPercent + "%"
+    document.getElementById('userResults').innertext = "You Scored a " + resultPercent + "%"
 };
 // test 123
