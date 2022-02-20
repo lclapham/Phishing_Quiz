@@ -22,10 +22,19 @@
 
         <!-- Home Page Body Start -->
         <main>
-            <form action="../php/index.php" class="contact_form" method="post" name="form"></form>
-            <p value="emplinq" id="userResults"></p>
+            <form action="index.php" class="contact_form" method="post" name="form"></form>
+            <!-- <p value="emplinq" id="userResults"></p> -->
             <input type="submit" id="send" value="Submit Results">
 
+            </form>
+
+            <form action="/php/index.php" method="post">
+                <p value="emplinq" name="name" id="userResults"></p>
+                Name: <input id="userResults" type="input" name="name">
+                <!-- Name: <input type="text" name="name"><br> -->
+                <!-- E-mail: <input type="text" name="email"><br>
+                 -->
+                <input type="submit">
             </form>
 
 
