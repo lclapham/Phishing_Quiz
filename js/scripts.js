@@ -9,11 +9,8 @@ window.onload = (event) => {
     console.log($elBtnLogIn);
 
     const correctAnswerArr = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',]
-    answerArr = ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x']
-    let correctAnswers
-    correctAnswers = 0;
-
-
+    answerArr = []
+    
     /////////////////// Setup Listing Events
 
     // User Signup FORM Listner
