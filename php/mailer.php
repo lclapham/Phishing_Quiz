@@ -1,10 +1,17 @@
 <?php
 echo "Mailer Running";
+
+echo "<br>";
+echo $_POST["userName"];
+echo "<br>";
+echo $_POST["userEmailAddr"];
+echo "<br>";
+echo $_POST["userResults"];
 /**
  * PHPMailer simple contact form example.
  * If you want to accept and send uploads in your form, look at the send_file_upload example.
  */
-
+// 
 //Import the PHPMailer class into the global namespace
 use PHPMailer\PHPMailer\src\PHPMailer;
 use PHPMailer\PHPMailer\src\SMTP;
