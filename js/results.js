@@ -7,6 +7,11 @@ window.onload = (event) => {
             resultPercent += 10;
         }
     }
-    document.getElementById('userResults').value = "You Scored a " + resultPercent + "%"
+
+    // Get the users info and post it into the results page
+    let userInfo = localStorage.getItem('dataKey')
+    
+    // document.getElementById('userResults').value = "You Scored a " + resultPercent + "%"
+    document.getElementById('userResults').value = resultPercent 
 };
 // test 123
