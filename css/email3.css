@@ -1,20 +1,4 @@
 .em-template {
-    background: white;
+    /* specific to email3 */
     border: 1px solid grey;
-    font-family: arial,sans-ser;
-    font-size: .7em;
-    margin-top: 3em;
-
-}
-.em-template p,
-.em-template h1,
-  .em-template h2,
-  .em-template h4,
-  .em-template h5 {
-      color: #000000;
-      text-shadow: none;
-      margin: 0 20px;
-  }
-hr {
-    color: #eee;
 }

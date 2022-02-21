@@ -1,112 +1,34 @@
 .em-template {
-  font-family: arial,sans-ser;
-  font-size: .7em;
-  margin-top: 3em;
   /* specific to email1 */
-      /* background: #ececec; */
-      border: 1px solid lightgray;
-
-}
-
-.em-nav {
-  width: 100%;
-  margin: 20px 0;
-}
-.em-nav ul{
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.em-nav ul li{
-  width: 20%;
-  float: left;
-}
-
-.em-nav .ui-btn-icon-left::after {
-    top: 75px;
-}
-
-.em-template p,
-.em-template h1,
-.em-template h2,
-.em-template h4,
-.em-template h5 {
-    color: #000000;
-    text-shadow: none;
-    margin: 0 20px;
-}
-/* .em-image-div img {
-    float: none;
-} */
-
-  /* dot with initials / re / to / from */
-.em-dot {
-  margin-top: 10px;
-  margin-left: 20px;
-  height: 35px;
-  width: 35px;
-  background-color: #E00054;
-  border-radius: 50%;
-  display: inline-block;
-}
-.em-dot p {
-    margin: 8px 6px;/*to center initials in dot*/
-    position: absolute;
+    border: 1px solid lightgray;
+  }
+  
+    /* Tooltip button*/
+  .tooltip-button {
+  /* email1 specific */
+    width: 300px;
+    padding: 15px 0 0px;
+    height: 35px;
+    background-color: teal;
     font-size: large;
-}
-.em-from-div h4 {
-  margin: 10px 0 0px 15px;
-  position: absolute;
-  display: inline-block;
-}
-/* Tooltip container */
-.tooltip {
-  position: relative;
-  /* border-bottom: 1px dotted black; If you want dots under the hoverable text */
-}
-  /* specific to email1 */
-.body {
-max-width: 800px;
-background: #ececec;
-margin: 0 auto;
-padding: 2em 0;
-}  
-
-
-.tooltip-button {
-position: relative;
-/* border-bottom: 1px dotted black; If you want dots under the hoverable text */
-background-color: teal;
-height: 35px;
-width: 300px;
-text-align: center;
-color: white;
-border-radius: 10px;
-padding: 15px 0 0px;
-margin: 0 auto;
-font-size: large;
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext,
-.tooltip-button .tooltiptext {
-visibility: hidden;
-width: 250px;
-background-color: white;
-color: black;
-text-align: center;
-padding: 5px 0;
-border-radius: 6px;
-
-/* Position the tooltip text - see examples below! */
-position: absolute;
-z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-visibility: visible;
-}
+    border: none;
+    border-radius: 10px;
+  }
+  
+      /* dot with initials / re / to / from */
+      .em-dot {
+        background-color: #E00054;
+      }
+      .em-dot p {
+          margin: 8px 6px;/*to center initials in dot*/
+          font-size: large;
+      }
+    
+      /* specific to email1 */
+  .body {
+    max-width: 800px;
+    background: #ececec;
+    margin: 0 auto;
+    padding: 2em 0;
+  }  
+  
