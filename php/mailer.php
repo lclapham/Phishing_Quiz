@@ -1,15 +1,16 @@
 <?php
+echo "Mailer Running";
 /**
  * PHPMailer simple contact form example.
  * If you want to accept and send uploads in your form, look at the send_file_upload example.
  */
 
 //Import the PHPMailer class into the global namespace
-use PHP\PHPMailer\src\PHPMailer;
-use PHP\PHPMailer\src\SMTP;
-use PHP\PHPMailer\src\Exception;
+use PHPMailer\PHPMailer\src\PHPMailer;
+use PHPMailer\PHPMailer\src\SMTP;
+use PHPMailer\PHPMailer\src\Exception;
 
-// require '../php/vendor/autoload.php';
+require '../php/vendor/autoload.php';
 
 if (array_key_exists('to', $_POST)) {
     $err = false;
