@@ -13,13 +13,16 @@ window.onload = (event) => {
     function fnSignUp(event) {
         console.log("You are in fnsignup")
         event.preventDefault(event);
-        let dataStore = {
-            fName: $('#fName').val(),
-            lName: $('#lName').val(),
-            uEmail: $('#uEmail').val().toUpperCase(),
-        }
+        // let dataStore = {
+        //     fName: $('#fName').val(),
+        //     lName: $('#lName').val(),
+        //     uEmail: $('#uEmail').val().toUpperCase(),
+        // }
+       
         // set local Storage with user signup details
-        localStorage.setItem('dataKey', JSON.stringify(dataStore));
+        localStorage.setItem('fisrtName', JSON.stringify($('#fName').val()));
+        localStorage.setItem('lastName', JSON.stringify($('#lName').val()));
+        localStorage.setItem('email', JSON.stringify($('#uEmail').val()));
         console.log("You made it to the redirect point")
 
         window.location.replace("../pages/instructions.html");

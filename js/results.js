@@ -9,8 +9,10 @@ window.onload = (event) => {
     }
 
     // Get the users info and post it into the results page
-    let userInfo = localStorage.getItem('dataKey')
-    
+    let userFirst = localStorage.getItem('firstname')
+    let userLast = localStorage.getItem('lastName')
+    let userEmail = localStorage.getItem('email')
+
     // document.getElementById('userResults').value = "You Scored a " + resultPercent + "%"
     document.getElementById('userResults').value = resultPercent 
 };
