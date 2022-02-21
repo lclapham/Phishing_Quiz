@@ -1,5 +1,6 @@
 // This script calculates the users score using the results in localstorage.
 window.onload = (event) => {
+    console.log("loaded results.js")
     let results = localStorage.getItem('userRepo')
     let resultPercent = 0
     for (let i = 0; i <= results.length; i++) {
@@ -9,14 +10,26 @@ window.onload = (event) => {
     }
 
     // Get the users info and post it into the results page
-    let userFirst = localStorage.getItem('firstname')
+    let userFirst = localStorage.getItem('firstName')
     let userLast = localStorage.getItem('lastName')
-    let userEmail = localStorage.getItem('email')
+    let userEmail = localStorage.getItem('userEmail')
 
-    document.getElementById('userName').innerText = userFirst+" "+userLast
-    document.getElementById('userName').innerText = userEmail
 
-    // document.getElementById('userResults').value = "You Scored a " + resultPercent + "%"
-    document.getElementById('userResults').value = resultPercent 
+    let userName = userFirst + " " + userLast
+    NewUser = userName.replace(/"/g, '');
+    NewEmail = userEmail.replace(/"/g, '');
+    console.log("This is it " + NewUser)
+    userName.replace("",)
+
+   
+    // document.getElementById('userResults').innerText = resultPercent 
+    console.log("Right Before setting values")
+    document.getElementById('userName').value = NewUser
+    document.getElementById('userEmailAddr').value = NewEmail
+    document.getElementById('userResults').value = "You scored " + resultPercent + "%"
+
+    document.getElementById('uName').innerText = NewUser
+    document.getElementById('uEmail').innerText = NewEmail
+    document.getElementById('uResults').innerText = 'You scored '+resultPercent+'%'
 };
 // test 123

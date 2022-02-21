@@ -22,16 +22,22 @@
 
         <!-- Home Page Body Start -->
         <main>
-            <form action="index.php" class="contact_form" method="post" name="form"></form>
+            <!-- <form action="index.php" class="contact_form" method="post" name="form"></form> -->
             <!-- <p value="emplinq" id="userResults"></p> -->
-            <input type="submit" id="send" value="Submit Results">
+            <!-- <input type="submit" id="send" value="Submit Results">
 
-            </form>
+            </form> -->
 
             <form action="/php/index.php" method="post">
-                <p value="emplinq" name="name" id="userResults"></p>
-                <p value="emailAddr" name="emailAddr" id="userEmail"></p>
-               You scored <input id="userResults" type="input" name="name">%
+                
+                <p value="uname" name="uName" id="uName"></p>
+                <p value="emailAddr" name="emailAddr" id="uEmail"></p>
+                <p value="results" name="results" id="uResults"></p>
+
+                <input type="hidden" name="userName" id="userName">
+                <input type="hidden" name="userEmailAddr" id="userEmailAddr">
+                <input type="hidden" name="userResults" id="userResults">
+                <!-- You scored <input id="userResults" type="input" name="name">% -->
                 <!-- Name: <input type="text" name="name"><br> -->
                 <!-- E-mail: <input type="text" name="email"><br>
                  -->

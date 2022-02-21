@@ -20,9 +20,9 @@ window.onload = (event) => {
         // }
        
         // set local Storage with user signup details
-        localStorage.setItem('fisrtName', JSON.stringify($('#fName').val()));
+        localStorage.setItem('firstName', JSON.stringify($('#fName').val()));
         localStorage.setItem('lastName', JSON.stringify($('#lName').val()));
-        localStorage.setItem('email', JSON.stringify($('#uEmail').val()));
+        localStorage.setItem('userEmail', JSON.stringify($('#uEmail').val()));
         console.log("You made it to the redirect point")
 
         window.location.replace("../pages/instructions.html");

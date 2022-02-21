@@ -1,6 +1,13 @@
-<?php echo $_POST["name"]; ?>
-<br>
-Your email address is: <?php echo $_POST["email"];
+<?php 
 
-phpinfo();
+
+echo "You are in PHP";
+echo "<br>";
+echo $_POST["userName"];
+echo "<br>";
+echo $_POST["userEmailAddr"];
+echo "<br>";
+echo $_POST["userResults"];
+
+
 ?>
