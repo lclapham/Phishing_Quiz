@@ -13,6 +13,9 @@ window.onload = (event) => {
     let userLast = localStorage.getItem('lastName')
     let userEmail = localStorage.getItem('email')
 
+    document.getElementById('userName').innerText = userFirst+" "+userLast
+    document.getElementById('userName').innerText = userEmail
+
     // document.getElementById('userResults').value = "You Scored a " + resultPercent + "%"
     document.getElementById('userResults').value = resultPercent 
 };
