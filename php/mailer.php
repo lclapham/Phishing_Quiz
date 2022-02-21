@@ -5,11 +5,11 @@
  */
 
 //Import the PHPMailer class into the global namespace
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+use PHP\PHPMailer\src\PHPMailer;
+use PHP\PHPMailer\src\SMTP;
+use PHP\PHPMailer\src\Exception;
 
-require '../php/vendor/autoload.php';
+// require '../php/vendor/autoload.php';
 
 if (array_key_exists('to', $_POST)) {
     $err = false;
