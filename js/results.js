@@ -26,10 +26,10 @@ window.onload = (event) => {
     console.log("Right Before setting values")
     document.getElementById('userName').value = NewUser
     document.getElementById('userEmailAddr').value = NewEmail
-    document.getElementById('userResults').value = "You scored " + resultPercent + "%"
+    document.getElementById('userResults').value = resultPercent + "%."
 
     document.getElementById('uName').innerText = NewUser
     document.getElementById('uEmail').innerText = NewEmail
-    document.getElementById('uResults').innerText = 'You scored '+resultPercent+'%'
+    document.getElementById('uResults').innerText = resultPercent
 };
 // test 123
