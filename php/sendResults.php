@@ -1,14 +1,14 @@
 <?php
 
-echo "SendResults PHP";
+echo "Thank you! ";
 
-echo "<br>";
-echo $_POST["userName"];
-echo "<br>";
-echo $_POST["userEmailAddr"];
-echo "<br>";
-echo $_POST["userResults"];
-echo "<br>";
+// echo "<br>";
+// echo $_POST["userName"];
+// echo "<br>";
+// echo $_POST["userEmailAddr"];
+// echo "<br>";
+// echo $_POST["userResults"];
+// echo "<br>";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -16,16 +16,16 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once "vendor/autoload.php";
 
-if (extension_loaded('openssl')) {
-    print 'openssl extension loaded.';
-}
+// if (extension_loaded('openssl')) {
+//     print 'openssl extension loaded.';
+// }
 
 
 $mail = new PHPMailer(true);
 
 //Enable SMTP debugging.
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-$mail->SMTPDebug = 4;
+// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+$mail->SMTPDebug = 0;
 //Set PHPMailer to use SMTP.
 $mail->isSMTP();
 //Set SMTP host name                          
@@ -72,16 +72,12 @@ $B = $_POST["userEmailAddr"];
 $C = $_POST["userResults"];
 $mail->body = "<p>Hello world</p>";
 
-$body  = "$A " . "completed the Phishing Quiz today"; 
+$body  = "$A " . "completed the 227 InfoSec \"Phishing Quiz\" today."; 
 $body .= "<p>$A scored a $C</p>";
 $body .= "Sincerely, <br>";
 $body .= "227 InfoSec, Inc.";
 $mail->Body    = $body;
 
-$body  = "Hello <font size=\"4\">" . $row["full_name"] . "</font>, <p>";
-    $body .= "<i>Your</i> personal photograph to this message.<p>";
-    $body .= "Sincerely, <br>";
-    $body .= "phpmailer List manager";
 
 // $mail->Body =  "<p><php? echo $A?/></p><p><php? echo $B?/></p><p><php? echo $C?/></p>";
 
