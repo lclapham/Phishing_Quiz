@@ -37,13 +37,7 @@ $mail->Host = "mail.227infosec.com";
 //Provide username and password     
 $mail->Username = "info@227infosec.com";
 $mail->Password = "1X2=bug@B00";
-//If SMTP requires TLS encryption then set it
-// $mail->SMTPSecure = "ssl"; 
-// $mail->SMTPAutoTLS = false;
-// $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;                          
-//Set TCP port to connect to
-// $mail->Port = 587;    
-
+// Disable SSL checks
 $mail->Port = 465;
 $mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth = FALSE;
@@ -54,7 +48,6 @@ $mail->SMTPOptions = array(
         'allow_self_signed' => TRUE
     )
 );
-
 
 
 $mail->From = "info@227infosec.com";
@@ -78,10 +71,13 @@ $body .= "Sincerely, <br>";
 $body .= "227 InfoSec, Inc.";
 $mail->Body    = $body;
 
-
-// $mail->Body =  "<p><php? echo $A?/></p><p><php? echo $B?/></p><p><php? echo $C?/></p>";
-
 $mail->AltBody = "This is the plain text version of the email content";
+
+$myfile = fopen("phishQuizLog.txt", "a") or die("Unable to open file!");
+$date = date('l jS \of F Y h:i:s A');
+fwrite($myfile, $date . " " . $A . " " . $C ."\n");
+fclose($myfile);
+
 try {
     $mail->send();
     echo "Message has been sent successfully";
