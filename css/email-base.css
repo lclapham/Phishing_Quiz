@@ -1,7 +1,8 @@
 .em-template {
     background: white;
     font-family: arial,sans-ser;
-    margin-top: 3em;
+    margin: 3em auto 0;
+    width: 80%;
 }  
 .em-template p,
 .em-template h1,
