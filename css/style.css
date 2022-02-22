@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: #001C34;
+    background: #4E606C;
     /* max-height: 100vh; */
     max-width: 1100px;
     /* max-height: 100vh;
@@ -83,7 +83,9 @@ h1 {
     font-size: 1.25em;
     border-radius: 10px;
 }
-
+.content-register {
+    height: 115vh;
+}
 .content__section--register {
     max-width: 600px;
     margin: 0 auto;
@@ -117,12 +119,14 @@ h1 {
     display: grid;
     grid-template-columns: 1fr;
 }
-
+.register-input {
+    height: 50px;
+}
 .register-name {
     grid-area: title1;
 }
 
-.register-name-field {
+.register-input-name {
     grid-area: imgA;
 }
 
@@ -130,7 +134,7 @@ h1 {
     grid-area: title2;
 }
 
-.register-lastname-field {
+.register-input-lastname {
     grid-area: imgB;
 }
 
@@ -138,13 +142,16 @@ h1 {
     grid-area: title3;
 }
 
-.register-email-field {
+.register-input-email {
     grid-area: imgC;
 }
 
 .content__section--button-register {
     justify-self: center;
     margin-top: 20px;
+}
+.form-questions {
+    margin: 30px 0;
 }
 
 /* .content__section--pages{
@@ -157,10 +164,12 @@ fieldset {
 label,
 input {
     margin-top: 1em;
+    font-size: 1.5em;
+    margin-right: 2em;
 }
-
-input {
-    height: 50px;
+input[type='radio'] {
+    transform: scale(2);
+    margin-right: 20px;
 }
 
 footer {
@@ -172,96 +181,3 @@ footer {
     margin-left: 100px;
 }
 
-/* .ui-content {
-    padding: 0 1em;
-} */
-
-/* #usageStatement {
-    margin-left: 8%;
-    margin-right: 3%;
-    border: 1px black solid;
-} */
-/* img {
-    float: left;
-}
-
-a {
-    text-decoration: none;
-} */
-
-/* .userBtns {
-    position: relative;
-    width: 96%;
-    margin: auto;
-} */
-/* .responsiveImage {
-    margin-top: 5vh;
-    margin-bottom: 2%; */
-/* width: 100%;
-    height: auto; */
-/* max-height: 100%;
-    max-width: 100%;
-} */
-
-/* div#viewComics table {
-    background-color: #ffffe6;
-    margin: auto;
-    width: 100%;
-    border: 2px solid #5e778d;
-    border-radius: 0.3125em;
-    word-wrap:break-word;
-    text-align: center; */
-/* This fixes the table from overlapping */
-/* table-layout: fixed;
-    
-} */
-
-/* s div#viewComics table tr td {
-    border-bottom: #5e778d 1px solid;
-    border-right: #5e778d 1px solid;
-    border-radius: 0.3125em;
-    
-} */
-
-/* div#viewComics table tr:nth-child(odd) {
-    background-color: #1861a6;
-    color: #ffffe6;
-    text-align: center;
-} */
-
-/* div#viewComics table th {
-    background-color: #5c94c1;
-    border-radius: 0.3125em;
-    color: black;
-    font-size: 0.8em;
-} */
-
-/* .btnShowComicInfo:active {
-    background-color: red;
-} */
-
-/* .btnContainer {
-    width: 90%;
-    margin: auto;
-} */
-
-/* #viewPgMain {
-    padding:0;
-} */
-
-/* #designerSig {
-    margin: 20px 20px;
-} */
-
-/* div>h4 {
-    margin: 20px 20px;
-} */
-/* 
-#pgViewTable td:nth-child(5) {
-    display: none;
-}
-
-#pgViewTable th:nth-child(5) {
-    display: none;
-}
- */

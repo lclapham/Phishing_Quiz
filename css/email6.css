@@ -1,7 +1,7 @@
 .em-template {
   /* specific to email2 and 6*/
   max-width: 700px;
-  margin: 0 100px;
+  margin: 0 auto;
 }
 
   /* Tooltip button*/
