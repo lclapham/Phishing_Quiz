@@ -52,7 +52,7 @@ window.onload = (event) => {
         event.preventDefault(event);
 
         if(!document.getElementById(e + '1').checked && (!document.getElementById(e + '2').checked)){
-            alert("Please provide and answer to continue")
+            alert("Please provide an answer to continue")
             return
         }
         //Check which radio button is selected
