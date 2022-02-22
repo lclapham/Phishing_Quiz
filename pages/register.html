@@ -12,38 +12,50 @@
 </head>
 
 <body class="ui-body">
+    <div class="content">
 
     <!-- Sign Up Page Start REGISTRATION-->
-    <section data-role="page" id="pgSignUp" data-theme="b" data-fullscreen="true">
-        <header data-role="header">
-            <h1>User Registration Page</h1>
+    <section class="content__section" data-role="page" id="pgSignUp" data-theme="b" data-fullscreen="true">
+
+        <header class="content__section--pages" data-role="header">
+            <h1>Register</h1>
         </header>
-        <p>Enter your name and email. Failure to do so will result in recieving no credit.</p>
-        <main>
+
+        <div class="content__section--text">
+            <p>Welcome to the 227 InfoSec phishing training quiz. <br><br>
+            Registration is necessary to record your results.
+            <!-- Enter your name and email. Failure to do so will result in recieving no credit. -->
+        </p>
+</div>
+
+    </section>
+        <main class="content__section--register">
             <article role="main" class="ui-content">
-                <form id="mySignUpForm">
-                    <fieldset>
-                        <label for="">First Name</label>
-                        <input id="fName" type="text">
-                        <label for="">Last Name</label>
-                        <input id="lName" type="text">
-                        <label for="Your Email">Email Address</label>
-                        <input id="uEmail" type="email">
+                <form class="content__section--register-form" id="mySignUpForm">
+                    <fieldset class="content__section--register-fieldset"> 
+                        <label class="register-name" for="">First Name</label>
+                        <input class="register-name-field" id="fName" type="text">
+                        <label class="register-lastname" for="">Last Name</label>
+                        <input class="register-lastname-field" id="lName" type="text">
+                        <label class="register-email" for="Your Email">Email Address</label>
+                        <input class="register-email-field" id="uEmail" type="email">
                     </fieldset>
                     <!-- 
                     <a href="./instructions.html"> </a> -->
+                    <div class="content__section--button content__section--button-register userBtns">
+
                     <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-action" id="uSignUpBtn"
                         type="submit">Register</button>
                     <!-- This should take them to instructions page -->
+                    </div>
                 </form>
             </article>
         </main>
 
-        <footer data-role="footer" data-position="fixed">
+        <footer class="footer-register" data-role="footer" data-position="fixed">
             <h4>227 InfoSec, Inc. 2022&copy;</h4>
         </footer>
-    </section>
-
+</div>
 </body>
 
 

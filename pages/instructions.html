@@ -15,37 +15,42 @@
 
 <body class="ui-body">
 
-   
-    <!-- Home Page Start INSTRUCTIONS -->
-    <section data-theme="b" data-role="page" id="pgInstructions" data-fullscreen="true">
+    <div class="content">
+        <!-- Home Page Start INSTRUCTIONS -->
+
+    <section class="content__section"  data-theme="b" data-role="page" id="pgInstructions" data-fullscreen="true">
         <!-- Navbar setup Start -->
-        <header data-role="header">
-            <h1>The Phishing Quiz Instructions</h1>
+        <header class="content__section--pages" data-role="header">
+            <h1>Instructions</h1>
         </header>
 
         <!-- Home Page Body Start -->
-        <main>
+        <!-- <main> -->
+            <div class="content__section--text">
+
             <p>You will be presented a number of emails. Some of these emails will be legitimate and some of them will
                 be examples of phishing. Your job is to identify the parts of the emails that are suspect and determine
-                the appropriate action.</p>
+                the appropriate action.</p><br><br>
 
-                <H4>DO NOT HIT THE BACK BUTTON ONCE YOU BEGIN THE TEST, YOUR RESULTS WILL BE LOST</H4>
-            <nav data-role="navbar">
+                <H4>DO NOT HIT THE BACK BUTTON ONCE YOU BEGIN THE TEST, YOUR RESULTS WILL BE LOST</H4><br><br>
+                </div>
+            <!-- <nav data-role="navbar"> -->
                 <!-- #pgQuestion01 -->
+                <div class="content__section--button userBtns">
 
-                <button><a href="question1.html" data-icon="bars" class="ui-btn-icon-bottom navView"
-                        data-transition="fade">Start Quiz</a> </button>
-            </nav>
+                <a href="question1.html" data-icon="bars" class="ui-btn-icon-bottom navView"
+                        data-transition="fade"><button>Start Quiz</button></a> 
+            <!-- </nav> -->
+</div>
+        <!-- </main> -->
 
-        </main>
 
-
+    </section>
         <!-- Footer Start -->
-        <footer data-role="footer" data-position="fixed">
+        <footer style="margin-left: 100px;" data-role="footer" data-position="fixed">
             <h4>227 InfoSec, Inc. 2022&copy;</h4>
         </footer>
-    </section>
-
+</div>
    
 
 </body>

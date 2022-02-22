@@ -1,100 +1,261 @@
+*,
+html {
+    margin: 0;
+}
+
 body {
-    max-height: 100vh;
-    max-width: 900px;
+    background: #001C34;
+    /* max-height: 100vh; */
+    max-width: 1100px;
     /* max-height: 100vh;
     max-width:90vw; */
     margin: 0 auto;
     display: block;
     /* margin-left: auto;
     margin-right: auto; */
-    padding: 0;
+    /* padding: 0;
     scroll-behavior:smooth;
-    overflow: visible !important;
-}
-.ui-content {
-    padding: 0 1em;
+    overflow: visible !important; */
+    color: white;
+    font-family: Aileron, "Open Sans", Roboto, "Helvetica Neue", sans-serif;
 }
 
-#usageStatement {
+h1 {
+    font-family: 'Glegoo', 'Courier New', Courier, monospace;
+    font-size: 3em;
+    margin: 0;
+
+}
+
+.content {
+    background: #243e50;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.content__section {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "title img"
+        "text img"
+        "button img";
+    position: relative;
+    padding-top: 200px;
+
+}
+.content__section#pgSignUp {
+    padding-top: 50px;
+}
+.content__section--title,
+.content__section--text,
+.content__section--img-container,
+.content__section--button {
+    align-self: center;
+}
+
+.content__section--title {
+    grid-area: title;
+}
+
+.content__section--text {
+    grid-area: text;
+}
+
+.content__section--img-container {
+    grid-area: img;
+}
+
+.content__section--button {
+    grid-area: button;
+    margin-top: 30px;
+}
+
+.content__section--button button {
+    width: 200px;
+    height: 50px;
+    background-color: #C82255;
+    border: none;
+    color: white;
+    font-family: 'Glegoo', 'Courier New', Courier, monospace;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+
+.content__section--register {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "title img"
+        "text img"
+        "imgA img";
+    margin-top: 50px;
+}
+
+.content__section--register-form {
+    max-width: 600px;
+    margin: 0 auto;
+    grid-template-areas:
+        "form"
+        "button";
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.content__section--register-fieldset {
+    grid-template-areas:
+        "title1"
+        "imgA"
+        "title2"
+        "imgB"
+        "title3"
+        "imgC";
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.register-name {
+    grid-area: title1;
+}
+
+.register-name-field {
+    grid-area: imgA;
+}
+
+.register-lastname {
+    grid-area: title2;
+}
+
+.register-lastname-field {
+    grid-area: imgB;
+}
+
+.register-email {
+    grid-area: title3;
+}
+
+.register-email-field {
+    grid-area: imgC;
+}
+
+.content__section--button-register {
+    justify-self: center;
+    margin-top: 20px;
+}
+
+/* .content__section--pages{
+    text-align: center;
+} */
+fieldset {
+    border: none;
+}
+
+label,
+input {
+    margin-top: 1em;
+}
+
+input {
+    height: 50px;
+}
+
+footer {
+    margin-top: 140px;
+}
+
+.footer-register {
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+/* .ui-content {
+    padding: 0 1em;
+} */
+
+/* #usageStatement {
     margin-left: 8%;
     margin-right: 3%;
     border: 1px black solid;
-}
-img {
+} */
+/* img {
     float: left;
 }
 
 a {
     text-decoration: none;
-}
+} */
 
-.userBtns {
+/* .userBtns {
     position: relative;
     width: 96%;
     margin: auto;
-}
-.responsiveImage {
+} */
+/* .responsiveImage {
     margin-top: 5vh;
-    margin-bottom: 2%;
-    /* width: 100%;
+    margin-bottom: 2%; */
+/* width: 100%;
     height: auto; */
-    max-height: 100%;
+/* max-height: 100%;
     max-width: 100%;
-}
+} */
 
-div#viewComics table {
+/* div#viewComics table {
     background-color: #ffffe6;
     margin: auto;
     width: 100%;
     border: 2px solid #5e778d;
     border-radius: 0.3125em;
     word-wrap:break-word;
-    text-align: center;
-    /* This fixes the table from overlapping */
-    table-layout: fixed;
+    text-align: center; */
+/* This fixes the table from overlapping */
+/* table-layout: fixed;
     
-}
+} */
 
-s div#viewComics table tr td {
+/* s div#viewComics table tr td {
     border-bottom: #5e778d 1px solid;
     border-right: #5e778d 1px solid;
     border-radius: 0.3125em;
     
-}
+} */
 
-div#viewComics table tr:nth-child(odd) {
+/* div#viewComics table tr:nth-child(odd) {
     background-color: #1861a6;
     color: #ffffe6;
     text-align: center;
-}
+} */
 
-div#viewComics table th {
+/* div#viewComics table th {
     background-color: #5c94c1;
     border-radius: 0.3125em;
     color: black;
     font-size: 0.8em;
-}
+} */
 
-.btnShowComicInfo:active {
+/* .btnShowComicInfo:active {
     background-color: red;
-}
+} */
 
-.btnContainer {
+/* .btnContainer {
     width: 90%;
     margin: auto;
-}
+} */
 
-#viewPgMain {
+/* #viewPgMain {
     padding:0;
-}
+} */
 
-#designerSig {
+/* #designerSig {
     margin: 20px 20px;
-}
+} */
 
-div>h4 {
+/* div>h4 {
     margin: 20px 20px;
-}
+} */
 /* 
 #pgViewTable td:nth-child(5) {
     display: none;

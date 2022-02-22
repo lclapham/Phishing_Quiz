@@ -12,34 +12,38 @@
 
 <body class="ui-body">
 
+    <div class="content">
     <!-- Welcome Page Start WELCOME-->
-    <section data-theme="b" data-role="page" id="pgWelcome" data-fullscreen="true">
+    <section class="content__section" data-theme="b" data-role="page" id="pgWelcome" data-fullscreen="true">
         <!-- Navbar setup Start -->
-        <header data-role="header" data-position="fixed">
-            <h1>This is the Welcome Page</h1>
+        <header class="content__section--title" data-role="header" data-position="fixed">
+            <h1>Will you take the bait?</h1>
         </header>
-        <article>
-            <div class="img-container">
-                <p>Welcome to the 227 InfoSec phishing training quiz. You will need to register with your name and
+        <div class="content__section--text">
+                        <p>
+                            Phishing can be more difficult to detect than you might expect. Phishing is when someone pretends to be someone you know in order to deceive you into giving up your personal information. Can you distinguish what's real and what's not? 
+                            <!-- Welcome to the 227 InfoSec phishing training quiz. You will need to register with your name and
                     email. This registration will be used to record your quiz results. Please select the "Sign Up"
-                    button to register.</p>
-                <img class="responsiveImage" width="500" height="400" src="../images/welcome.jpg"
+                    button to register. -->
+                </p>
+                </div>
+<!-- <article> -->
+            <div class="content__section--img-container img-container">
+                <img class="responsiveImage" width="300" height="300" src="../images/phishing-circle.gif"
                     alt="Welcome-logo">
-                <!-- width="300" height="400" -->
+            </div>
+        <!-- </article> -->
+            <div class="content__section--button userBtns">
+                <a ”javascript:history.go(0)” href="./pages/register.html"><button>TAKE QUIZ</button></a>
             </div>
 
-            <div class="userBtns">
-                <a ”javascript:history.go(0)” href="./pages/register.html"><button>Register</button></a>
-            </div>
-
-        </article>
 
         <footer data-role="footer" data-position="fixed">
             <h4>227 InfoSec, Inc. 2022&copy;</h4>
         </footer>
 
     </section>
-
+</div>
 </body>
 
 <script rel="preload" src="./js/scripts.js"></script>

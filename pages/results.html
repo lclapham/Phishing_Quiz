@@ -12,16 +12,16 @@
 
 <body class="ui-body">
 
-
-    <!-- Results Page -->
-    <section data-theme="b" data-role="page" id="pgResults" data-fullscreen="true">
+    <div class="content">
+        <!-- Results Page -->
+    <section class="content__section" data-theme="b" data-role="page" id="pgResults" data-fullscreen="true">
         <!-- Navbar setup Start -->
         <header data-role="header">
-            <h1>The Phishing Quiz Results</h1>
+            <h1>Phishing Quiz Results</h1>
         </header>
 
         <!-- Home Page Body Start -->
-        <main>
+        <main style="grid-area: text;">
             <!-- <form action="index.php" class="contact_form" method="post" name="form"></form> -->
             <!-- <p value="emplinq" id="userResults"></p> -->
             <!-- <input type="submit" id="send" value="Submit Results">
@@ -32,7 +32,7 @@
                 
                 <p value="uname" name="uName" id="uName"></p>
                 <p value="emailAddr" name="emailAddr" id="uEmail"></p>
-                <p value="results" name="results" id="uResults"></p>
+                <p style="font-size: 1.5em; margin: 20px 0;" value="results" name="results" id="uResults"></p>
 
                 <input type="hidden" name="userName" id="userName">
                 <input type="hidden" name="userEmailAddr" id="userEmailAddr">
@@ -41,7 +41,8 @@
                 <!-- Name: <input type="text" name="name"><br> -->
                 <!-- E-mail: <input type="text" name="email"><br>
                  -->
-                <input type="submit">
+                 
+                <input style="width: 200px; height: 50px;background: #C82255; border-radius: 10px; border: none; color: white; font-size: 2em; font-family:'Courier New', Courier, monospace" type="submit">
             </form>
 
 
@@ -54,14 +55,14 @@
         </main>
 
 
-        <!-- Footer Start -->
-        <footer data-role="footer" data-position="fixed">
-            <h4>227 InfoSec, Inc. 2022&copy;</h4>
-        </footer>
     </section>
 
+        <!-- Footer Start -->
+        <footer style="margin-left: 100px;" data-role="footer" data-position="fixed">
+            <h4>227 InfoSec, Inc. 2022&copy;</h4>
+        </footer>
 
-
+</div>
 </body>
 
 <script src="../js/results.js"></script>
