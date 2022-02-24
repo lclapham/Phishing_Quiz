@@ -7,7 +7,7 @@
     <title>Phishing Quiz</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/style.css">    
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/email-base.css">
     <link rel="stylesheet" href="../css/email4.css">
 
@@ -15,95 +15,110 @@
 </head>
 
 <body class="ui-body">
-<div class="content">
-    <!-- Question #1 -->
-    <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
-        <!-- Navbar setup Start -->
-        <header data-role="header">
-            <h1>Question #4</h1>
-        </header>
+    <div class="content">
+        <!-- Question #1 -->
+        <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
+            <!-- Navbar setup Start -->
+            <header class="question-header" data-role="header">
+                <h1>Question #4</h1>
+            </header>
 
-        <!-- Quiz Nav -->
-        <main>
+            <!-- Quiz Nav -->
+            <main>
 
-            <div class="em-template">
+                <div class="em-template">
 
-                <h2 style="padding: 2em 0 0;">You made a purchase with your TJX Rewards® Platinum Mastercard®.</h2>
-        
-                <div class="em-from-div">
-                    <span class="em-dot">
-                        <p>SM</p>
-                    </span>
-                    <h4>
-                        <strong>Synchrony for your TJX Rewards® Platinum Mastercard®</strong>
-                            &lt;customer.service@mail.synchronybank.com&gt;<br>
-                        1/11/2022 4:48 PM
-                    </h4>
-                </div>
-        
-                <h4><br>To: annab23@hotmail.com</h4><br>
-                <br>
-                <div class="body">
-                    <p style="float: right; margin: 10px;">Account ending in: 9528 | <span class="tooltip"  style="text-decoration: underline;">Log in
-                        <span class="tooltiptext">https://tjx.syf.com/login/?lang=en<br> Click or tap to follow link</span>
-                    </span></p>
-                    <div class="tjx-synchrony">
-                        <img src="../images/tjmx-logos.png" alt="tjx logos">
-                        <img src="../images/synchrony-logo.png" alt="synchrony logo">
-                    </div>
-                    <h1>
-                        <span>You made a purchase of $31.11 from WALMART.</span>
-                    </h1>
-                    <br>
-        
-                    <p>
-                        Hi Anna,<br><br>
-        
-                        Thanks for making a purchase on your TJX Rewards® Platinum Mastercard®. Here are your purchase details:
-        
-                    </p><br><br>
-        
-                    <div class="googlemap">
-                        <div class="tooltip">
-                            <img src="../images/googlemap-walmart.png" alt="google map">
-                            <span class="tooltiptext">https://www.google.com/maps/search/?api=1&query=36.365723,-94.217579<br> Click or tap to follow link</span>
+                    <h2 style="padding: 2em 0 0;">You made a purchase with your TJX Rewards® Platinum Mastercard®.</h2>
+
+                    <div class="em-from-div">
+                        <div class="em-dot">
+                            SM
                         </div>
+                        <h4>
+                            <strong>Synchrony for your TJX Rewards® Platinum Mastercard®</strong>
+                        </h4>
+                        <h4 class="em-dot-date">
+                            &lt;customer.service@mail.synchronybank.com&gt;<br>
+                            1/11/2022 4:48 PM
+                        </h4>
                     </div>
-        
-                    <h2 style="text-align:center;">Update your alert preferences anytime.</h2><br>
-                    <div class="tooltip tooltip-button">Log In Now
-                        <span class="tooltiptext">https://tjx.syf.com/login/?lang=en<br> Click or tap to follow link</span>
-                    </div><br><br>
-        
-                    <p>The TJX Rewards® Platinum Mastercard® is issued by Synchrony Bank pursuant to a license by Mastercard
-                        International Incorporated. Mastercard is a registered trademark, and the circles design is a trademark
-                        of Mastercard International Incorporated.<br><br>
-                        Head off identity theft before it happens. For more information about identity theft, please visit the
-                        Federal Trade Commission′ s (FTC) consumer
-                        <span class="tooltip" style="color: blue; text-decoration: underline;">website.
-                            <span class="tooltiptext">https://www.identitytheft.gov/<br> Click or tap to follow link
-                            </span>
-                        </span>
-                        </><br><br>
-                        This is an unmonitored email box. Please do not reply to this email.<br><br>
-                        ABOUT THIS EMAIL MESSAGE: This email was sent by Synchrony to provide important account servicing
-                        information regarding your TJX Rewards® Platinum Mastercard® account. You may receive account servicing
-                        emails even if you have requested not to receive marketing offers by email for your TJX Rewards®
-                        Platinum Mastercard® account. <br><br>
-                        Credit is extended by Synchrony Bank, which is located at <span style="border-bottom: 2px dotted;">170
-                            Election Road, Suite 125, Draper, UT 84020-6425,</span> USA.
-                        <span class="tooltip" style="color: blue; text-decoration: underline;">www.synchrony.com
-                            <span class="tooltiptext">https://www.synchrony.com/<br> Click or tap to follow link
-                            </span><br><br>
-        
-                    </p><br>
-        
-                </div>
-            </div>
-        
 
-            <form class="form-questions" action="">
-                <input type="radio" id="31" name="question4" value="A">
+                    <h4><br>To: annab23@hotmail.com</h4><br>
+                    <br>
+                    <div class="body">
+                        <p style="float: right; margin: 10px;">Account ending in: 9528 | <span class="tooltip"
+                                style="text-decoration: underline;">Log in
+                                <span class="tooltiptext">https://tjx.syf.com/login/?lang=en<br> Click or tap to follow
+                                    link</span>
+                            </span></p>
+                        <div class="tjx-synchrony">
+                            <img src="../images/tjmx-logos.png" alt="tjx logos">
+                            <img src="../images/synchrony-logo.png" alt="synchrony logo">
+                        </div>
+                        <h1>
+                            <span>You made a purchase of $31.11 from WALMART.</span>
+                        </h1>
+                        <br>
+
+                        <p>
+                            Hi Anna,<br><br>
+
+                            Thanks for making a purchase on your TJX Rewards® Platinum Mastercard®. Here are your
+                            purchase details:
+
+                        </p><br><br>
+
+                        <div class="googlemap">
+                            <div class="tooltip">
+                                <img src="../images/googlemap-walmart.png" alt="google map">
+                                <span
+                                    class="tooltiptext">https://www.google.com/maps/search/?api=1&query=36.365723,-94.217579<br>
+                                    Click or tap to follow link</span>
+                            </div>
+                        </div>
+
+                        <h2 style="text-align:center;">Update your alert preferences anytime.</h2><br>
+                        <div class="tooltip tooltip-button">Log In Now
+                            <span class="tooltiptext">https://tjx.syf.com/login/?lang=en<br> Click or tap to follow
+                                link</span>
+                        </div><br><br>
+
+                        <p>The TJX Rewards® Platinum Mastercard® is issued by Synchrony Bank pursuant to a license by
+                            Mastercard
+                            International Incorporated. Mastercard is a registered trademark, and the circles design is
+                            a trademark
+                            of Mastercard International Incorporated.<br><br>
+                            Head off identity theft before it happens. For more information about identity theft, please
+                            visit the
+                            Federal Trade Commission′ s (FTC) consumer
+                            <span class="tooltip" style="color: blue; text-decoration: underline;">website.
+                                <span class="tooltiptext">https://www.identitytheft.gov/<br> Click or tap to follow link
+                                </span>
+                            </span>
+                            </><br><br>
+                            This is an unmonitored email box. Please do not reply to this email.<br><br>
+                            ABOUT THIS EMAIL MESSAGE: This email was sent by Synchrony to provide important account
+                            servicing
+                            information regarding your TJX Rewards® Platinum Mastercard® account. You may receive
+                            account servicing
+                            emails even if you have requested not to receive marketing offers by email for your TJX
+                            Rewards®
+                            Platinum Mastercard® account. <br><br>
+                            Credit is extended by Synchrony Bank, which is located at <span
+                                style="border-bottom: 2px dotted;">170
+                                Election Road, Suite 125, Draper, UT 84020-6425,</span> USA.
+                            <span class="tooltip" style="color: blue; text-decoration: underline;">www.synchrony.com
+                                <span class="tooltiptext">https://www.synchrony.com/<br> Click or tap to follow link
+                                </span><br><br>
+
+                        </p><br>
+
+                    </div>
+                </div>
+
+
+                <form class="form-questions" action="">
+                    <input type="radio" id="31" name="question4" value="A">
                     <label for="31">Phishing Email</label>
                     <input type="radio" id="32" name="question4" value="B">
                     <label for="32">Valid Email</label><br>
@@ -112,20 +127,20 @@
 
                 <div class="content__section--button userBtns">
 
-                <button id="3" class="answer-btn">Next Question</button>
-                <!-- Need to record results. Make a function that has a data libaray of results -->
-            <!-- </nav> -->
-            </div>
+                    <button id="3" class="answer-btn">Next Question</button>
+                    <!-- Need to record results. Make a function that has a data libaray of results -->
+                    <!-- </nav> -->
+                </div>
 
-        </main>
+            </main>
 
-        <!-- Footer Start -->
-        <footer data-role="footer" data-position="fixed">
-            <h4>227 InfoSec, Inc. 2022</h4>
-        </footer>
-    </section>
+            <!-- Footer Start -->
+            <footer data-role="footer" data-position="fixed">
+                <h6>227 InfoSec, Inc. 2022&copy;</h6>
+            </footer>
+        </section>
 
-</div>
+    </div>
 </body>
 
 <script src="../js/scripts.js"></script>
