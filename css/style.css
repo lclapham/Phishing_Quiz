@@ -2,14 +2,18 @@
 html {
     margin: 0;
 }
-
+:root {
+    --fs-h1: 3em;
+    --fs-h6: 1.5em;
+    --fs-btn: 1.25em;
+}
 body {
     /* background: #001C34; */
     background-color: #cfd3d7;
     /* max-height: 100vh; */
     max-width: 1100px;
-    /* max-height: 100vh;
-    max-width:90vw; */
+    max-height: 100vh;
+    /* max-width:90vw; */
     margin: 0 auto;
     display: block;
     /* margin-left: auto;
@@ -18,16 +22,21 @@ body {
     scroll-behavior:smooth;
     overflow: visible !important; */
     color: white;
-    font-family: Aileron, "Open Sans", Roboto, "Helvetica Neue", sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 300;
 }
-
 h1 {
     font-family: 'Glegoo', 'Courier New', Courier, monospace;
-    font-size: 3em;
+    font-size: var(--fs-h1);
     margin: 0;
 
 }
-
+h6 {
+    font-weight: 300;
+}
+p {
+    line-height: 1.5em;
+}
 .content {
     background: #243e50;
     min-height: 100vh;
@@ -44,8 +53,8 @@ h1 {
         "text img"
         "button img";
     position: relative;
-    padding-top: 200px;
-
+    padding-top: 150px;
+    
 }
 .content__section#pgSignUp {
     padding-top: 50px;
@@ -66,17 +75,22 @@ h1 {
 
 .content__section--text {
     grid-area: text;
+    padding-right: 4em;
 }
 
 .content__section--img-container {
     grid-area: img;
+    margin-right: -25px;
 }
 
 .content__section--button {
     grid-area: button;
     margin-top: 30px;
 }
-
+.userBtns {
+    display: grid;
+    justify-items: center;
+}
 .content__section--button button {
     width: 200px;
     height: 50px;
@@ -84,7 +98,7 @@ h1 {
     border: none;
     color: white;
     font-family: 'Glegoo', 'Courier New', Courier, monospace;
-    font-size: 1.25em;
+    font-size: var(--fs-btn);
     border-radius: 10px;
 }
 /* .content-register {
@@ -99,7 +113,7 @@ h1 {
         "title img"
         "text img"
         "imgA img";
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .content__section--register-form {
@@ -122,6 +136,9 @@ h1 {
         "imgC";
     display: grid;
     grid-template-columns: 1fr;
+}
+::placeholder {
+    color: rgb(156, 156, 156);
 }
 .register-input {
     height: 50px;
@@ -154,6 +171,10 @@ h1 {
     justify-self: center;
     margin-top: 20px;
 }
+.question-header {
+    margin-left: 100px;
+}
+
 .form-questions {
     margin: 30px 0;
 }
@@ -171,7 +192,7 @@ fieldset {
 label,
 input {
     margin-top: 1em;
-    font-size: 1.5em;
+    font-size: var(--fs-h6);
     /* margin-right: 2em; */
 }
 input[type='radio'] {
@@ -179,16 +200,17 @@ input[type='radio'] {
     margin-right: 20px;
 }
 
-footer {
+footer { 
     /* margin-top: 140px; */
     /* padding-bottom: 50px; */
-    position: relative;
-bottom: -80px;
+    position: absolute;
+bottom: 0;
+height: 30px;
+padding: 20px 100px;
 }
 
-.footer-register {
+/* .footer-register { */
     /* margin-top: 30px; */
-    margin-left: 100px;
-
-}
+    /* margin-left: 100px; */
+/* } */
 
