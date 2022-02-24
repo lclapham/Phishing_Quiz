@@ -40,6 +40,10 @@
     text-align: center;
     color: white;
   }
+  h4.em-dot-date {
+    display: block;
+    margin: -15px 80px 0px;
+   }
 
       .tjx-synchrony {
           display: inline-block;

@@ -24,7 +24,11 @@
           font-size: large;
           color: white;
       }
-
+      h4.em-dot-date {
+        display: block;
+        margin: -15px 80px 0px;
+       }
+    
   /* specific to email6*/
   .dropbox img{
     width: 5%;
