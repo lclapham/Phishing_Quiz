@@ -15,56 +15,63 @@
 </head>
 
 <body class="ui-body">
-<div class="content">
-    <!-- Question #1 -->
-    <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
-        <!-- Navbar setup Start -->
-        <header data-role="header">
-            <h1>Question #7</h1>
-        </header>
+    <div class="content">
+        <!-- Question #1 -->
+        <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
+            <!-- Navbar setup Start -->
+            <header class="question-header" data-role="header">
+                <h1>Question #7</h1>
+            </header>
 
-        <!-- Quiz Nav -->
-        <main>
+            <!-- Quiz Nav -->
+            <main>
 
-            <div class="em-template">
-                <div class="em-from-div">
-                    <span class="em-dot">
-                        <p>GH</p>
-                    </span>
-                    <h4>
-                        <strong>Google Hangouts</strong> <span style="color: gray;">&lt;no-reply@google.hangouts.com&gt;<br>
-                        2/14/2022 12:06 PM</span>
-                    </h4>
+                <div class="em-template">
+
+                    <div class="em-from-div">
+                        <div class="em-dot">
+                            GH
+                        </div>
+                        <h4>
+                            <strong>Google Hangouts</strong> <span
+                                style="color: gray;">&lt;no-reply@google.hangouts.com&gt;</span></h4>
+                        <h4 class="em-dot-date">
+                            2/14/2022 12:06 PM
+                        </h4>
+                    </div>
+                    <br>
+
+                    <!-- <h4><br>To: chris.kissler@gmail.com</h4> -->
+                    <br>
+
+                    <div class="hangouts">
+                        <img src="../images/google-hangouts3.png" alt="google hangouts banner">
+                    </div>
+                    <div class="conversation">
+                        <div class="person-icon">
+                            <img src="../images/person-icon.png" alt="google hangouts banner">
+                        </div>
+                        <br><br>
+                        <p style="margin-left: 0;">Roberta Cavallo added you to a group conversation.<br><br><span
+                                style="color: gray;">with 1 other</span></p><br><br>
+                        <div class="tooltip tooltip-button">View Conversation
+                            <span class="tooltiptext">https://google.hangouts.com/group-convo/hgroi33/</span>
+                        </div><br><br><br>
+                    </div>
+                    <br>
+                    <p style="font-size: small; color: gray;">
+                        This notification was sent to <span style="color: blue;">chris.kissler@gmail.com</span>.
+                        <span class="tooltip" style="color: blue;">Unsubscribe
+                            <span class="tooltiptext">https://google.hangouts.com/unsubscribe/
+                            </span>
+                        </span> from these emails.<br>
+                        To stop receiving Google Hangouts notifications from someone, open their Google profile and
+                        click Mute.<br>
+                        Google LLC, 1600 Amphitheatre Pkwy, Mountain View, CA 94043 USA<br><br>
+                    </p>
                 </div>
-            
-                <!-- <h4><br>To: chris.kissler@gmail.com</h4> -->
-                <br>
-            
-                <div class="hangouts">
-                    <img src="../images/google-hangouts3.png" alt="google hangouts banner">
-                </div>
-                <div class="conversation">
-                <div class="person-icon">
-                    <img src="../images/person-icon.png" alt="google hangouts banner">
-                </div>
-                <br><br><p style="margin-left: 0;">Roberta Cavallo added you to a group conversation.<br><br><span style="color: gray;">with 1 other</span></p><br><br>
-                <div class="tooltip tooltip-button">View Conversation
-                    <span class="tooltiptext">https://google.hangouts.com/group-convo/hgroi33/</span>
-                </div><br><br><br>
-            </div>
-            <br>
-                <p style="font-size: small; color: gray;">
-                    This notification was sent to <span style="color: blue;">chris.kissler@gmail.com</span>. 
-                    <span class="tooltip" style="color: blue;">Unsubscribe
-                        <span class="tooltiptext">https://google.hangouts.com/unsubscribe/
-                        </span>
-                    </span> from these emails.<br>
-                    To stop receiving Google Hangouts notifications from someone, open their Google profile and click Mute.<br>
-                    Google LLC, 1600 Amphitheatre Pkwy, Mountain View, CA 94043 USA<br><br>
-                </p>
-            </div>
-            
-            <!-- <nav data-role="navbar"> -->
+
+                <!-- <nav data-role="navbar"> -->
 
                 <form class="form-questions" action="">
                     <input type="radio" id="61" name="question7" value="A">
@@ -76,19 +83,19 @@
 
                 <div class="content__section--button userBtns">
 
-                <button id="6" class="answer-btn">Next Question </button>
-                <!-- Need to record results. Make a function that has a data libaray of results -->
-            <!-- </nav> -->
-</div>
-        </main>
+                    <button id="6" class="answer-btn">Next Question </button>
+                    <!-- Need to record results. Make a function that has a data libaray of results -->
+                    <!-- </nav> -->
+                </div>
+            </main>
 
-        <!-- Footer Start -->
-        <footer data-role="footer" data-position="fixed">
-            <h4>227 InfoSec, Inc. 2022</h4>
-        </footer>
-    </section>
+            <!-- Footer Start -->
+            <footer data-role="footer" data-position="fixed">
+                <h6>227 InfoSec, Inc. 2022&copy;</h6>
+            </footer>
+        </section>
 
-</div>
+    </div>
 </body>
 
 <script src="../js/scripts.js"></script>

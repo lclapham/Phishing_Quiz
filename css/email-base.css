@@ -1,7 +1,7 @@
 .em-template {
     background: white;
     font-family: arial,sans-ser;
-    margin: 3em auto 0;
+    margin: 1em auto 0;
     width: 80%;
     height: 400px; 
     overflow-y: auto; 
@@ -56,18 +56,22 @@
 
     /* dot with initials / re / to / from */
   .em-dot {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-left: 20px;
     height: 35px;
     width: 35px;
     border-radius: 50%;
     display: inline-block;
   }
-  .em-dot p {
+  /* .em-dot p {
     position: absolute;
+  } */
+  .em-from-div {
+    display: inline-block;
+    margin-top: 20px;
   }
   .em-from-div h4 {
-    margin: 10px 0 0px 15px;
-    position: absolute;
-    display: inline-block;
+    /* margin: 10px 0 0px 45px; */
+    /* position: absolute; */
+    display: inline;
   }

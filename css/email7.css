@@ -22,7 +22,11 @@
           margin: 8px 4px;/*to center initials in dot*/
           font-size: large;
       }
-
+      h4.em-dot-date {
+        display: block;
+        margin: -15px 80px 0px;
+       }
+    
   /* specific to email7 */
   .hangouts img{
       width: 100%;
