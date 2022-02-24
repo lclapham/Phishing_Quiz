@@ -69,8 +69,7 @@ window.onload = (event) => {
 
                 recordAnswer(pgNumber, answerValue)
             } else {
-                console.log("the two don't match, pucntion--Revisionsed to 2 and updated data)
-                console.log("the two don't match, pucntion--Revisionsed to 2 and updated dataema)
+                console.log("the two don't match")
             }
         }
 
