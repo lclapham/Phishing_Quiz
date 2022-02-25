@@ -14,7 +14,7 @@
     <title>Phishing Quiz</title>
 </head>
 
-<body class="ui-body">
+<body id="6" class="ui-body">
     <div class="content">
         <!-- Question #1 -->
         <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
@@ -36,7 +36,7 @@
                             <strong>Dropbox</strong>
                             <span style="color: gray;">&lt;no-reply@dropboxmail.com&gt;</span>
                         </h4>
-                        <h4  class="em-dot-date" style="color: gray;">
+                        <h4 class="em-dot-date" style="color: gray;">
                             1/11/2022 4:48 PM
                         </h4>
                     </div>
@@ -83,25 +83,19 @@
                     </div>
                 </div>
 
-                <!-- <nav data-role="navbar"> -->
-
-                <form class="form-questions" action="">
-                    <input type="radio" id="51" name="question6" value="A">
-                    <label for="51">Phishing Email</label>
-                    <input type="radio" id="52" name="question6" value="B">
-                    <label for="52">Valid Email</label><br>
-                    <!-- <input type="submit" value="submit"> -->
-                </form>
-                <!-- <a href="question7.html" data-icon="bars"
-                class="ui-btn-icon-bottom navView" data-transition="fade">Next</a> -->
-                <div class="content__section--button userBtns">
-
-                    <button id="5" class="answer-btn">Next Question </button>
-                    <!-- Need to record results. Make a function that has a data libaray of results -->
-                    <!-- </nav> -->
+            </main>
+            <!-- <nav data-role="navbar"> -->
+            <div>
+                <div>
+                    <button class="answerButtons" name="A" value="A">Phishing Email</button> <button
+                        class="answerButtons" name="B" value="B">Valid Email</button>
                 </div>
 
-            </main>
+                <div class="content__section--button userBtns">
+                    <button id="5" class="next-btn">Next Question </button>
+
+                </div>
+            </div>
 
             <!-- Footer Start -->
             <footer data-role="footer" data-position="fixed">

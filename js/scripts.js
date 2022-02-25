@@ -2,7 +2,6 @@
 //This is a test.
 
 window.onload = (event) => {
-    console.log('Index.html and or Question pages are fully loaded');
 
     //////////// Disable next button on load
     nextQuestion = document.querySelector('.next-btn')
@@ -29,96 +28,102 @@ window.onload = (event) => {
 
     // User Button Listner
     $('.next-btn').click(function () {
-        pgNumber = document.body.id
-        if (pgNumber == 9) {
-            window.location.replace("../pages/results.html")
+        answerBtns = document.querySelectorAll('.answerButtons')
+        if (answerBtns[0].value == 'selected') {
+            answer = "A"
+            updateLocalStore(answer)
         } else {
-            let newPage = parseInt(pgNumber + 2);
-            window.location.replace("../pages/question" + newPage + ".html")
+            answer = "B"
+            updateLocalStore(answer)
+        }
+
+        // Get the current page and add 1 to it. 
+        pgNumber = parseInt(document.body.id)
+        newPgNumber = pgNumber + 1;
+
+        // Check if last page or increment page.
+        if (pgNumber == 10) {
+            setScore();
+        } else {
+            window.location.replace("../pages/question" + newPgNumber + ".html")
         }
     })
 
     // Answer Button Listner
     $('.answerButtons').click(function () {
+        buttons = document.getElementsByClassName('answerButtons')
+        // Toggle inner html value state
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].value = null
+        }
+        this.value = "selected"
 
-        pgNumber = document.body.id;
-        answerValue = this.value;
+        // Enable the next button
+        nextQuestion = document.querySelector('.next-btn')
+        nextQuestion.disabled = false;
 
-        console.log("Yep listner is working " + pgNumber + answerValue)
-
-        validateChoice(pgNumber, answerValue)
-        // questionNumber = parseInt(this.id);
-        // calcAnswer(questionNumber);
     })
 
     //////////////////////// Project Functions
 
-    function validateChoice(pgNumber, answerValue) {
-        console.log("In validate chocie")
-        currentStorage = localStorage.getItem('userRepo')
-        currentPG = document.body.id;
+    // Sign up Function; needs some validation.    
 
-        if (currentStorage == null) {
-            recordAnswer(pgNumber, answerValue)
-        } else {
-            newPgNumber = pgNumber + 1
-            if (newPgNumber = currentStorage.length) {
-                console.log("Yes thats right")
-                userAnswerLocal = localStorage.getItem('userRepo')
-                console.log(userAnswerLocal[pgNumber])
+    function setScore() {
+        let userScore = localStorage.getItem('userRepo');
+        let userScoreArr = JSON.parse(userScore);
+        let score = 0
+        let testLength = parseInt(correctAnswerArr.length)
 
-                recordAnswer(pgNumber, answerValue)
-            } else {
-                console.log("the two don't match")
+        for (let i = 0; i < testLength; i++) {
+            if (userScoreArr[i] == correctAnswerArr[i]) {
+                score += 1
             }
+        }
+        // Set the user score
+        var userScoreFin = (score / testLength) * 100;
+
+        // Clear the decimel places
+        finalScore = Math.trunc(userScoreFin)
+
+        // Put the score in localstorage
+        localStorage.setItem('userFin', JSON.stringify(finalScore))
+
+        // Switch the page to the results page
+        window.location.replace("../pages/results.html")
+
+    }
+
+    function fnSignUp(event) {
+        event.preventDefault(event);
+        let dataStore = {
+            fName: $('#fName').val(),
+            lName: $('#lName').val(),
+            uEmail: $('#uEmail').val().toUpperCase(),
+
+        }
+
+        // set local Storage with user signup details
+        localStorage.setItem('dataKey', JSON.stringify(dataStore));
+        window.location.replace("./instructions.html");
+
+    };
+
+
+    // This function manages the localstorage
+    function updateLocalStore(answer) {
+        //check localstorage and add new result to old.
+        var old = localStorage.getItem('userRepo');
+
+        if (old == null) {
+            localStorage.setItem('userRepo', JSON.stringify(answer))
+        } else {
+
+            strOld = JSON.parse(old);
+
+            localStorage.setItem('userRepo', JSON.stringify(strOld + answer));
+
         }
 
     }
-
-
-
-function recordAnswer(pgNumber, answerValue) {
-    console.log("Yep it is working " + pgNumber + answerValue)
-
-    // Check answer key agains user answer
-    console.log("This is the val of answer value in the fucntion " + answerValue)
-    
-    if (correctAnswerArr[pgNumber] == answerValue) {
-        let answerRight = 'c'
-        updateLocalStore(answerRight)
-    } else {
-        let answerWrong = 'x'
-        updateLocalStore(answerWrong)
-    }
-    // Enable the next button
-    nextQuestion = document.querySelector('.next-btn')
-    nextQuestion.disabled = false;
-}
-
-// Sign up Function; needs some validation.    
-function fnSignUp(event) {
-    event.preventDefault(event);
-    let dataStore = {
-        fName: $('#fName').val(),
-        lName: $('#lName').val(),
-        uEmail: $('#uEmail').val().toUpperCase(),
-
-    }
-
-    // set local Storage with user signup details
-    localStorage.setItem('dataKey', JSON.stringify(dataStore));
-    window.location.replace("./instructions.html");
-
-};
-
-
-// This function manages the localstorage
-function updateLocalStore(answer) {
-    //check localstorage and add new result to old.
-    var old = localStorage.getItem('userRepo');
-    if (old === null) old = "";
-    localStorage.setItem('userRepo', old + answer);
-}
-
 };
 

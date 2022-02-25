@@ -14,7 +14,7 @@
     <title>Phishing Quiz</title>
 </head>
 
-<body class="ui-body">
+<body id="7" class="ui-body">
     <div class="content">
         <!-- Question #1 -->
         <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
@@ -34,7 +34,8 @@
                         </div>
                         <h4>
                             <strong>Google Hangouts</strong> <span
-                                style="color: gray;">&lt;no-reply@google.hangouts.com&gt;</span></h4>
+                                style="color: gray;">&lt;no-reply@google.hangouts.com&gt;</span>
+                        </h4>
                         <h4 class="em-dot-date">
                             2/14/2022 12:06 PM
                         </h4>
@@ -71,23 +72,20 @@
                     </p>
                 </div>
 
-                <!-- <nav data-role="navbar"> -->
+            </main>
 
-                <form class="form-questions" action="">
-                    <input type="radio" id="61" name="question7" value="A">
-                    <label for="61">Phishing Email</label>
-                    <input type="radio" id="62" name="question7" value="B">
-                    <label for="62">Valid Email</label><br>
-                    <!-- <input type="submit" value="submit"> -->
-                </form>
+            <!-- <nav data-role="navbar"> -->
+            <div>
+                <div>
+                    <button class="answerButtons" name="A" value="A">Phishing Email</button> <button
+                        class="answerButtons" name="B" value="B">Valid Email</button>
+                </div>
 
                 <div class="content__section--button userBtns">
+                    <button id="6" class="next-btn">Next Question </button>
 
-                    <button id="6" class="answer-btn">Next Question </button>
-                    <!-- Need to record results. Make a function that has a data libaray of results -->
-                    <!-- </nav> -->
                 </div>
-            </main>
+            </div>
 
             <!-- Footer Start -->
             <footer data-role="footer" data-position="fixed">

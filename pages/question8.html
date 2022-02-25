@@ -13,49 +13,45 @@
     <title>Phishing Quiz</title>
 </head>
 
-<body class="ui-body">
-<div class="content">
-    <!-- Question #1 -->
-    <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
-        <!-- Navbar setup Start -->
-        <header class="question-header" data-role="header">
-            <h1>Question #8</h1>
-        </header>
+<body id="8" class="ui-body">
+    <div class="content">
+        <!-- Question #1 -->
+        <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
+            <!-- Navbar setup Start -->
+            <header class="question-header" data-role="header">
+                <h1>Question #8</h1>
+            </header>
 
-        <!-- Quiz Nav -->
-        <main>
+            <!-- Quiz Nav -->
+            <main>
 
-            <div class="em-template" style="border: none;">
-<img src="../images/amazon phish.png" alt="">
+                <div class="em-template" style="border: none;">
+                    <img src="../images/amazon phish.png" alt="">
 
 
-            </div>
-           
+                </div>
+
+            </main>
             <!-- <nav data-role="navbar"> -->
-
-                <form class="form-questions" action="">
-                    <input type="radio" id="71" name="question8" value="A">
-                    <label for="71">Phishing Email</label>
-                    <input type="radio" id="72" name="question8" value="B">
-                    <label for="72">Valid Email</label><br>
-                    <!-- <input type="submit" value="submit"> -->
-                </form>
+            <div>
+                <div>
+                    <button class="answerButtons" name="A" value="A">Phishing Email</button> <button
+                        class="answerButtons" name="B" value="B">Valid Email</button>
+                </div>
 
                 <div class="content__section--button userBtns">
+                    <button id="7" class="next-btn">Next Question </button>
 
-                <button id="7" class="answer-btn">Next Question </button>
-                <!-- Need to record results. Make a function that has a data libaray of results -->
-            <!-- </nav> -->
-</div>
-        </main>
+                </div>
+            </div>
 
-        <!-- Footer Start -->
-        <footer data-role="footer" data-position="fixed">
-            <h6>227 InfoSec, Inc. 2022&copy;</h6>
-        </footer>
-    </section>
+            <!-- Footer Start -->
+            <footer data-role="footer" data-position="fixed">
+                <h6>227 InfoSec, Inc. 2022&copy;</h6>
+            </footer>
+        </section>
 
-</div>
+    </div>
 </body>
 
 <script src="../js/scripts.js"></script>
