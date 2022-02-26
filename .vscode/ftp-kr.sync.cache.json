@@ -1,4 +1,52 @@
 {
-  "ftp://lclapham@192.168.56.106:21": {},
+  "ftp://lclapham@192.168.1.252:21": {
+    ".git": {},
+    ".vscode": {},
+    "applications.html": {
+      "type": "-",
+      "size": 3607,
+      "lmtime": 0,
+      "modified": false
+    },
+    "bitnami.css": {
+      "type": "-",
+      "size": 177,
+      "lmtime": 0,
+      "modified": false
+    },
+    "css": {},
+    "dashboard": {},
+    "email_templates": {},
+    "favicon.ico": {
+      "type": "-",
+      "size": 30894,
+      "lmtime": 0,
+      "modified": false
+    },
+    "images": {},
+    "img": {},
+    "index.html": {
+      "type": "-",
+      "size": 2165,
+      "lmtime": 0,
+      "modified": false
+    },
+    "index.php.old": {
+      "type": "-",
+      "size": 260,
+      "lmtime": 0,
+      "modified": false
+    },
+    "js": {},
+    "mailer.php": {
+      "type": "-",
+      "size": 4131,
+      "lmtime": 0,
+      "modified": false
+    },
+    "pages": {},
+    "php": {},
+    "webalizer": {}
+  },
   "$version": 1
 }

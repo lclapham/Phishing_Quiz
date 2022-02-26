@@ -5,16 +5,23 @@ window.onload = (event) => {
 
     //////////// Disable next button on load
     nextQuestion = document.querySelector('.next-btn')
-    nextQuestion.disabled = true;
+
+    // Make sure the page presented has next buttons
+    if (nextQuestion == null) {
+        
+    } else {
+        nextQuestion.disabled = true;
+    }
 
     ////////////////// Setup Variables
     const $elBtnLogIn = $("#loginBtn");
     console.log($elBtnLogIn);
 
+    // Set the answers key below to automate grading
     const correctAnswerArr = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',]
     answerArr = []
 
-    /////////////////// Setup Listing Events
+    /////////////////// Setup Listing Events/////////////////////////////////////////////
 
     // User Signup FORM Listner
     $('#mySignUpForm').submit(function (event) {
@@ -22,9 +29,16 @@ window.onload = (event) => {
     });
 
     // Start quiz button listner
-    $('#startBTN').click(function () {
-        window.location.replace("../Phishing_Quiz/question1.html")
-    })
+    $('#startQuizBtn').click(function () {
+               
+        // Set the number of pages in quiz here.
+        let totalNumQuestions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        localStorage.setItem('numQ', JSON.stringify(totalNumQuestions));
+
+        // Call for the next page
+        newPageFunc()
+
+    });
 
     // User Button Listner
     $('.next-btn').click(function () {
@@ -42,11 +56,9 @@ window.onload = (event) => {
         newPgNumber = pgNumber + 1;
 
         // Check if last page or increment page.
-        if (pgNumber == 10) {
-            setScore();
-        } else {
-            window.location.replace("../pages/question" + newPgNumber + ".html")
-        }
+        setScore();
+        newPageFunc()
+
     })
 
     // Answer Button Listner
@@ -62,17 +74,60 @@ window.onload = (event) => {
         nextQuestion = document.querySelector('.next-btn')
         nextQuestion.disabled = false;
 
-    })
+    });
 
-    //////////////////////// Project Functions
+     //////////////////////// Project Functions///////////////////////////////
 
+    // Function to ranomize and set new page
+    function newPageFunc() {
+       
+        // Get the random number
+        ranNum = randomNumberGen(10)
+
+        if (ranNum === 11) {
+
+            window.location.replace("../pages/results.html")
+
+        } else {
+
+            window.location.replace("../pages/question" + ranNum + ".html")
+        }
+
+    }
+
+    //  Create a random number
+    function randomNumberGen(countDown) {
+       
+        // Get the current local storage
+        numQ = localStorage.getItem('numQ');
+        numQArr = JSON.parse(numQ);
+        numQArrLength = numQArr.length
+
+        do {
+            let min = 1;
+            ranNum = Math.floor(Math.random() * (countDown - min + 1) + min);
+            ranIndex = numQArr.indexOf(ranNum)
+            if(numQArr.length == 0){
+                ranNum = 11;
+                return ranNum;
+            }
+        } while (ranIndex === -1);
+
+        numQArr.splice(ranIndex, 1)
+        localStorage.setItem('numQ', JSON.stringify(numQArr))
+
+        return ranNum;
+
+    }
+   
     // Sign up Function; needs some validation.    
-
     function setScore() {
         let userScore = localStorage.getItem('userRepo');
         let userScoreArr = JSON.parse(userScore);
         let score = 0
         let testLength = parseInt(correctAnswerArr.length)
+
+        // newPageFunc();
 
         for (let i = 0; i < testLength; i++) {
             if (userScoreArr[i] == correctAnswerArr[i]) {
@@ -88,26 +143,7 @@ window.onload = (event) => {
         // Put the score in localstorage
         localStorage.setItem('userFin', JSON.stringify(finalScore))
 
-        // Switch the page to the results page
-        window.location.replace("../pages/results.html")
-
     }
-
-    function fnSignUp(event) {
-        event.preventDefault(event);
-        let dataStore = {
-            fName: $('#fName').val(),
-            lName: $('#lName').val(),
-            uEmail: $('#uEmail').val().toUpperCase(),
-
-        }
-
-        // set local Storage with user signup details
-        localStorage.setItem('dataKey', JSON.stringify(dataStore));
-        window.location.replace("./instructions.html");
-
-    };
-
 
     // This function manages the localstorage
     function updateLocalStore(answer) {
@@ -117,13 +153,11 @@ window.onload = (event) => {
         if (old == null) {
             localStorage.setItem('userRepo', JSON.stringify(answer))
         } else {
-
             strOld = JSON.parse(old);
-
             localStorage.setItem('userRepo', JSON.stringify(strOld + answer));
 
         }
 
-    }
-};
+    };
 
+}
