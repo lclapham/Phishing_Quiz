@@ -33,7 +33,7 @@ window.onload = (event) => {
     if (results >= 80) {
 
     } else {
-        console.log("You failes")
+        console.log("You failed")
         getDownload.disabled = true;
         alert("You must get 80% or higher to get a certificate.")
     }
