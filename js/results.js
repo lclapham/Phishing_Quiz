@@ -2,7 +2,7 @@
 window.onload = (event) => {
     //  Setup localstorage for score
     let results = localStorage.getItem('userFin')
-
+    console.log("Yes loaded")
 
     // Get the users info and post it into the results page
     let userFirst = localStorage.getItem('firstName')
@@ -16,12 +16,19 @@ window.onload = (event) => {
     userName.replace("",)
 
     // document.getElementById('userResults').innerText = resultPercent 
-    document.getElementById('userName').value = NewUser
-    document.getElementById('userEmailAddr').value = NewEmail
-    document.getElementById('userResults').value = results + "%."
+    // document.getElementById('userName').value = NewUser
+    // document.getElementById('userEmailAddr').value = NewEmail
+    // document.getElementById('userResults').value = results + "%."
 
     document.getElementById('uName').innerText = NewUser
     document.getElementById('uEmail').innerText = NewEmail
     document.getElementById('uResults').innerText = results
+
+    // Listener for the button
+    $('#certBtn').click(function () {
+        console.log("your in the listener")
+        window.location.replace("../pages/certificate.html")
+    });
+
 };
 
