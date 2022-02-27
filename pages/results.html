@@ -8,35 +8,43 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdn.rawgit.com/yWorks/jsPDF/e2a73c5b/dist/jspdf.min.js"></script>
+    <script
+        src="https://cdn.rawgit.com/sphilee/jsPDF-CustomFonts-support/bcc544cd/dist/jspdf.customfonts.min.js"></script>
+    <!-- <script src="https://cdn.rawgit.com/sphilee/jsPDF-CustomFonts-support/bcc544cd/dist/default_vfs.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css">
+    
 </head>
 
-<body class="ui-body">
+<body class=" ui-body">
 
     <div class="content">
         <!-- Results Page -->
-    <section class="content__section" data-theme="b" data-role="page" id="pgResults" data-fullscreen="true">
-        <!-- Navbar setup Start -->
-        <header data-role="header">
-            <h1>Phishing Results</h1>
-        </header>
-        <div class="content__section--img-container img-container">
-            <img class="responsiveImage" width="300" height="auto" src="../images/circle-phish.gif"
-                alt="Welcome-logo">
-        </div>
+        <section class="content__section" data-theme="b" data-role="page" id="pgResults" data-fullscreen="true">
+            <!-- Navbar setup Start -->
+            <header data-role="header">
+                <h1>Phishing Results</h1>
+            </header>
+            <div class="content__section--img-container img-container">
+                <img class="responsiveImage" width="300" height="auto" src="../images/circle-phish.gif"
+                    alt="Welcome-logo">
+            </div>
 
-        <!-- Home Page Body Start -->
-        <main style="grid-area: text;">
-            <!-- <form action="index.php" class="contact_form" method="post" name="form"></form> -->
-            <!-- <p value="emplinq" id="userResults"></p> -->
-            <!-- <input type="submit" id="send" value="Submit Results">
+            <!-- Home Page Body Start -->
+            <main style="grid-area: text;">
+                <!-- <form action="index.php" class="contact_form" method="post" name="form"></form> -->
+                <!-- <p value="emplinq" id="userResults"></p> -->
+                <!-- <input type="submit" id="send" value="Submit Results">
 
             </form> -->
 
-            <!-- <form action="/php/sendResults.php" method="post"> -->
-                
+                <!-- <form action="/php/sendResults.php" method="post"> -->
+
                 <p value="uname" name="uName" id="uName"></p>
                 <p value="emailAddr" name="emailAddr" id="uEmail"></p>
-                <p style="font-size: 1.5em; margin: 20px 0;"value="results" name="results" >You scored <span  id="uResults"></span>%</p>
+                <p style="font-size: 1.5em; margin: 20px 0;" value="results" name="results">You scored <span
+                        id="uResults"></span>%</p>
 
                 <!-- <input type="hidden" name="userName" id="userName">
                 <input type="hidden" name="userEmailAddr" id="userEmailAddr">
@@ -45,31 +53,33 @@
                 <!-- Name: <input type="text" name="name"><br> -->
                 <!-- E-mail: <input type="text" name="email"><br>
                  -->
-                 <button id="certBtn" style="width: 200px; height: 50px;background: #C82255; border-radius: 10px; border: none; color: white; font-size: 1.5em; font-family:'Courier New', Courier, monospace" >Get Certificate</button>
+                <button id="certBtn"
+                    style="width: 200px; height: 75px;background: #C82255; border-radius: 10px; border: none; color: white; font-size: 1.5em; font-family:'Courier New', Courier, monospace">Download
+                    Certificate</button>
                 <!-- <input style="width: 200px; height: 50px;background: #C82255; border-radius: 10px; border: none; color: white; font-size: 1.5em; font-family:'Courier New', Courier, monospace" type="submit"> -->
-            <!-- </form> -->
+                <!-- </form> -->
 
 
-            <!-- <nav data-role="navbar">
+                <!-- <nav data-role="navbar">
                
                 <button id="userResults"><a href="" data-icon="bars" class="ui-btn-icon-bottom navView"
                         data-transition="fade">Submit Results</a> </button>
             </nav> -->
 
-        </main>
+            </main>
 
 
-    </section>
+        </section>
 
         <!-- Footer Start -->
         <footer data-role="footer" data-position="fixed">
             <h6>227 InfoSec, Inc. 2022&copy;</h6>
         </footer>
 
-</div>
-</body>
+    </div>
+    </body>
 
-<script src="../js/results.js"></script>
+    <script src="../js/results.js"></script>
 
 
 </html>
