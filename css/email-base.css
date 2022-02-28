@@ -2,9 +2,9 @@
     background: white;
     font-family: arial,sans-ser;
     margin: 1em auto 0;
-    width: 80%;
-    height: 400px; 
-    overflow-y: auto; 
+    width: 95%;
+    /* height: 400px; 
+    overflow-y: auto;  */
     overflow-x: hidden;
 }  
 .em-template p,
