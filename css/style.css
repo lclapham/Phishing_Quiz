@@ -38,49 +38,50 @@ body {
     width: 75px;
     border: 1px solid #243e50;
 }
+
+
+#sp00 {
+    float: left;
+    background-color: grey;
+}
 #sp01 {
     
     float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 #sp02 {
     float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 #sp03 {
     float: left;
-    background-color: #c82255;
+    background-color: grey;
 }
 
 #sp04 {
     float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 #sp05 {
     float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 #sp06 {
     float: left;
-    background-color: #c82255;
+    background-color: grey;
 }
 
 #sp07 {
     float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 #sp08 {
     float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 #sp09 {
     float: left;
-    background-color: #c82255;
-}
-
-#sp10 {
-    float: left;
-    background-color: #008181;
+    background-color: grey;
 }
 
 h1 {
