@@ -110,10 +110,10 @@ window.onload = (event) => {
 
             if (userProgressArr[i] == 'C') {
                 console.log("It equals C")
-                spanBox.style.backgroundColor = "green";
+                spanBox.style.backgroundColor = "#008181";
             } else if(userProgressArr[i] == 'X') {
                 console.log("in the else")
-                spanBox.style.backgroundColor = "red";
+                spanBox.style.backgroundColor = "#c82255";
             }
         }
     }
