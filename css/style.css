@@ -22,14 +22,69 @@ body {
     scroll-behavior:smooth;
     overflow: visible !important; */
     color: white;
-    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 300;
 }
+
+.pBarContainer {
+    /* border: 3px solid black; */
+    margin-left: 5%;
+}
+.pBar {
+    display: block;
+    height: 15px;
+    width: 75px;
+    border: 3px solid black;
+}
+#sp01 {
+    
+    float: left;
+    background-color: green;
+}
+#sp02 {
+    float: left;
+    background-color: green;
+}
+#sp03 {
+    float: left;
+    background-color: red;
+}
+
+#sp04 {
+    float: left;
+    background-color: green;
+}
+#sp05 {
+    float: left;
+    background-color: green;
+}
+#sp06 {
+    float: left;
+    background-color: red;
+}
+
+#sp07 {
+    float: left;
+    background-color: green;
+}
+#sp08 {
+    float: left;
+    background-color: green;
+}
+#sp09 {
+    float: left;
+    background-color: red;
+}
+
+#sp10 {
+    float: left;
+    background-color: green;
+}
+
 h1 {
-    font-family: 'Glegoo', 'Courier New', Courier, monospace;
+    font-family: "Glegoo", "Courier New", Courier, monospace;
     font-size: var(--fs-h1);
     margin: 0;
-
 }
 h6 {
     font-weight: 300;
@@ -54,7 +109,6 @@ p {
         "button img";
     position: relative;
     padding-top: 150px;
-    
 }
 .content__section#pgSignUp {
     padding-top: 50px;
@@ -94,10 +148,10 @@ p {
 .content__section--button button {
     width: 200px;
     height: 50px;
-    background-color: #C82255;
+    background-color: #c82255;
     border: none;
     color: white;
-    font-family: 'Glegoo', 'Courier New', Courier, monospace;
+    font-family: "Glegoo", "Courier New", Courier, monospace;
     font-size: var(--fs-btn);
     border-radius: 10px;
 }
@@ -195,22 +249,21 @@ input {
     font-size: var(--fs-h6);
     /* margin-right: 2em; */
 }
-input[type='radio'] {
+input[type="radio"] {
     transform: scale(2);
     margin-right: 20px;
 }
 
-footer { 
+footer {
     /* margin-top: 140px; */
     /* padding-bottom: 50px; */
     /* position: absolute; This was overlaying on the buttons when in debug--could not select button. */
-bottom: 0;
-height: 30px;
-padding: 20px 100px;
+    bottom: 0;
+    height: 30px;
+    padding: 20px 100px;
 }
 
 /* .footer-register { */
-    /* margin-top: 30px; */
-    /* margin-left: 100px; */
+/* margin-top: 30px; */
+/* margin-left: 100px; */
 /* } */
-
