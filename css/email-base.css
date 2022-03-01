@@ -3,9 +3,9 @@
     font-family: arial,sans-ser;
     margin: 1em auto 0;
     width: 95%;
-    /* height: 400px; 
-    overflow-y: auto;  */
-    overflow-x: hidden;
+    /* height: 600px;  */
+    /*overflow-y: auto;  */
+    /* overflow-x: hidden; */
 }  
 .em-template p,
 .em-template h1,
@@ -74,4 +74,9 @@
     /* margin: 10px 0 0px 45px; */
     /* position: absolute; */
     display: inline;
+  }
+  iframe {
+    display: block;
+    margin: 0 auto;
+    height: 400px;
   }
