@@ -28,57 +28,59 @@ body {
 
 .pBarContainer {
     /* border: 3px solid black; */
-    margin-left: 5%;
+    /* margin-left: 5%; */
+    display: grid;
+    justify-items: center;
 }
 .pBar {
     display: block;
     height: 15px;
     width: 75px;
-    border: 3px solid black;
+    border: 1px solid #243e50;
 }
 #sp01 {
     
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 #sp02 {
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 #sp03 {
     float: left;
-    background-color: red;
+    background-color: #c82255;
 }
 
 #sp04 {
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 #sp05 {
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 #sp06 {
     float: left;
-    background-color: red;
+    background-color: #c82255;
 }
 
 #sp07 {
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 #sp08 {
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 #sp09 {
     float: left;
-    background-color: red;
+    background-color: #c82255;
 }
 
 #sp10 {
     float: left;
-    background-color: green;
+    background-color: #008181;
 }
 
 h1 {
@@ -141,11 +143,8 @@ p {
     grid-area: button;
     margin-top: 30px;
 }
-.userBtns {
-    display: grid;
-    justify-items: center;
-}
 .content__section--button button {
+    display: inline-block;
     width: 200px;
     height: 50px;
     background-color: #c82255;
@@ -154,6 +153,57 @@ p {
     font-family: "Glegoo", "Courier New", Courier, monospace;
     font-size: var(--fs-btn);
     border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.content__section--button button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+.content__section--button button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .5s;
+}
+.content__section--button button:hover span {
+    padding-right: 25px;
+}
+.content__section--button button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.answerBtns {
+    display: grid; 
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    margin: 30px auto;
+}
+.userBtns {
+    display: grid;
+    justify-items: center;
+    opacity: .8;
+}
+.answerBtns button {
+    background-color: gray;
+}
+.answerButtons[value='A']:hover,
+.answerButtons[value='A']:visited
+ {
+    background-color: #c82255;
+    /* opacity: 0.6; */
+  transition: 0.5s;
+}
+.answerButtons[value='B']:hover {
+    background-color: #008181;
+    transition: 0.5s;
+
 }
 /* .content-register {
     height: 115vh;
