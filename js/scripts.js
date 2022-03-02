@@ -4,9 +4,13 @@
 window.onload = (event) => {
 
     //////////// Disable next button on load
-    nextQuestion = document.querySelector('.next-btn')
-    let nextQSpan = nextQuestion.querySelector('span')
-    nextQSpan.style.display = "none"
+    let nextQuestion = document.querySelector('.next-btn')
+    
+    if (nextQuestion != null) {
+        let nextQSpan = nextQuestion.querySelector('span')
+        nextQSpan.style.display = "none"
+    }
+
 
     // Progress Bar checks and calls
     checkLocalStor = localStorage.getItem('userRepo');
