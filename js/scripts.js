@@ -121,11 +121,20 @@ window.onload = (event) => {
         for (let i = 0; i < userProgressArr.length; i++) {
 
             spanBox = document.querySelector('#sp0' + i)
+            imgCheck = document.querySelector('#ck0' + i)
+            imgX = document.querySelector('#x0' + i)
+
+            
+            console.log(imgCheck);
 
             if (userProgressArr[i] == 'C') {
-                spanBox.style.backgroundColor = "#008181";
+                spanBox.style.backgroundColor = "white";
+                imgCheck.style.display = 'grid';
+
             } else if (userProgressArr[i] == 'X') {
-                spanBox.style.backgroundColor = "#c82255";
+                spanBox.style.backgroundColor = "white";
+                imgX.style.display = 'grid';
+
             }
         }
     }

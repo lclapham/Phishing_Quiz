@@ -178,7 +178,10 @@ p {
     opacity: 1;
     right: 0;
 }
-
+.pBarContainer span {
+    display: grid;
+    justify-content: center;
+}
 .answerBtns {
     display: grid; 
     justify-items: center;
