@@ -5,6 +5,8 @@ window.onload = (event) => {
 
     //////////// Disable next button on load
     nextQuestion = document.querySelector('.next-btn')
+    let nextQSpan = nextQuestion.querySelector('span')
+    nextQSpan.style.display = "none"
 
     // Progress Bar checks and calls
     checkLocalStor = localStorage.getItem('userRepo');
@@ -18,6 +20,7 @@ window.onload = (event) => {
 
     } else {
         nextQuestion.disabled = true;
+        nextQuestion.style.opacity = ".8"
     }
 
     ////////////////// Setup Variables
@@ -25,7 +28,6 @@ window.onload = (event) => {
     console.log($elBtnLogIn);
 
     // Set the answers key below to automate grading
-    const correctAnswerArr = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A',]
     answerArr = []
 
     /////////////////// Setup Listing Events/////////////////////////////////////////////
@@ -51,17 +53,13 @@ window.onload = (event) => {
     $('.next-btn').click(function () {
         answerBtns = document.querySelectorAll('.answerButtons')
         bodyName = document.querySelector('.ui-body').title
-        console.log(answerBtns[0].value)
-        console.log(bodyName)
-        console.log(answerBtns[1].value)
+
 
         if ((answerBtns[0].value == 'selected') && (answerBtns[0].name == bodyName)) {
-            console.log("In first if " + answerBtns[0] + bodyName)
             answer = "C"
             updateLocalStore(answer)
 
         } else if (answerBtns[1].value = 'selected' && answerBtns[1].name == bodyName) {
-            console.log("in the second if")
             answer = "C"
             updateLocalStore(answer)
         } else {
@@ -81,38 +79,48 @@ window.onload = (event) => {
     })
 
     // Answer Button Listner
-    $('.answerButtons').click(function () {
+    $('.answerButtons').click(function (e) {
+
+
         buttons = document.getElementsByClassName('answerButtons')
         // Toggle inner html value state
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].value = null
         }
+
         this.value = "selected"
+
+        if (e.target.name == 'A') {
+            this.style.backgroundColor = "#c82255"
+            buttons[1].style.backgroundColor = "grey"
+        } else if (e.target.name == 'B') {
+            this.style.backgroundColor = "#008181"
+            buttons[0].style.backgroundColor = "grey"
+        }
 
         // Enable the next button
         nextQuestion = document.querySelector('.next-btn')
         nextQuestion.disabled = false;
+        nextQuestion.style.opacity = "1"
+        let nextQSpan = nextQuestion.querySelector('span')
+        nextQSpan.style.display = "inline"
 
     });
 
     //////////////////////// Project Functions///////////////////////////////
 
-
     // Function to set the color of the progress bar
     function progressBar() {
         let userProgress = localStorage.getItem('userRepo');
         let userProgressArr = JSON.parse(userProgress);
-        console.log("this is the length " + userProgressArr.length)
 
         for (let i = 0; i < userProgressArr.length; i++) {
-            
+
             spanBox = document.querySelector('#sp0' + i)
 
             if (userProgressArr[i] == 'C') {
-                console.log("It equals C")
                 spanBox.style.backgroundColor = "#008181";
-            } else if(userProgressArr[i] == 'X') {
-                console.log("in the else")
+            } else if (userProgressArr[i] == 'X') {
                 spanBox.style.backgroundColor = "#c82255";
             }
         }

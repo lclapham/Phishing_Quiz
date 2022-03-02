@@ -194,14 +194,14 @@ p {
 .answerBtns button {
     background-color: gray;
 }
-.answerButtons[value='A']:hover,
-.answerButtons[value='A']:visited
+.answerButtons[name='A']:hover,
+.answerButtons[name='A']:visited
  {
     background-color: #c82255;
     /* opacity: 0.6; */
   transition: 0.5s;
 }
-.answerButtons[value='B']:hover {
+.answerButtons[name='B']:hover {
     background-color: #008181;
     transition: 0.5s;
 
