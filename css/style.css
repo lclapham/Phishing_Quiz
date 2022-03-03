@@ -3,13 +3,23 @@ html {
     margin: 0;
 }
 :root {
+    /* font sizes */
     --fs-h1: 3em;
     --fs-h6: 1.5em;
     --fs-btn: 1.25em;
+
+    /* colors */
+    --clr-white: #fff;
+    --clr-ltgrey: #cfd3d7;
+    --clr-grey: #4f606c;
+    --clr-teal: #243e50;
+    --clr-red: #c82255;
+    --clr-green: #008181;
+
 }
 body {
     /* background: #001C34; */
-    background-color: #cfd3d7;
+    background-color: var(--clr-ltgrey);
     /* max-height: 100vh; */
     max-width: 1100px;
     max-height: 100vh;
@@ -21,7 +31,7 @@ body {
     /* padding: 0;
     scroll-behavior:smooth;
     overflow: visible !important; */
-    color: white;
+    color: var(--clr-white);
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 300;
 }
@@ -36,52 +46,52 @@ body {
     display: block;
     height: 15px;
     width: 75px;
-    border: 1px solid #243e50;
+    border: 1px solid var(--clr-teal);
 }
 
 
 #sp00 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp01 {
     
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp02 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp03 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 
 #sp04 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp05 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp06 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 
 #sp07 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp08 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 #sp09 {
     float: left;
-    background-color: grey;
+    background-color: var(--clr-grey);
 }
 
 h1 {
@@ -96,7 +106,7 @@ p {
     line-height: 1.5em;
 }
 .content {
-    background: #243e50;
+    background: var(--clr-teal);
     min-height: 100vh;
     margin: 0 auto;
 }
@@ -148,9 +158,9 @@ p {
     display: inline-block;
     width: 200px;
     height: 50px;
-    background-color: #c82255;
+    background-color: var(--clr-red);
     border: none;
-    color: white;
+    color: var(--clr-white);
     font-family: "Glegoo", "Courier New", Courier, monospace;
     font-size: var(--fs-btn);
     border-radius: 10px;
@@ -192,20 +202,22 @@ p {
 .userBtns {
     display: grid;
     justify-items: center;
-    opacity: .8;
+    /* opacity: .8; */
 }
 .answerBtns button {
-    background-color: gray;
+    background-color: var(--clr-ltgrey);
+    color: var(--clr-grey);
 }
 .answerButtons[name='A']:hover,
 .answerButtons[name='A']:visited
  {
-    background-color: #c82255;
-    /* opacity: 0.6; */
-  transition: 0.5s;
+    background-color: var(--clr-red);
+    color: white;
+    transition: 0.5s;
 }
 .answerButtons[name='B']:hover {
-    background-color: #008181;
+    background-color: var(--clr-green);
+    color: white;
     transition: 0.5s;
 
 }
@@ -246,7 +258,7 @@ p {
     grid-template-columns: 1fr;
 }
 ::placeholder {
-    color: rgb(156, 156, 156);
+    color: var(--clr-grey);
 }
 .register-input {
     height: 50px;
@@ -309,15 +321,8 @@ input[type="radio"] {
 }
 
 footer {
-    /* margin-top: 140px; */
-    /* padding-bottom: 50px; */
-    /* position: absolute; This was overlaying on the buttons when in debug--could not select button. */
+    position: absolute; 
     bottom: 0;
-    height: 30px;
-    padding: 20px 100px;
+    padding: 20px 30px;
 }
 
-/* .footer-register { */
-/* margin-top: 30px; */
-/* margin-left: 100px; */
-/* } */
