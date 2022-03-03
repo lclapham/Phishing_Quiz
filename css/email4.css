@@ -16,12 +16,12 @@
         .em-dot {
           background-color: #023890;
         }
-        .em-dot p {
-            margin: 8px 4px;/*to center initials in dot*/
-            font-size: large;
-            color: white;
+        .em-dot span {
+          position: relative;
+          top: 11px;
+          left: 9px;/*to center initials in dot*/
         }
-        .em-from-div h4 {
+          .em-from-div h4 {
       /* email4 specific */
           max-width: 500px;
         }

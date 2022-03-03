@@ -19,9 +19,10 @@
       .em-dot {
         background-color: #E00054;
       }
-      .em-dot p {
-          margin: 8px 6px;/*to center initials in dot*/
-          font-size: large;
+      .em-dot span {
+        position: relative;
+        top: 9px;
+        left: 7px;/*to center initials in dot*/
       }
     
       /* specific to email1 */

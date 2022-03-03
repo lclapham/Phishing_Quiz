@@ -19,10 +19,10 @@
         background-color: #fd6823;
         /* specific to email6 */
       }
-      .em-dot p {
-          margin: 8px 12px;/*to center initials in dot*/
-          font-size: large;
-          color: white;
+      .em-dot span {
+        position: relative;
+        top: 8px;
+        left: 12px;/*to center initials in dot*/
       }
       h4.em-dot-date {
         display: block;

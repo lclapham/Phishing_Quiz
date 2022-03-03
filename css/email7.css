@@ -18,9 +18,10 @@
       .em-dot {
         background-color: #38c7f7;
       }
-      .em-dot p {
-          margin: 8px 4px;/*to center initials in dot*/
-          font-size: large;
+      .em-dot span {
+        position: relative;
+        top: 9px;
+        left: 5px;/*to center initials in dot*/
       }
       h4.em-dot-date {
         display: block;
