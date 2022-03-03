@@ -13,7 +13,9 @@
     <script
         src="https://cdn.rawgit.com/sphilee/jsPDF-CustomFonts-support/bcc544cd/dist/jspdf.customfonts.min.js"></script>
     <!-- <script src="https://cdn.rawgit.com/sphilee/jsPDF-CustomFonts-support/bcc544cd/dist/default_vfs.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css">
+
+    <!-- WHY IS THIS INCLUDED? -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css"> -->
 
     <link rel="stylesheet" href="../css/busy_indicator.css">
    
@@ -62,9 +64,12 @@
                 <!-- Name: <input type="text" name="name"><br> -->
                 <!-- E-mail: <input type="text" name="email"><br>
                  -->
-                <button id="certBtn"
+                 <div class="content__section--button">
+                    <button id="certBtn" style="vertical-align:middle"><span>Get Certificate</span></button>
+
+                 <!-- <button id="certBtn"
                     style="width: 200px; height: 75px;background: #C82255; border-radius: 10px; border: none; color: white; font-size: 1.5em; font-family:'Courier New', Courier, monospace">Download
-                    Certificate</button>
+                    Certificate</button> -->
                 <!-- <input style="width: 200px; height: 50px;background: #C82255; border-radius: 10px; border: none; color: white; font-size: 1.5em; font-family:'Courier New', Courier, monospace" type="submit"> -->
                 <!-- </form> -->
 
