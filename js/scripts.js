@@ -24,7 +24,7 @@ window.onload = (event) => {
 
     } else {
         nextQuestion.disabled = true;
-        nextQuestion.style.opacity = ".8"
+        nextQuestion.style.opacity = ".5"
     }
 
     ////////////////// Setup Variables
@@ -96,10 +96,15 @@ window.onload = (event) => {
 
         if (e.target.name == 'A') {
             this.style.backgroundColor = "#c82255"
-            buttons[1].style.backgroundColor = "grey"
+            this.style.color = 'white'
+            buttons[1].style.backgroundColor = "#cfd3d7"
+            buttons[1].style.color = '#4f606c'
         } else if (e.target.name == 'B') {
             this.style.backgroundColor = "#008181"
-            buttons[0].style.backgroundColor = "grey"
+            this.style.color = 'white'
+            buttons[0].style.backgroundColor = "#cfd3d7"
+            buttons[0].style.color = '#4f606c'
+
         }
 
         // Enable the next button
@@ -128,11 +133,11 @@ window.onload = (event) => {
             console.log(imgCheck);
 
             if (userProgressArr[i] == 'C') {
-                spanBox.style.backgroundColor = "white";
+                spanBox.style.backgroundColor = "#cfd3d7";
                 imgCheck.style.display = 'grid';
 
             } else if (userProgressArr[i] == 'X') {
-                spanBox.style.backgroundColor = "white";
+                spanBox.style.backgroundColor = "#cfd3d7";
                 imgX.style.display = 'grid';
 
             }
