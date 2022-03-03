@@ -56,14 +56,15 @@ window.onload = (event) => {
     // User Button Listner
     $('.next-btn').click(function () {
         answerBtns = document.querySelectorAll('.answerButtons')
-        bodyName = document.querySelector('.ui-body').title
+        // bodyName = document.querySelector('.ui-body').title
+        iFrameName =document.getElementsByTagName('iframe')[0].name
+    
 
-
-        if ((answerBtns[0].value == 'selected') && (answerBtns[0].name == bodyName)) {
+        if ((answerBtns[0].value == 'selected') && (answerBtns[0].name == iFrameName)) {
             answer = "C"
             updateLocalStore(answer)
 
-        } else if (answerBtns[1].value = 'selected' && answerBtns[1].name == bodyName) {
+        } else if (answerBtns[1].value = 'selected' && answerBtns[1].name == iFrameName) {
             answer = "C"
             updateLocalStore(answer)
         } else {
