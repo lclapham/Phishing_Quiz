@@ -1,0 +1,47 @@
+.em-template {
+    /* specific to email2 and 6*/
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-family: Arial, sans-serif;
+}
+
+  
+    /* Tooltip button*/
+    /* specific to email6 */
+  .tooltip-button {
+    padding: 15px 0 0px;
+    height: 35px;
+    background-color: #da2114;
+    font-weight: 400;
+    margin: 0 0 0 20px;
+  }
+  
+  
+        /* dot with initials / re / to / from */
+        .em-dot {
+          background-color: #fd6823;
+          /* specific to email6 */
+        }
+        .em-dot span {
+          position: relative;
+          top: 8px;
+          left: 12px;/*to center initials in dot*/
+        }
+        h4.em-dot-date {
+          display: block;
+          margin: -15px 80px 0px;
+         }
+      
+    /* specific to email6*/
+    .netflix img{
+      width:100%;
+      float: none;
+      margin: 1em auto;
+      display: block;
+  }
+  .body {
+      border: 1px solid lightgray;
+    }
+  
