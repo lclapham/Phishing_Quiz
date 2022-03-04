@@ -129,17 +129,20 @@ window.onload = (event) => {
             spanBox = document.querySelector('#sp0' + i)
             imgCheck = document.querySelector('#ck0' + i)
             imgX = document.querySelector('#x0' + i)
-
+            count = document.querySelector('.count0' + i)
             
             console.log(imgCheck);
 
             if (userProgressArr[i] == 'C') {
                 spanBox.style.backgroundColor = "#cfd3d7";
                 imgCheck.style.display = 'grid';
+                count.style.display = 'none';
+
 
             } else if (userProgressArr[i] == 'X') {
                 spanBox.style.backgroundColor = "#cfd3d7";
                 imgX.style.display = 'grid';
+                count.style.display = 'none';
 
             }
         }
