@@ -44,8 +44,8 @@ body {
 }
 .pBar {
     display: block;
-    height: 15px;
-    width: 75px;
+    height: 30px;
+    width: 50px;
     border: 1px solid var(--clr-teal);
 }
 
@@ -191,6 +191,7 @@ p {
 .pBarContainer span {
     display: grid;
     justify-content: center;
+    border-radius: 50%;
 }
 .answerBtns {
     display: grid; 
