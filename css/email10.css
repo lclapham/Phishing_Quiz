@@ -1,0 +1,42 @@
+.em-template {
+    /* specific to email10 */
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1em;
+  }
+  /* Tooltip button*/
+  .tooltip .tooltiptext {
+      background-color: #ebebeb;
+  }
+  
+  .tooltip-button {
+  padding: 10px 0 0px;
+  background-color: rgb(61, 112, 232);
+  }
+  .em-from-div {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-areas:
+    "dot text"
+  }
+        /* dot with initials / re / to / from */
+        .em-dot {
+            background-color: #38c7f7;
+          }
+          .em-dot img {
+            /* position: relative; */
+            grid-area: dot;
+            top: 0px;
+            left: 0px;/*to center initials in dot*/
+          }
+          h4.em-dot-sender {
+              grid-area: text;
+          }
+    
+  /* specific to email10 */
+  .ups img{
+    width: 25%;
+    /* float: none; */
+    margin: 20px 0 0 20px;
+  }
+  
