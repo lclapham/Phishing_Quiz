@@ -3,10 +3,6 @@
     max-width: 900px;
     margin: 0 auto;
   }
-  h1 {
-    font-family: Arial, sans-serif;
-}
-
   
     /* Tooltip button*/
     /* specific to email6 */
@@ -41,7 +37,7 @@
       margin: 1em auto;
       display: block;
   }
-  .body {
+  /* .body {
       border: 1px solid lightgray;
-    }
+    } */
   
