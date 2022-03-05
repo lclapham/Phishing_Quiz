@@ -21,15 +21,21 @@
     }
     .web1 {
         grid-area: img;
+        position: relative;
+        z-index: 1;
     }
     .web1:hover {
         transform: scale(2.5);
+        z-index: 2;
     }
     .web2 {
         grid-area: img2;
+        position: relative;
+        z-index: 1;
     }
     .web2:hover {
         transform: scale(2.5);
+        z-index: 2
     }
 
 .fone {
