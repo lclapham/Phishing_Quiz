@@ -47,22 +47,13 @@
       border: 5px solid rgb(61, 112, 232);
       text-align: center;
     }
-    .conversation {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: 
-        "icon textA textA"
-        "icon text text"
-        "icon button buttonA";
-        background-color: rgb(238, 238, 238);
-    }
-    .conversation p {
-        grid-area: text;
-    }
 .fone {
     display: grid;
     margin: 0 auto;
     width: 50%;
+}
+.fone:hover {
+  transform: scale(1.5);
 }
     footer {
         position: relative;
