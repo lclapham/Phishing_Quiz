@@ -1,7 +1,9 @@
 .em-template {
-    font-size: inherit;
-    background: none;
-    width: 78%;
+  display: block;
+  margin: 30px auto;
+  height: 365px;
+  width: 80%;
+  background: none;
   }
   
     /* Tooltip button*/
@@ -50,11 +52,13 @@
 .fone {
     display: grid;
     margin: 0 auto;
-    width: 50%;
+    /* width: 50%; */
+    height: 365px;
 }
 .fone:hover {
   transform: scale(1.5);
 }
     footer {
         position: relative;
+        padding: 0px 30px;
     }
