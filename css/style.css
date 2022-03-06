@@ -17,7 +17,7 @@ html {
     --clr-green: #008181;
 
 }
-body {
+.teal-body {
     /* background: #001C34; */
     background-color: var(--clr-ltgrey);
     /* max-height: 100vh; */
@@ -34,8 +34,12 @@ body {
     color: var(--clr-white);
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 300;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
-
 .pBarContainer {
     /* border: 3px solid black; */
     /* margin-left: 5%; */
