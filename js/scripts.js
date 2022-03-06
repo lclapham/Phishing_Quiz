@@ -5,7 +5,7 @@ window.onload = (event) => {
 
     //////////// Disable next button on load
     let nextQuestion = document.querySelector('.next-btn')
-    
+
     if (nextQuestion != null) {
         let nextQSpan = nextQuestion.querySelector('span')
         nextQSpan.style.display = "none"
@@ -57,14 +57,15 @@ window.onload = (event) => {
     $('.next-btn').click(function () {
         answerBtns = document.querySelectorAll('.answerButtons')
         // bodyName = document.querySelector('.ui-body').title
-        iFrameName =document.getElementsByTagName('iframe')[0].name
-    
+        iFrameName = document.getElementsByTagName('iframe')[0].name
 
-        if ((answerBtns[0].value == 'selected') && (answerBtns[0].name == iFrameName)) {
+console.log("Before the if's")
+        if ((answerBtns[0].value == 'selected') && (answerBtns[0].name === iFrameName)) {
+            console.log("IN the first "+answerBtns[0].value+answerBtns[0].name+iFrameName)
             answer = "C"
             updateLocalStore(answer)
 
-        } else if (answerBtns[1].value = 'selected' && answerBtns[1].name == iFrameName) {
+        } else if ((answerBtns[1].value = 'selected') && (answerBtns[1].name === iFrameName[0].name)) {
             answer = "C"
             updateLocalStore(answer)
         } else {
@@ -130,7 +131,7 @@ window.onload = (event) => {
             imgCheck = document.querySelector('#ck0' + i)
             imgX = document.querySelector('#x0' + i)
             count = document.querySelector('.count0' + i)
-            
+
             console.log(imgCheck);
 
             if (userProgressArr[i] == 'C') {
