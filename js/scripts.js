@@ -55,23 +55,47 @@ window.onload = (event) => {
 
     // User Button Listner
     $('.next-btn').click(function () {
-        answerBtns = document.querySelectorAll('.answerButtons')
+
+        test = document.getElementsByTagName('iframe')
+
+        if ( test.length == 0) {
+            console.log("In the iframe check")
+            answerBtn = document.querySelectorAll('[value=selected]')
+            answerValue = "A"
+
+        } else {
+            answerBtn = document.querySelectorAll('[value=selected]')
+            answerValue = document.getElementsByTagName('iframe')[0].name
+
+        }
+        // answerBtns = document.querySelectorAll('.answerButtons')
         // bodyName = document.querySelector('.ui-body').title
-        iFrameName = document.getElementsByTagName('iframe')[0].name
 
-console.log("Before the if's")
-        if ((answerBtns[0].value == 'selected') && (answerBtns[0].name === iFrameName)) {
-            console.log("IN the first "+answerBtns[0].value+answerBtns[0].name+iFrameName)
-            answer = "C"
-            updateLocalStore(answer)
 
-        } else if ((answerBtns[1].value = 'selected') && (answerBtns[1].name === iFrameName[0].name)) {
+        console.log("Before the if's")
+
+        if (answerBtn[0].name == answerValue) {
             answer = "C"
             updateLocalStore(answer)
         } else {
             answer = "X"
             updateLocalStore(answer)
         }
+
+        // if ((answerBtns[0].value == 'selected') && (answerBtns[0].name === iFrameName)) {
+        //     console.log("IN the first "+answerBtns[0].value+answerBtns[0].name+iFrameName)
+        //     answer = "C"
+        //     updateLocalStore(answer)
+
+        // } else if ((answerBtns[1].value = 'selected') && (answerBtns[1].name === iFrameName[0].name)) {
+        //    console.log("In the second if "+answerBtns[1].value+answerBtns[1].name+iFrameName)
+        //     answer = "C"
+        //     updateLocalStore(answer)
+        // } else {
+        //     console.log("In the else")
+        //     answer = "X"
+        //     updateLocalStore(answer)
+        // }
 
         // Get the current page and add 1 to it. 
         pgNumber = parseInt(document.body.id)
