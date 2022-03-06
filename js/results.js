@@ -33,13 +33,17 @@ window.onload = (event) => {
     // Make sure the page presented has next buttons
     if (results >= 80) {
         tryAgain.style.display = 'none';
-        getDownload.style.display = 'inline-block';
+        getDownload.style.display = 'inline-block'; 
+        document.getElementById("results-h1").innerHTML = "You are off the hook!";
+
     } else {
         console.log("You failed")
         getDownload.disabled = true;
         // alert("You must get 80% or higher to get a certificate.")
         tryAgain.style.display = 'inline-block';
         getDownload.style.display = 'none';
+        document.getElementById("results-h1").innerHTML = "Yikes! You took the bait.";
+
         
     }
 
