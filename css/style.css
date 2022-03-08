@@ -43,6 +43,7 @@ html {
 .pBarContainer {
     /* border: 3px solid black; */
     /* margin-left: 5%; */
+    margin-top: 13px;
     display: grid;
     justify-items: center;
 }
