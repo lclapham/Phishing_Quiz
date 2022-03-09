@@ -11,7 +11,6 @@ window.onload = (event) => {
         nextQSpan.style.display = "none"
     }
 
-
     // Progress Bar checks and calls
     checkLocalStor = localStorage.getItem('userRepo');
 
@@ -33,10 +32,11 @@ window.onload = (event) => {
 
     // Set the answers key below to automate grading
     answerArr = []
-    //Store this answer from answer 11
-    var q11Answer
 
     /////////////////// Setup Listing Events/////////////////////////////////////////////
+
+
+  
 
     // User Signup FORM Listner
     $('#mySignUpForm').submit(function (event) {
@@ -49,13 +49,11 @@ window.onload = (event) => {
         // Set the number of pages in quiz here.
         // let totalNumQuestions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         // localStorage.setItem('numQ', JSON.stringify(totalNumQuestions));
-
-        let questionBank = 11 // this is how many total questions are available to randomly select. Not number of questions presented to user.
         // Set up question bank
-        generateQbank(questionBank)
+        generateQbank(10, 11)
 
         // Call for the next page
-        newPageFunc()
+        // newPageFunc()
 
     });
 
@@ -63,30 +61,45 @@ window.onload = (event) => {
     $('.next-btn').click(function () {
 
         test = document.getElementsByTagName('iframe')
-        test2 = document.getElementsByTagName('img')
-
 
         if (test.length == 0) {
-            answerBtn = document.querySelectorAll('[data-selected=selected]')
-            answerValue = answerBtn[0].name
-            // answerValue = "A"
+            console.log("In the iframe check")
+            answerBtn = document.querySelectorAll('[value=selected]')
+            answerValue = "A"
 
         } else {
+            answerBtn = document.querySelectorAll('[value=selected]')
+            answerValue = document.getElementsByTagName('iframe')[0].name
 
-            answerBtn = document.querySelectorAll('[data-selected=selected]')
-            answerValue = answerBtn[0].name
-            ansValue = document.querySelector('[data-answer]')
-            answerValue = ansValue.dataset.answer
         }
+        // answerBtns = document.querySelectorAll('.answerButtons')
+        // bodyName = document.querySelector('.ui-body').title
 
 
-        if (answerBtn[0].value == answerValue) {
+        console.log("Before the if's")
+
+        if (answerBtn[0].name == answerValue) {
             answer = "C"
             updateLocalStore(answer)
         } else {
             answer = "X"
             updateLocalStore(answer)
         }
+
+        // if ((answerBtns[0].value == 'selected') && (answerBtns[0].name === iFrameName)) {
+        //     console.log("IN the first "+answerBtns[0].value+answerBtns[0].name+iFrameName)
+        //     answer = "C"
+        //     updateLocalStore(answer)
+
+        // } else if ((answerBtns[1].value = 'selected') && (answerBtns[1].name === iFrameName[0].name)) {
+        //    console.log("In the second if "+answerBtns[1].value+answerBtns[1].name+iFrameName)
+        //     answer = "C"
+        //     updateLocalStore(answer)
+        // } else {
+        //     console.log("In the else")
+        //     answer = "X"
+        //     updateLocalStore(answer)
+        // }
 
         // Get the current page and add 1 to it. 
         pgNumber = parseInt(document.body.id)
@@ -102,22 +115,21 @@ window.onload = (event) => {
     // Answer Button Listner
     $('.answerButtons').click(function (e) {
 
-        // Get the buttons.
-        buttons = document.getElementsByClassName('answerButtons')
 
+        buttons = document.getElementsByClassName('answerButtons')
         // Toggle inner html value state
         for (let i = 0; i < buttons.length; i++) {
-            buttons[i].dataset.selected = null
+            buttons[i].value = null
         }
 
-        this.dataset.selected = "selected"
+        this.value = "selected"
 
-        if (e.target.value == 'A') {
+        if (e.target.name == 'A') {
             this.style.backgroundColor = "#c82255"
             this.style.color = 'white'
             buttons[1].style.backgroundColor = "#cfd3d7"
             buttons[1].style.color = '#4f606c'
-        } else if (e.target.value == 'B') {
+        } else if (e.target.name == 'B') {
             this.style.backgroundColor = "#008181"
             this.style.color = 'white'
             buttons[0].style.backgroundColor = "#cfd3d7"
@@ -148,6 +160,8 @@ window.onload = (event) => {
             imgX = document.querySelector('#x0' + i)
             count = document.querySelector('.count0' + i)
 
+            console.log(imgCheck);
+
             if (userProgressArr[i] == 'C') {
                 spanBox.style.backgroundColor = "#cfd3d7";
                 imgCheck.style.display = 'grid';
@@ -165,54 +179,102 @@ window.onload = (event) => {
 
     // Function to ranomize and set new page
     function newPageFunc() {
-        pgNumbers = localStorage.getItem('numQ')
-        pgNumArr = JSON.parse(pgNumbers);
 
         // Get the random number
         ranNum = randomNumberGen(10)
 
-        if (pgNumArr.length == 0) {
+        if (ranNum === 11) {
 
             window.location.replace("../pages/results.html")
 
         } else {
 
-            window.location.replace("../pages/question" + pgNumArr[0] + ".html")
-
+            window.location.replace("../pages/question" + ranNum + ".html")
         }
-
-        // Remove page number from arr and local storage.
-        pgNumArr.splice(0, 1)
-        localStorage.setItem('numQ', JSON.stringify(pgNumArr));
 
     }
 
     // Generator for question bank. Creates a random list of numbers in LS for questions
-    function generateQbank(questionBank) {
-        numQArr = []
+    function generateQbank(numUserQuestions, numQuizBank) {
         numQ = localStorage.getItem('numQ');
-        let counter = 1
         if (numQ == null) {
-            do {
-                ranNum = randomNumberGen(questionBank)
-                retryNum = numQArr.includes(ranNum)
-                if (retryNum == false) {
-                    numQArr.push(ranNum)
+            console.log("No Question bank")
+            // localStorage.setItem('numQ');
+            numQArr = []
+            for(let i = 0; i <= 10; i++){
+                rNum =  randomNumberGen();
+                retryNum = numQArr.includes(rNum)
+                if(retryNum == true){
+                    console.log("It was true")
+                } else {
+                    console.log("It was false")
+
                 }
 
+            }
+           
 
-            } while (numQArr.length < 10)
 
-        } localStorage.setItem('numQ', JSON.stringify(numQArr))
+        } else { //populate test question bank
+
+            console.log("There is something there")
+        }
 
 
     }
 
     //  Create a random number
-    function randomNumberGen(questionBank) {
+
+
+    function randomNumberGen() {
+
+        // Get the current local storage
+        // numQ = localStorage.getItem('numQ');
+        // numQArr = JSON.parse(numQ);
+        // numQArr = [];
+        // numQArrLength = numQArr.length
+        console.log("in random")
 
         let min = 1;
-        ranNum = Math.floor(Math.random() * (questionBank - min + 1) + min);
+        ranNum = Math.floor(Math.random() * (10 - min + 1) + min);
+
+        // ranIndex = numQArr.includes(ranNum)
+
+        // numQArr.push(ranNum)
+
+
+
+        // let min = 1;
+        // ranNum = Math.floor(Math.random() * (10 - min + 1) + min);
+        // console.log("The random number is "+ ranNum)
+        // numQArr.push(ranNum)
+        // ranIndex = numQArr.indexOf(ranNum)
+
+        // console.log("This idex is "+ranIndex)
+        // console.log("The array is " + numQArr)
+
+        // localStorage.setItem('numQ', JSON.stringify(numQArr))
+
+        //   (ranIndex === -1);
+
+
+
+
+
+        // do {
+        //     let min = 1;
+        //     ranNum = Math.floor(Math.random() * (countDown - min + 1) + min);
+        //     ranIndex = numQArr.indexOf(ranNum)
+        //     if (numQArr.length == 0) {
+        //         ranNum = 11;
+        //         return ranNum;
+        //     }
+        // } while (ranIndex === -1);
+
+        // numQArr.splice(ranIndex, 1)
+        // localStorage.setItem('numQ', JSON.stringify(numQArr))
+
+        // return ranNum;
         return ranNum;
 
     }
