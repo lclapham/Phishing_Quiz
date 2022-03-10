@@ -101,6 +101,12 @@ window.onload = (event) => {
         // Get the buttons.
         buttons = document.getElementsByClassName('answerButtons')
 
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].value = null
+        }
+
+        this.value = "selected"
+
         if (e.target.value == 'A') {
             this.style.backgroundColor = "#c82255"
             this.style.color = 'white'
