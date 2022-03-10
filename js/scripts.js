@@ -63,14 +63,17 @@ window.onload = (event) => {
 
 
         if (test.length == 0) {
+            
             answerBtn = document.querySelectorAll('[data-selected=selected]')
             answerValue = answerBtn[0].name
+            console.log("test length section " +ansValue)
             // answerValue = "A"
 
         } else {
 
             answerBtn = document.querySelectorAll('[data-selected=selected]')
             answerValue = answerBtn[0].name
+            console.log("else section " + answerValue)
             ansValue = document.querySelector('[data-answer]')
             answerValue = ansValue.dataset.answer
         }
@@ -102,10 +105,10 @@ window.onload = (event) => {
         buttons = document.getElementsByClassName('answerButtons')
 
         for (let i = 0; i < buttons.length; i++) {
-            buttons[i].value = null
+            buttons[i].dataset.selected = null
         }
 
-        this.value = "selected"
+        this.dataset.selected = "selected"
 
         if (e.target.value == 'A') {
             this.style.backgroundColor = "#c82255"
