@@ -30,6 +30,13 @@
   .mistakes img {
       width: 933px;
   }
+  .yay {
+      display: grid;
+  }
+  .yay img,
+  .yay h1 {
+    margin: 0 auto;
+  }
   /* The Close Button */
   .close {
     color: #aaaaaa;
