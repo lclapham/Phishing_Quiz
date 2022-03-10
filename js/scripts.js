@@ -46,10 +46,6 @@ window.onload = (event) => {
     // Start quiz button listner
     $('#startQuizBtn').click(function () {
 
-        // Set the number of pages in quiz here.
-        // let totalNumQuestions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // localStorage.setItem('numQ', JSON.stringify(totalNumQuestions));
-
         let questionBank = 11 // this is how many total questions are available to randomly select. Not number of questions presented to user.
         // Set up question bank
         generateQbank(questionBank)
@@ -79,7 +75,6 @@ window.onload = (event) => {
             answerValue = ansValue.dataset.answer
         }
 
-
         if (answerBtn[0].value == answerValue) {
             answer = "C"
             updateLocalStore(answer)
@@ -99,18 +94,12 @@ window.onload = (event) => {
 
     })
 
+
     // Answer Button Listner
     $('.answerButtons').click(function (e) {
 
         // Get the buttons.
         buttons = document.getElementsByClassName('answerButtons')
-
-        // Toggle inner html value state
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].dataset.selected = null
-        }
-
-        this.dataset.selected = "selected"
 
         if (e.target.value == 'A') {
             this.style.backgroundColor = "#c82255"
@@ -123,7 +112,16 @@ window.onload = (event) => {
             buttons[0].style.backgroundColor = "#cfd3d7"
             buttons[0].style.color = '#4f606c'
 
+        } else if (e.target.name == 'A') {
+            this.style.border = "3px solid red"
+            buttons[1].style.border = "none"
+        } else if (e.target.name == 'B') {
+            this.style.border = "3px solid green"
+            buttons[0].style.border = "none"
+
         }
+
+
 
         // Enable the next button
         nextQuestion = document.querySelector('.next-btn')
@@ -153,7 +151,6 @@ window.onload = (event) => {
                 imgCheck.style.display = 'grid';
                 count.style.display = 'none';
 
-
             } else if (userProgressArr[i] == 'X') {
                 spanBox.style.backgroundColor = "#cfd3d7";
                 imgX.style.display = 'grid';
@@ -172,11 +169,9 @@ window.onload = (event) => {
         ranNum = randomNumberGen(10)
 
         if (pgNumArr.length == 0) {
-
             window.location.replace("../pages/results.html")
 
         } else {
-
             window.location.replace("../pages/question" + pgNumArr[0] + ".html")
 
         }
@@ -199,7 +194,6 @@ window.onload = (event) => {
                 if (retryNum == false) {
                     numQArr.push(ranNum)
                 }
-
 
             } while (numQArr.length < 10)
 
@@ -241,7 +235,7 @@ window.onload = (event) => {
         // Put the score in localstorage
         localStorage.setItem('userFin', JSON.stringify(finalScore))
 
-    }
+    };
 
     // This function manages the localstorage
     function updateLocalStore(answer) {
@@ -254,8 +248,8 @@ window.onload = (event) => {
             strOld = JSON.parse(old);
             localStorage.setItem('userRepo', JSON.stringify(strOld + answer));
 
-        }
+        };
 
     };
 
-}
+};
