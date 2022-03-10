@@ -65,7 +65,8 @@ window.onload = (event) => {
         if (test.length == 0) {
             
             answerBtn = document.querySelectorAll('[data-selected=selected]')
-            answerValue = answerBtn[0].name
+            ansValue = document.querySelector('[data-answer]')
+            answerValue = ansValue.dataset.answer
             console.log("test length section " +answerValue)
             // answerValue = "A"
 
@@ -79,6 +80,8 @@ window.onload = (event) => {
         }
 
         if (answerBtn[0].value == answerValue) {
+            console.log("This is the answerbutton value "+answerBtn[0].value)
+            console.log("This is the answer Value " +answerValue)
             answer = "C"
             updateLocalStore(answer)
         } else {
@@ -100,9 +103,12 @@ window.onload = (event) => {
 
     // Answer Button Listner
     $('.answerButtons').click(function (e) {
-
+        console.log("In the answerButtons Listner")
         // Get the buttons.
         buttons = document.getElementsByClassName('answerButtons')
+       
+        
+        console.log("This is the button "+buttons)
 
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].dataset.selected = null
@@ -110,22 +116,32 @@ window.onload = (event) => {
 
         this.dataset.selected = "selected"
 
+        answerBtn = document.querySelectorAll('[data-selected=selected]')
+        answerFinal = answerBtn[0].dataset.value
+        console.log("This is the answer Final "+ answerFinal)
+        
+        console.log("This is the target.value "+ e.target.value)
+
         if (e.target.value == 'A') {
+            console.log("In the else if  #1 A")
             this.style.backgroundColor = "#c82255"
             this.style.color = 'white'
             buttons[1].style.backgroundColor = "#cfd3d7"
             buttons[1].style.color = '#4f606c'
         } else if (e.target.value == 'B') {
+            console.log("In the else if  #1 b")
             this.style.backgroundColor = "#008181"
             this.style.color = 'white'
             buttons[0].style.backgroundColor = "#cfd3d7"
             buttons[0].style.color = '#4f606c'
 
-        } else if (e.target.name == 'A') {
+        } else if (answerFinal == 'A') {
+            console.log("In the else if A")
             this.style.border = "5px solid #c82255"
             this.style.borderRadius = "10px"
             buttons[1].style.border = "none"
-        } else if (e.target.name == 'B') {
+        } else if (answerFinal == 'B') {
+            console.log("In the else if B")
             this.style.border = "5px solid #c82255"
             this.style.borderRadius = "10px"
             buttons[0].style.border = "none"
