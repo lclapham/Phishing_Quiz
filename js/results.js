@@ -64,6 +64,8 @@ $('#tryAgain').click(function () {
 
 })
 function tryAgainFunc(){
+    localStorage.removeItem('numQ')
+    localStorage.removeItem('userRepo')
 window.location.replace("../pages/instructions.html")
 }
 
