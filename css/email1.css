@@ -1,6 +1,7 @@
 .em-template {
   /* specific to email1 */
     border: 1px solid lightgray;
+    font-size: 16px;
   }
   
     /* Tooltip button*/
@@ -10,11 +11,14 @@
     padding: 15px 0 0px;
     height: 35px;
     background-color: teal;
-    font-size: large;
+    font-size: 18px;
     border: none;
     border-radius: 10px;
   }
-  
+  .tooltip-content::before {
+    top: -11%;
+    left: 2%;
+  }
       /* dot with initials / re / to / from */
       .em-dot {
         background-color: #E00054;

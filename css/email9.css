@@ -3,7 +3,9 @@
     max-width: 900px;
     margin: 0 auto;
   }
-  
+  .tooltip-content {
+    height: 87px;
+  }
     /* Tooltip button*/
     /* specific to email6 */
   .tooltip-button {

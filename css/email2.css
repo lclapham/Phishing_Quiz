@@ -2,16 +2,27 @@
   /* specific to email2 */
   /* max-width: 700px; */
   margin: 0 auto;
-  font-size: .7em;
+  /* font-size: .7em; */
 }
 /* Tooltip button*/
 
 .tooltip-button {
-padding: 10px 0 0px;
+padding: 10px 0 10px;
 background-color: rgb(61, 112, 232);
 }
 
 /* specific to email2 */
+#paypal-hover {
+  margin-left: -50px;
+  height: 100px;
+  top: 100%; 
+  transform-origin: 35% 0%;
+  -webkit-transform-origin: 35% 0%;
+}
+#paypal-hover::after {
+  top: 3px;
+  left: 85px;
+}
 .paypal img{
   width: 25%;
   float: none;
