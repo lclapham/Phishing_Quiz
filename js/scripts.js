@@ -113,10 +113,12 @@ window.onload = (event) => {
             buttons[0].style.color = '#4f606c'
 
         } else if (e.target.name == 'A') {
-            this.style.border = "3px solid red"
+            this.style.border = "5px solid #c82255"
+            this.style.borderRadius = "10px"
             buttons[1].style.border = "none"
         } else if (e.target.name == 'B') {
-            this.style.border = "3px solid green"
+            this.style.border = "5px solid #c82255"
+            this.style.borderRadius = "10px"
             buttons[0].style.border = "none"
 
         }
