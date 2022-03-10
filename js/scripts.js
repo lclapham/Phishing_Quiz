@@ -66,13 +66,13 @@ window.onload = (event) => {
             
             answerBtn = document.querySelectorAll('[data-selected=selected]')
             answerValue = answerBtn[0].name
-            console.log("test length section " +ansValue)
+            console.log("test length section " +answerValue)
             // answerValue = "A"
 
         } else {
 
             answerBtn = document.querySelectorAll('[data-selected=selected]')
-            answerValue = answerBtn[0].name
+            answerValue = answerBtn[0].value
             console.log("else section " + answerValue)
             ansValue = document.querySelector('[data-answer]')
             answerValue = ansValue.dataset.answer
