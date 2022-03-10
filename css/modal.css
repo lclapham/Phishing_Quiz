@@ -21,7 +21,15 @@
     border: 1px solid #888;
     width: 80%;
   }
-  
+  .mistakes {
+      overflow: scroll;
+      width: 950px;
+      height: 300px;
+      margin: 0 auto;
+  }
+  .mistakes img {
+      width: 933px;
+  }
   /* The Close Button */
   .close {
     color: #aaaaaa;
