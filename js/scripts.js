@@ -4,11 +4,11 @@
 window.onload = (event) => {
 
     //////////// Disable next button on load
-    let nextQuestion = document.querySelector('.next-btn')
+    let nextQuestion = document.querySelector('.submitBtn')
 
     if (nextQuestion != null) {
         let nextQSpan = nextQuestion.querySelector('span')
-        nextQSpan.style.display = "none"
+        // nextQSpan.style.display = "none"
     }
 
 
@@ -31,6 +31,11 @@ window.onload = (event) => {
     const $elBtnLogIn = $("#loginBtn");
     console.log($elBtnLogIn);
 
+    
+    var correct = document.getElementById("correct");
+    var incorrect = document.getElementById("incorrect");
+
+    console.log("Setup the modal vearibles " +correct +" "+incorrect)
     // Set the answers key below to automate grading
     answerArr = []
     //Store this answer from answer 11
@@ -56,18 +61,19 @@ window.onload = (event) => {
     });
 
     // User Button Listner
-    $('.next-btn').click(function () {
+    $('.submitBtn').click(function () {
 
+     
         test = document.getElementsByTagName('iframe')
         test2 = document.getElementsByTagName('img')
 
 
         if (test.length == 0) {
-            
+
             answerBtn = document.querySelectorAll('[data-selected=selected]')
             ansValue = document.querySelector('[data-answer]')
             answerValue = ansValue.dataset.answer
-            console.log("test length section " +answerValue)
+            console.log("test length section " + answerValue)
             // answerValue = "A"
 
         } else {
@@ -80,12 +86,17 @@ window.onload = (event) => {
         }
 
         if (answerBtn[0].value == answerValue) {
-            console.log("This is the answerbutton value "+answerBtn[0].value)
-            console.log("This is the answer Value " +answerValue)
+            console.log("This is the answerbutton value " + answerBtn[0].value)
+            console.log("This is the answer Value " + answerValue)
             answer = "C"
+            console.log("THis is the correct if")
+            correct.style.display = "block";
+
             updateLocalStore(answer)
         } else {
             answer = "X"
+            console.log("this is the incorrect")
+            incorrect.style.display = "block";
             updateLocalStore(answer)
         }
 
@@ -96,19 +107,22 @@ window.onload = (event) => {
         // Check if last page or increment page.
 
         setScore();
-        newPageFunc()
+        // newPageFunc()
 
     })
 
+    $('.next-btn').click(function () {
+        newPageFunc()
 
+    })
     // Answer Button Listner
     $('.answerButtons').click(function (e) {
         console.log("In the answerButtons Listner")
         // Get the buttons.
         buttons = document.getElementsByClassName('answerButtons')
-       
-        
-        console.log("This is the button "+buttons)
+
+
+        console.log("This is the button " + buttons)
 
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].dataset.selected = null
@@ -118,9 +132,9 @@ window.onload = (event) => {
 
         answerBtn = document.querySelectorAll('[data-selected=selected]')
         answerFinal = answerBtn[0].dataset.value
-        console.log("This is the answer Final "+ answerFinal)
-        
-        console.log("This is the target.value "+ e.target.value)
+        console.log("This is the answer Final " + answerFinal)
+
+        console.log("This is the target.value " + e.target.value)
 
         if (e.target.value == 'A') {
             console.log("In the else if  #1 A")
@@ -151,7 +165,7 @@ window.onload = (event) => {
 
 
         // Enable the next button
-        nextQuestion = document.querySelector('.next-btn')
+        nextQuestion = document.querySelector('.submitBtn')
         nextQuestion.disabled = false;
         nextQuestion.style.opacity = "1"
         let nextQSpan = nextQuestion.querySelector('span')

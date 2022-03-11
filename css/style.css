@@ -210,7 +210,7 @@ p {
 .userBtns {
     display: grid;
     justify-items: center;
-    /* opacity: .8; */
+    opacity: .8;
 }
 .answerBtns button {
     background-color: var(--clr-ltgrey);
