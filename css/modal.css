@@ -17,14 +17,17 @@
   }
   /* Modal Content */
   .modal-content {
-    background-color: rgb(150, 176, 184);
+    background-color: #243e50;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    /* border: 1px solid #888; */
     width: 80%;
   }
    .modal-content h1 {
       text-align: center;
+  }
+  .correct .modal-content {
+      background-color: #1d304b;
   }
   .sad {
       display: grid;
@@ -36,7 +39,7 @@
   .sad p {
     grid-column: 2 / 3;
     padding-bottom: 20px;
-    color: #243e50;
+    /* color: #243e50; */
   }
  .mistakes {
       overflow: scroll;
