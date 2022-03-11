@@ -12,7 +12,9 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
+  .incorrect {
+      padding-top: 50px;
+  }
   /* Modal Content */
   .modal-content {
     background-color: rgb(150, 176, 184);
@@ -23,6 +25,18 @@
   }
    .modal-content h1 {
       text-align: center;
+  }
+  .sad {
+      display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 4fr;
+    width: 60%;
+    justify-items: center;
+  }
+  .sad p {
+    grid-column: 2 / 3;
+    padding-bottom: 20px;
+    color: #243e50;
   }
  .mistakes {
       overflow: scroll;
