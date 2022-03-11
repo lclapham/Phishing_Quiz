@@ -21,7 +21,10 @@
     border: 1px solid #888;
     width: 80%;
   }
-  .mistakes {
+   .modal-content h1 {
+      text-align: center;
+  }
+ .mistakes {
       overflow: scroll;
       width: 950px;
       height: 300px;
