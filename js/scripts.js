@@ -66,7 +66,7 @@ window.onload = (event) => {
      
         test = document.getElementsByTagName('iframe')
         test2 = document.getElementsByTagName('img')
-
+        console.log("This is the length of test "+test)
 
         if (test.length == 0) {
 
@@ -74,18 +74,21 @@ window.onload = (event) => {
             ansValue = document.querySelector('[data-answer]')
             answerValue = ansValue.dataset.answer
             console.log("test length section " + answerValue)
+
+            console.log("This is the answerbutton value before the if's "+answerBtn[0].dataset.value)
             // answerValue = "A"
+            answerBtn = answerBtn[0].dataset.value
 
         } else {
 
             answerBtn = document.querySelectorAll('[data-selected=selected]')
-            answerValue = answerBtn[0].value
-            console.log("else section " + answerValue)
+            answerBtn = answerBtn[0].value
+           
             ansValue = document.querySelector('[data-answer]')
             answerValue = ansValue.dataset.answer
         }
 
-        if (answerBtn[0].value == answerValue) {
+        if (answerBtn == answerValue) {
             console.log("This is the answerbutton value " + answerBtn[0].value)
             console.log("This is the answer Value " + answerValue)
             answer = "C"
