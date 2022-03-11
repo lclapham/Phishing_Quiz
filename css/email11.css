@@ -27,6 +27,9 @@
     .web1:hover {
         transform: scale(2.5);
         z-index: 2;
+        /* -webkit-transition: opacity 0.4s, -webkit-transform 0.4s; */
+  
+        transition: opacity 0.4s, transform 0.4s;
     }
     .web2 {
         grid-area: img2;
@@ -35,7 +38,9 @@
     }
     .web2:hover {
         transform: scale(2.5);
-        z-index: 2
+        z-index: 2;
+        transition: opacity 0.4s, transform 0.4s;
+
     }
 
 .fone {
