@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/email-base.css">
     <link rel="stylesheet" href="../css/email3.css">
+    <link rel="stylesheet" href="../css/modal.css">
 
     <title>Phishing Quiz</title>
 </head>
@@ -168,9 +169,51 @@
                 </div>
 
                 <div class="content__section--button userBtns">
-                    <button id="0" class="next-btn">Next<span></span></button>
+                    <button id="btn"><span>Submit</span></button>
                 </div>
-            </div>
+
+
+                <!-- MODAL -->
+                <div id="incorrect" class="modal incorrect">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <!-- <iframe width=900 height=200 src="../images/ups modal pic.png">
+                        </iframe> -->
+                        <div class="sad">
+
+                            <img src="../images/phish_sad_1-removebg-preview 1.png" alt="">
+                            <h1>Dang! you got hooked.</h1>
+                            <p>Scroll to learn why</p>
+                        </div>
+                        <div class="mistakes">
+                            <img src="../images/ups modal pic.png">
+                            </img>
+                        </div> <span class="close">&times;</span>
+                        <div class="content__section--button userBtns">
+                            <button id="0" class="next-btn">Next<span></span></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="correct" class="modal correct">
+
+                    <!-- Modal content -->
+                    <div class="modal-content ">
+                        <div class="yay">
+                            <img src="../images/phish happy.gif">
+                            </img>
+                            <span class="close">&times;</span>
+                            <h1>Yay! Good job.</h1>
+                        </div>
+                        <div class="content__section--button userBtns">
+                            <button id="0" class="next-btn"><span>Next</span></button>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
 
             <!-- Footer Start -->
             <footer data-role="footer" data-position="fixed">
@@ -185,5 +228,7 @@
 </body>
 
 <script src="../js/scripts.js"></script>
+<script src="../js/modal.js"></script>
+
 
 </html>
