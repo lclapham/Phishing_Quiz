@@ -31,11 +31,11 @@ window.onload = (event) => {
     const $elBtnLogIn = $("#loginBtn");
     console.log($elBtnLogIn);
 
-    
+
     var correct = document.getElementById("correct");
     var incorrect = document.getElementById("incorrect");
 
-    console.log("Setup the modal vearibles " +correct +" "+incorrect)
+    console.log("Setup the modal vearibles " + correct + " " + incorrect)
     // Set the answers key below to automate grading
     answerArr = []
     //Store this answer from answer 11
@@ -63,10 +63,10 @@ window.onload = (event) => {
     // User Button Listner
     $('.submitBtn').click(function () {
 
-     
+
         test = document.getElementsByTagName('iframe')
         test2 = document.getElementsByTagName('img')
-        console.log("This is the length of test "+test)
+        console.log("This is the length of test " + test)
 
         if (test.length == 0) {
 
@@ -75,7 +75,7 @@ window.onload = (event) => {
             answerValue = ansValue.dataset.answer
             console.log("test length section " + answerValue)
 
-            console.log("This is the answerbutton value before the if's "+answerBtn[0].dataset.value)
+            console.log("This is the answerbutton value before the if's " + answerBtn[0].dataset.value)
             // answerValue = "A"
             answerBtn = answerBtn[0].dataset.value
 
@@ -83,7 +83,7 @@ window.onload = (event) => {
 
             answerBtn = document.querySelectorAll('[data-selected=selected]')
             answerBtn = answerBtn[0].value
-           
+
             ansValue = document.querySelector('[data-answer]')
             answerValue = ansValue.dataset.answer
         }
@@ -166,7 +166,6 @@ window.onload = (event) => {
         }
 
 
-
         // Enable the next button
         nextQuestion = document.querySelector('.submitBtn')
         nextQuestion.disabled = false;
@@ -182,24 +181,32 @@ window.onload = (event) => {
     function progressBar() {
         let userProgress = localStorage.getItem('userRepo');
         let userProgressArr = JSON.parse(userProgress);
+        console.log("Length of user arr " +userProgressArr.length)
+        if (userProgressArr.length == 10) {
+            window.location.replace("../pages/results.html")
 
-        for (let i = 0; i < userProgressArr.length; i++) {
+        } else {
 
-            spanBox = document.querySelector('#sp0' + i)
-            imgCheck = document.querySelector('#ck0' + i)
-            imgX = document.querySelector('#x0' + i)
-            count = document.querySelector('.count0' + i)
 
-            if (userProgressArr[i] == 'C') {
-                spanBox.style.backgroundColor = "#cfd3d7";
-                imgCheck.style.display = 'grid';
-                count.style.display = 'none';
+            for (let i = 0; i < userProgressArr.length; i++) {
 
-            } else if (userProgressArr[i] == 'X') {
-                spanBox.style.backgroundColor = "#cfd3d7";
-                imgX.style.display = 'grid';
-                count.style.display = 'none';
+                spanBox = document.querySelector('#sp0' + i)
+                imgCheck = document.querySelector('#ck0' + i)
+                imgX = document.querySelector('#x0' + i)
+                count = document.querySelector('.count0' + i)
 
+
+                if (userProgressArr[i] == 'C') {
+                    spanBox.style.backgroundColor = "#cfd3d7";
+                    imgCheck.style.display = 'grid';
+                    count.style.display = 'none';
+
+                } else if (userProgressArr[i] == 'X') {
+                    spanBox.style.backgroundColor = "#cfd3d7";
+                    imgX.style.display = 'grid';
+                    count.style.display = 'none';
+
+                }
             }
         }
     }
