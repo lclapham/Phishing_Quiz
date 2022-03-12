@@ -54,6 +54,10 @@
     margin: 0 auto;
     /* width: 50%; */
     height: 365px;
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+    -webkit-transition-timing-function: ease, cubic-bezier(0.6,0,0.4,1);
+    transition-timing-function: ease, cubic-bezier(0.6,0,0.4,1);
 }
 .fone:hover {
   transform: scale(1.5);
