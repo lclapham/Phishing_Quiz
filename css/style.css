@@ -216,14 +216,14 @@ p {
     background-color: var(--clr-ltgrey);
     color: var(--clr-grey);
 }
-.answerButtons[name='A']:hover,
-.answerButtons[name='A']:visited
+.answerButtons[value='A']:hover,
+.answerButtons[value='A']:visited
  {
     background-color: var(--clr-red);
     color: white;
     transition: 0.5s;
 }
-.answerButtons[name='B']:hover {
+.answerButtons[value='B']:hover {
     background-color: var(--clr-green);
     color: white;
     transition: 0.5s;
