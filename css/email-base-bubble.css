@@ -55,7 +55,7 @@
     overflow-wrap: break-word;
 }
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.tooltip:active .tooltiptext {
     visibility: visible;
   }
 
@@ -153,7 +153,7 @@ radial-gradient(circle at 50% 55%, #fff, #add2dc);
 -2px -2px 10px #b1d6e0; */
 }
 
-.tooltip:hover .tooltip-content {
+.tooltip:active .tooltip-content {
 	opacity: 1;
 	pointer-events: auto;
 	-webkit-transform: scale3d(1,1,1);
