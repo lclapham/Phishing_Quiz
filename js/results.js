@@ -63,6 +63,19 @@ window.onload = (event) => {
         tryAgainFunc();
 
     })
+    
+    function stopSpinner() {
+        document.getElementById("busybox").style.display = "none";
+        console.log("stop spinner")
+
+    }
+
+    function startSpinner() {
+        document.getElementById("busybox").style.display = "block";
+        console.log("start spinner")
+         onDownload();
+
+    }
     function tryAgainFunc() {
         localStorage.removeItem('numQ')
         localStorage.removeItem('userRepo')
@@ -153,18 +166,6 @@ window.onload = (event) => {
 
 
     };
-
-    function stopSpinner() {
-        document.getElementById("busybox").style.display = "none";
-        console.log("stop spinner")
-
-    }
-
-    function startSpinner() {
-        document.getElementById("busybox").style.display = "block";
-        console.log("start spinner")
-
-    }
 
 };
 
