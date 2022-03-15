@@ -127,7 +127,7 @@ window.onload = (event) => {
         pdf.setFontSize(60);
 
         //console.log(pdf.getFontList());
-        pdf.addImage(certificatePNG, "PNG", 3, 7, 273, 200);
+        pdf.addImage(certificatePNG, "png", 3, 7, 273, 200);
         // pdf.text("Lamar Clapham", 85, 105, null, 90);
         pdf.text(NewUser, 136, 110, 'center');
 
