@@ -28,20 +28,24 @@ window.onload = (event) => {
 
 
     getDownload = document.querySelector('#certBtn');
+    certMultClick = document.querySelector('#certMultClick');
     tryAgain = document.querySelector('#tryAgain');
 
     // Make sure the page presented has next buttons
     if (results >= 80) {
         tryAgain.style.display = 'none';
         getDownload.style.display = 'inline-block';
+        certMultClick.style.display = 'inline-block';
         document.getElementById("results-h1").innerHTML = "You are off the hook!";
 
     } else {
         console.log("You failed")
         getDownload.disabled = true;
+        certMultClick.disabled = true;
         // alert("You must get 80% or higher to get a certificate.")
         tryAgain.style.display = 'inline-block';
         getDownload.style.display = 'none';
+        certMultClick.style.display = 'none';
         document.getElementById("results-h1").innerHTML = "Yikes! You took the bait.";
 
 
@@ -73,7 +77,7 @@ window.onload = (event) => {
     function startSpinner() {
         document.getElementById("busybox").style.display = "block";
         console.log("start spinner")
-         onDownload();
+         
 
     }
     function tryAgainFunc() {
@@ -127,7 +131,7 @@ window.onload = (event) => {
         pdf.setFontSize(60);
 
         //console.log(pdf.getFontList());
-        pdf.addImage(certificatePNG, "PNG", 3, 7, 273, 200);
+        pdf.addImage(certificatePNG, "png", 3, 7, 273, 200);
         // pdf.text("Lamar Clapham", 85, 105, null, 90);
         pdf.text(NewUser, 136, 110, 'center');
 
