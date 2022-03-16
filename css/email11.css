@@ -7,8 +7,8 @@
 .section__answer h1 {
     display: grid;
     justify-content: center;
-    font-size: 2em;
-    margin-top: 53px;
+    /* font-size: 2em;
+    margin-top: 53px; */
 }  
     .webpage {
         display: grid;
