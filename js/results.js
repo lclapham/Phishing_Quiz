@@ -20,7 +20,7 @@ window.onload = (event) => {
     // document.getElementById('userResults').innerText = resultPercent 
     document.getElementById('userName').value = NewUser
      document.getElementById('userEmailAddr').value = NewEmail
-    document.getElementById('userResults').value = results + "%."
+    document.getElementById('userResults').value = "You Scored " + results + "%."
 
     document.getElementById('uName').innerText = NewUser
     document.getElementById('uEmail').innerText = NewEmail
