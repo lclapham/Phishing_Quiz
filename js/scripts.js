@@ -223,7 +223,7 @@ window.onload = () => {
             window.location.replace("../pages/results.html")
 
         } else {
-            window.location.replace("https://www.phish-test.com/pages/question" + pgNumArr[0] + ".html")
+            window.location.replace("../pages/question" + pgNumArr[0] + ".html")
 
         }
 
