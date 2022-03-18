@@ -101,7 +101,7 @@ html {
     background-color: var(--clr-grey);
 }
 
-#tryAgain ,#certBtn {
+#tryAgain, #certBtn, #certMultClick {
     display: none;
 }
 
