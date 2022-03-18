@@ -1,11 +1,12 @@
 <?php
 
-echo "Thank you for taking the Phish-Test. You are prepared to defeat phishing attempts!";
-
 
 $A = $_POST["userName"];
 $B = $_POST["userEmailAddr"];
 $C = $_POST["userResults"];
+
+
+echo "Thank you for taking the Phish-Test. You are prepared to defeat phishing attempts!";
 
 
 
