@@ -1,5 +1,5 @@
 <?php
-
+echo "Hello";
 
 $A = $_POST["userName"];
 $B = $_POST["userEmailAddr"];
