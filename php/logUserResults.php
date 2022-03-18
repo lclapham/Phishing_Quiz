@@ -16,12 +16,12 @@ $dt = new DateTime('2016-12-12 12:12:12', new DateTimeZone('UTC'));
 $dt->setTimezone(new DateTimeZone('America/Denver'));
 
 // format the datetime
-$dt->format('Y-m-d H:i:s T');
+// $dt->format('Y-m-d H:i:s T');
 
 
 $myfile = fopen("phishQuizLog.txt", "a") or die("Unable to open file!");
 // $date = date('l jS \of F Y h:i:s A');
-fwrite($myfile, $dt . " Score:" . $C . " Name:" . $A . " email:". $B ."\n");
+fwrite($myfile, $dt->format('Y-m-d H:i:s T') . " Score:" . $C . " Name:" . $A . " email:". $B ."\n");
 fclose($myfile);
 // Notes
 ?>
