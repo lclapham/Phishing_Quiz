@@ -1,7 +1,7 @@
 // window.onbeforeunload = function() { return "Your work will be lost."; };
 //This is a test.
 
-window.onload = (event) => {
+window.onload = () => {
 
     //////////// Disable next button on load
     let nextQuestion = document.querySelector('.submitBtn')
