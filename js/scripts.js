@@ -215,7 +215,7 @@ window.onload = (event) => {
     function newPageFunc() {
         pgNumbers = localStorage.getItem('numQ')
         pgNumArr = JSON.parse(pgNumbers);
-
+        myURL = 
         // Get the random number
         ranNum = randomNumberGen(10)
 
@@ -223,7 +223,7 @@ window.onload = (event) => {
             window.location.replace("../pages/results.html")
 
         } else {
-            window.location.replace("../pages/question" + pgNumArr[0] + ".html")
+            window.location.replace("https://www.phish-test.com/pages/question" + pgNumArr[0] + ".html")
 
         }
 
