@@ -101,6 +101,10 @@ html {
     background-color: var(--clr-grey);
 }
 
+#tryAgain ,#certBtn {
+    display: none;
+}
+
 h1 {
     font-family: "Glegoo", "Courier New", Courier, monospace;
     font-size: var(--fs-h1);
