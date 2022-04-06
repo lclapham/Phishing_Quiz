@@ -18,9 +18,9 @@ window.onload = (event) => {
     userName.replace("",)
 
     // document.getElementById('userResults').innerText = resultPercent 
-    // document.getElementById('userName').value = NewUser
-    // document.getElementById('userEmailAddr').value = NewEmail
-    // document.getElementById('userResults').value = results + "%."
+    document.getElementById('userName').value = NewUser
+    document.getElementById('userEmailAddr').value = NewEmail
+    document.getElementById('userResults').value =  results + "%."
 
     document.getElementById('uName').innerText = NewUser
     document.getElementById('uEmail').innerText = NewEmail
@@ -67,7 +67,7 @@ window.onload = (event) => {
         tryAgainFunc();
 
     })
-    
+
     function stopSpinner() {
         document.getElementById("busybox").style.display = "none";
         console.log("stop spinner")
@@ -77,7 +77,7 @@ window.onload = (event) => {
     function startSpinner() {
         document.getElementById("busybox").style.display = "block";
         console.log("start spinner")
-         
+
 
     }
     function tryAgainFunc() {
