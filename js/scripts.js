@@ -29,13 +29,13 @@ window.onload = () => {
 
     ////////////////// Setup Variables
     const $elBtnLogIn = $("#loginBtn");
-    console.log($elBtnLogIn);
+    // console.log($elBtnLogIn);
 
 
     var correct = document.getElementById("correct");
     var incorrect = document.getElementById("incorrect");
 
-    console.log("Setup the modal vearibles " + correct + " " + incorrect)
+    // console.log("Setup the modal vearibles " + correct + " " + incorrect)
     // Set the answers key below to automate grading
     answerArr = []
     //Store this answer from answer 11
