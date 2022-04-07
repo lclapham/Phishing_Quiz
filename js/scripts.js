@@ -229,7 +229,8 @@ window.onload = () => {
             window.location.replace("../pages/results.html")
 
         } else {
-            window.location.replace("../pages/question" + pgNumArr[0] + ".html")
+            //For production need to make assign = replace
+            window.location.assign("../pages/question" + pgNumArr[0] + ".html")
 
         }
 
