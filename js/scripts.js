@@ -48,6 +48,12 @@ window.onload = () => {
         fnSignUp(event);
     });
 
+    $('#takeQuiz').click(function() {
+        localStorage.clear();
+        window.location.replace("./pages/register.html");
+
+    });
+
     // Start quiz button listner
     $('#startQuizBtn').click(function () {
 
