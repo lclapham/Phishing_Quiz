@@ -226,7 +226,9 @@ window.onload = () => {
         ranNum = randomNumberGen(10)
 
         if (pgNumArr.length == 0) {
-            window.location.replace("../pages/results.html")
+            //For production need to make assign = replace
+
+            window.location.assign("../pages/results.html")
 
         } else {
             //For production need to make assign = replace
