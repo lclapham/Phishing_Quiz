@@ -253,7 +253,7 @@ display: grid;
 }
 }
 .content__section--button {
-    grid-area: button;
+    /* grid-area: button; */
     margin-top: 30px;
 }
 .content__section--button button {
@@ -295,22 +295,49 @@ display: grid;
     justify-content: center;
     border-radius: 50%;
 }
-.answerBtns {
-    display: grid; 
+.allBtns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "pre phish valid post" 
+        "pre submit submit post";
+    justify-items: center;
+}
+/* .answerBtns { */
+    /* display: grid; 
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    width: 50%;
-    margin: 30px auto;
-}
-.userBtns {
-    display: grid;
-    justify-items: center;
-    /* opacity: .8; */
-}
-.answerBtns button {
+    width: 50%; */
+    /* margin: 30px auto;
+} */
+.answerButtons[value='A'],
+.answerButtons[value='B'] {
     background-color: var(--clr-ltgrey);
     color: var(--clr-grey);
+
 }
+
+.answerButtons[value='A'] {
+    grid-area: phish;
+    margin: 0 10px;
+}
+.answerButtons[value='B'] {
+    grid-area: valid;
+    margin: 0 10px;
+
+}
+.submitBtn {
+    grid-area: submit;
+}
+
+.nextBtns {
+    display: grid;
+    justify-items: center;
+}
+/* .answerBtns button {
+    background-color: var(--clr-ltgrey);
+    color: var(--clr-grey);
+} */
 .answerButtons[value='A']:hover,
 .answerButtons[value='A']:visited
  {
@@ -394,9 +421,9 @@ display: grid;
     justify-self: center;
     margin-top: 20px;
 }
-.question-header {
+/* .question-header {
     margin-left: 100px;
-}
+} */
 
 .form-questions {
     margin: 30px 0;
