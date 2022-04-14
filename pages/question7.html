@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../css/kelp.css">
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/email-base.css">
+    <link rel="stylesheet" href="../css/email-base-bubble.css">
     <link rel="stylesheet" href="../css/email7.css">
     <link rel="stylesheet" href="../css/modal.css">
 
@@ -81,8 +81,15 @@
     <!-- TEAL SECTION -->
     <div class="teal-body">
 
+        <div class="quiz-header">
+            <div class="quiz-header--toolbar">
+                <img src="/images/227_logo.png" width="10%" alt="227 InfoSec logo">
+            </div>
+        </div> <!--end quiz-header-->
 
-    <div class="content">
+        <span class="expand"></span>
+
+        <div class="content">
         <!-- Question #1 -->
         <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
             <!-- Navbar setup Start -->
@@ -156,23 +163,18 @@
 
             <!-- Quiz Nav -->
             <main>
-
                 <iframe data-answer="A" width=960 height=300 src="../email_templates/email7.html" >
                 </iframe>
-    
             </main>
 
-            <!-- <nav data-role="navbar"> -->
-            <div>
-                <div class="content__section--button answerBtns">
-                    <button class="answerButtons" value="A" data-selected="A">Phishing</button> 
+                <!-- BUTTONS -->
+                <div class="allBtns answerBtns content__section--button">
+
+                    <button class="answerButtons" value="A" data-selected="A">Phishing</button>
                     <button class="answerButtons" value="B" data-selected="B">Valid</button>
-                </div>
 
-                <div class="content__section--button submitBtn userBtns">
-                    <button id="btn"><span>Submit</span></button>
+                    <button id="btn" class="content__section--button nextBtns submitBtn"><span>Submit</span></button>
                 </div>
-
 
                 <!-- MODAL -->
                 <div id="incorrect" class="modal incorrect">
@@ -192,7 +194,7 @@
                             
                         </div>
                          <!-- <span class="close">&times;</span> -->
-                        <div class="content__section--button userBtns">
+                        <div class="content__section--button nextBtns">
                             <button id="0" class="next-btn"><span>Next</span></button>
                         </div>
                     </div>
@@ -209,25 +211,25 @@
                             <!-- <span class="close">&times;</span> -->
                             <h1>Yay! Good job.</h1>
                         </div>
-                        <div class="content__section--button userBtns">
+                        <div class="content__section--button nextBtns">
                             <button id="0" class="next-btn"><span>Next</span></button>
                         </div>
                     </div>
 
-                </div>
-        </div>
-
+                </section>
+            </div><!--end content-->
+        
+            <span class="expand"></span>
+        
             <!-- Footer Start -->
-            <footer data-role="footer" data-position="fixed">
-                <h6>227 InfoSec, Inc. 2022&copy;</h6>
-            </footer>
-        </section>
-
-    </div>
-</div><!--teal-body-->
-
-<!-- END TEAL SECTION -->
-
+                <footer data-role="footer" data-position="fixed">
+                    <h6>227 InfoSec, Inc. 2022&copy;</h6>
+                </footer>
+        
+            </div><!--teal-body-->
+        
+            <!-- END TEAL SECTION -->
+        
 </body>
 <script src="../js/jquery-3.6.0.js"></script>
 <script src="../js/scripts.js"></script>
