@@ -189,7 +189,7 @@ window.onload = () => {
         let userProgressArr = JSON.parse(userProgress);
         console.log("Length of user arr " +userProgressArr.length)
         if (userProgressArr.length == 10) {
-            window.location.replace("../pages/results.html")
+            window.location.assign("../pages/results.html")
 
         } else {
 
