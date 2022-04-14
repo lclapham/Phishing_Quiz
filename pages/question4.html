@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../css/kelp.css">
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/email-base.css">
+    <link rel="stylesheet" href="../css/email-base-bubble.css">
     <link rel="stylesheet" href="../css/email4.css">
     <link rel="stylesheet" href="../css/modal.css">
 
@@ -80,8 +80,17 @@
     
         <!-- TEAL SECTION -->
         <div class="teal-body">
+
+            <div class="quiz-header">
+                <div class="quiz-header--toolbar">
+                    <img src="/images/227_logo.png" width="10%" alt="227 InfoSec logo">
+                </div>
     
-    <div class="content">
+            </div>
+            <!--end quiz-header-->
+            <span class="expand"></span>
+    
+        <div class="content">
         <!-- Question #1 -->
         <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
             <!-- Navbar setup Start -->
@@ -157,19 +166,15 @@
             <main>
                 <iframe data-answer="B" width=960 height=300 src="../email_templates/email4.html" >
                 </iframe>
-    
-
             </main>
 
-            <!-- <nav data-role="navbar"> -->
-            <div>
-                <div class="content__section--button answerBtns">
-                    <button class="answerButtons" value="A" data-selected="A">Phishing</button> 
-                    <button class="answerButtons" value="B" data-selected="B">Valid</button>
-                </div>
+                <!-- BUTTONS -->
+                <div class="allBtns answerBtns content__section--button">
 
-                <div class="content__section--button submitBtn userBtns">
-                    <button id="btn"><span>Submit</span></button>
+                    <button class="answerButtons" value="A" data-selected="A">Phishing</button>
+                    <button class="answerButtons" value="B" data-selected="B">Valid</button>
+
+                    <button id="btn" class="content__section--button nextBtns submitBtn"><span>Submit</span></button>
                 </div>
 
 
@@ -183,7 +188,7 @@
                         <div class="sad">
 
                             <img src="../images/animv13small.gif" alt="">
-                            <h1>Dang! you got hooked.</h1>
+                            <h1>Dang! you floundered that one.</h1>
                             <p>Scroll to learn why</p>
                         </div>
                         <div class="mistakes">
@@ -191,7 +196,7 @@
                           
                         </div> 
                         <!-- <span class="close">&times;</span> -->
-                        <div class="content__section--button userBtns">
+                        <div class="content__section--button nextBtns">
                             <button id="0" class="next-btn"><span>Next</span></button>
                         </div>
                     </div>
@@ -208,25 +213,25 @@
                             <!-- <span class="close">&times;</span> -->
                             <h1>Fintastic!</h1>
                         </div>
-                        <div class="content__section--button userBtns">
+                        <div class="content__section--button nextBtns">
                             <button id="0" class="next-btn"><span>Next</span></button>
                         </div>
                     </div>
 
-                </div>
+            </section>
         </div>
+        <!--end content-->
 
-            <!-- Footer Start -->
-            <footer data-role="footer" data-position="fixed">
-                <h6>227 InfoSec, Inc. 2022&copy;</h6>
-            </footer>
-        </section>
+        <span class="expand"></span>
 
-    </div>
-</body>
+        <!-- Footer Start -->
+        <footer data-role="footer" data-position="fixed">
+            <h6>227 InfoSec, Inc. 2022&copy;</h6>
+        </footer>
 </div><!--teal-body-->
 
 <!-- END TEAL SECTION -->
+</body>
 <script src="../js/jquery-3.6.0.js"></script>
 <script src="../js/scripts.js"></script>
 <!-- <script src="../js/modal.js"></script> -->
