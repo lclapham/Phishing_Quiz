@@ -83,21 +83,24 @@
 
     <!-- TEAL SECTION -->
     <div class="teal-body">
+
         <div class="quiz-header">
             <div class="quiz-header--toolbar">
-                <img src="/images/227_logo.png" width="10%" alt="227 InfoSec logo">
+                <img class="logo" src="/images/227-logo-waterblue-horz.svg" alt="227 InfoSec logo">
+                <img class="logo-sm" src="/images/227logo-waterblue-vert.svg" alt="227 InfoSec logo">
+                <h4>Go Phish! <span>Phishing Quiz</span></h4>
             </div>
+        </div><!--end quiz-header-->
 
-        </div>
-        <!--end quiz-header-->
         <span class="expand"></span>
 
         <div class="content">
             <!-- Question #1 -->
             <section data-theme="b" data-role="page" id="pgQuestion02" data-fullscreen="true">
                 <!-- Navbar setup Start -->
-                <header class="question-header" data-role="header">
-                    <h1>Don't get caught!</h1>
+    <div class="phrase-prog">
+             <header class="question-header">
+                    <h2>Don't get caught!</h2>
                 </header>
 
                 <div class="pBarContainer">
@@ -164,7 +167,9 @@
                     </p>
                 </div>
 
-                <!-- Quiz Nav -->
+           </div> <!-- end PHRASE and PROGRESS  -->
+
+            <!-- Quiz Nav -->
                 <main>
                     <iframe data-answer="A" width=960 height=300 src="../email_templates/email3.html">
                     </iframe>
@@ -189,7 +194,7 @@
                         <div class="sad">
 
                             <img src="../images/animv13small.gif" alt="">
-                            <h1>You took a dive on that one.</h1>
+                            <h1>Took a dive on that one.</h1>
                             <p>Scroll to learn why</p>
                         </div>
                         <div class="mistakes">
@@ -212,7 +217,7 @@
                             <img src="../images/phish happy.gif">
                             <!--                            
                             <span class="close">&times;</span> -->
-                            <h1>You are pro<i>phish</i>ient at this!</h1>
+                            <h1>So pro<i>phish</i>ient!</h1>
                         </div>
                         <div class="content__section--button nextBtns">
                             <button id="0" class="next-btn"><span>Next</span></button>
@@ -227,7 +232,7 @@
 
         <!-- Footer Start -->
         <footer data-role="footer" data-position="fixed">
-            <h6>227 InfoSec, Inc. 2022&copy;</h6>
+            <h6><span style="font-family: 'ubuntu'">227 InfoSec, Inc.</span> in collaboration with <span style="font-family: 'Oswald'">TheKuziCollaborative</span> &copy;2022 </h6>
         </footer>
 
     </div>
