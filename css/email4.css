@@ -23,6 +23,14 @@
       max-width: 700px;
       margin: 0 100px;
   }
+  @media  screen and (max-width: 660px) {
+    .body {
+      width: 90vw;
+      margin: 0 auto;
+
+    }
+  }
+  
      
 .em-from-div {
   display: grid;
@@ -63,21 +71,56 @@
     padding: 10px 0;
     background-color: rgb(2, 171, 41);
     font-size: large;
+    border: none;
 }
-  
 
-      .tjx-synchrony {
-          display: inline-block;
-      }
-      .tjx-synchrony img {
-          width: 40%;
-          padding: 0px 20px;
-      }
-      .googlemap {
-          margin: 0 20px;
-          height: 400px;
-   }
-      .googlemap img {
-          width: 100%;
-      }
+.tjx-synchrony {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "nada login"
+    "tjx sync";
+    grid-column-gap: 20px;
+}
+@media screen and (max-width: 500px){
+  .tjx-synchrony{
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "login"
+  "tjx"
+  "sync";
+  grid-column-gap: 2px;
+  }
+}
+.tjx-synchrony p {
+  grid-area: login; 
+  justify-self: right;
+}
+.tjx {
+  grid-area: tjx;
+    width: 100%;
+    margin-left: 10px;
+}
+.sync {
+  grid-area: sync;
+  margin-right: 10px;
+  justify-self: center;
+
+}
+@media screen and (max-width: 500px){
+  .tjx {
+      margin: 0 10px;
+      width: 90%;
+    }
+  .sync {
+    margin-right: 0px;
+  }
+}
+
+.googlemap {
+    margin: 0 20px 20px;
+}
+  .googlemap img {
+      width: 100%;
+  }
   
