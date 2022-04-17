@@ -1,12 +1,13 @@
 .em-template {
     margin: 30px auto;
-    width: 78%;
+    /* width: 78%; */
     background: none;  }
   
     /* Tooltip button*/
-.real__answer h1 {
+.real__answer h3 {
     display: grid;
     justify-content: center;
+    margin-bottom: 30px;
 }  
     .webpage {
         display: grid;
@@ -14,9 +15,19 @@
         grid-template-areas: 
         "img img2";
         grid-column-gap: 20px;
-        margin-top: 75px;
-        margin-bottom: 78px;
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
+    @media screen and (max-width:799px){
+        .webpage {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "img"
+            "img2";
+            grid-row-gap: 20px;
+            }
+    }
+    
     .web1,
     .web2{
         -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
@@ -30,7 +41,7 @@
         z-index: 1;
     }
     .web1:hover {
-        transform: scale(2.5);
+        transform: scale(2.7);
         z-index: 2;
           }
     .web2 {
@@ -39,7 +50,7 @@
         z-index: 1;
     }
     .web2:hover {
-        transform: scale(2.5);
+        transform: scale(2.7);
         z-index: 2;
           }
 
