@@ -3,6 +3,50 @@
   /* max-width: 700px; */
   margin: 0 auto;
 }
+.em-template h1,
+.em-template h2,
+.em-template h4 {
+  font-family: Arial, Helvetica, sans-serif;
+} 
+.body {
+  border: 1px solid lightgray;
+}
+.em-from-div {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas:
+    "dot from"
+    "dot date"
+    "to to";
+}
+.em-dot {
+  grid-area: dot;
+  background-color: #fd6823;
+}
+.em-from {
+  grid-area: from;
+}
+.em-date {
+  grid-area: date;
+}
+.em-to {
+  grid-area: to;
+}
+.em-br {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .em-br {
+    display: block;
+  }
+}
+/* dot with initials / re / to / from */
+.em-dot span {
+  position: relative;
+  top: 8px;
+  left: 12px;/*to center initials in dot*/
+}
+
 .tooltip-content {
   height: 87px;
 }
@@ -14,23 +58,7 @@
   background-color: #5E8ADE;
   font-weight: 600;
 }
-
-
-      /* dot with initials / re / to / from */
-      .em-dot {
-        background-color: #fd6823;
-        /* specific to email6 */
-      }
-      .em-dot span {
-        position: relative;
-        top: 8px;
-        left: 12px;/*to center initials in dot*/
-      }
-      h4.em-dot-date {
-        display: block;
-        margin: -15px 80px 0px;
-       }
-    
+   
   /* specific to email6*/
   .dropbox img{
     width: 5%;
@@ -38,6 +66,3 @@
     margin: 1em auto;
     display: block;
 }
-.body {
-    border: 1px solid lightgray;
-  }
