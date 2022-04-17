@@ -4,60 +4,123 @@
     margin: 0 auto;
     font-size: .7em;
 }
+.em-template h1,
+.em-template h2,
+.em-template h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}  
+/* specific to email4 */
+.em-template h1 {
+  background: rgb(61, 112, 232);
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+}
+.body {
+  /* email4 specific */
+      border: 2px solid rgb(61, 112, 232);
+      max-width: 700px;
+      margin: 0 100px;
+  }
+  @media  screen and (max-width: 660px) {
+    .body {
+      width: 90vw;
+      margin: 0 auto;
+
+    }
+  }
+  
+     
+.em-from-div {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas:
+    "dot from"
+    "dot date"
+    "to to";
+}
+.em-dot {
+  grid-area: dot;
+  background-color: #023890;
+}
+.em-from {
+  grid-area: from;
+}
+.em-date {
+  grid-area: date;
+}
+.em-to {
+  grid-area: to;
+}
+    
+/* dot with initials / re / to / from */
+.em-dot span {
+  position: relative;
+  top: 11px;
+  left: 9px;/*to center initials in dot*/
+  color: white;
+}
+  .em-from-div h4 {
+/* email4 specific */
+  max-width: 500px;
+}
   /* Tooltip button*/
     /* email4 specific */
     .tooltip-button {
     padding: 10px 0;
     background-color: rgb(2, 171, 41);
     font-size: large;
+    border: none;
 }
-    
-        /* dot with initials / re / to / from */
-        .em-dot {
-          background-color: #023890;
-        }
-        .em-dot span {
-          position: relative;
-          top: 11px;
-          left: 9px;/*to center initials in dot*/
-          color: white;
-        }
-          .em-from-div h4 {
-      /* email4 specific */
-          max-width: 500px;
-        }
-  
-       .body {
-      /* email4 specific */
-          border: 2px solid rgb(61, 112, 232);
-          max-width: 700px;
-          margin: 0 100px;
-      }
-        /* specific to email4 */
-  .em-template h1 {
-    background: rgb(61, 112, 232);
-    padding: 20px;
-    margin: 20px 0;
-    text-align: center;
-    color: white;
-  }
-  h4.em-dot-date {
-    display: block;
-    margin: -15px 80px 0px;
-   }
 
-      .tjx-synchrony {
-          display: inline-block;
-      }
-      .tjx-synchrony img {
-          width: 40%;
-          padding: 0px 20px;
-      }
-      .googlemap {
-          margin: 0 20px;
-          height: 400px;
-   }
-      .googlemap img {
-          width: 100%;
-      }
+.tjx-synchrony {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "nada login"
+    "tjx sync";
+    grid-column-gap: 20px;
+}
+@media screen and (max-width: 500px){
+  .tjx-synchrony{
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "login"
+  "tjx"
+  "sync";
+  grid-column-gap: 2px;
+  }
+}
+.tjx-synchrony p {
+  grid-area: login; 
+  justify-self: right;
+}
+.tjx {
+  grid-area: tjx;
+    width: 100%;
+    margin-left: 10px;
+}
+.sync {
+  grid-area: sync;
+  margin-right: 10px;
+  justify-self: center;
+
+}
+@media screen and (max-width: 500px){
+  .tjx {
+      margin: 0 10px;
+      width: 90%;
+    }
+  .sync {
+    margin-right: 0px;
+  }
+}
+
+.googlemap {
+    margin: 0 20px 20px;
+}
+  .googlemap img {
+      width: 100%;
+  }
   

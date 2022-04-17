@@ -1,7 +1,46 @@
-.em-template {
+/* .em-template {
   font-size: inherit;
   width: 900px;
+} */
+.em-template h1,
+.em-template h2,
+.em-template h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}  
+.em-from-div {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas:
+    "dot from"
+    "dot date";
+    /* "to to"; */
 }
+.em-dot {
+  grid-area: dot;
+  background-color: #38c7f7;
+}
+.em-from {
+  grid-area: from;
+}
+.em-date {
+  grid-area: date;
+}
+.em-br {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .em-br {
+    display: block;
+  }
+  
+}
+/* dot with initials / re / to / from */
+.em-dot span {
+  position: relative;
+  top: 9px;
+  left: 5px;/*to center initials in dot*/
+}
+    
 
   /* Tooltip button*/
 /* specific to email7 */
@@ -13,31 +52,14 @@
     font-weight: bold;
   grid: button;
 }
-
-
-      /* dot with initials / re / to / from */
-      .em-dot {
-        background-color: #38c7f7;
-      }
-      .em-dot span {
-        position: relative;
-        top: 9px;
-        left: 5px;/*to center initials in dot*/
-      }
-      h4.em-dot-date {
-        display: block;
-        margin: -15px 80px 0px;
-       }
-    
   /* specific to email7 */
   .hangouts img{
-      width: 100%;
+      width: 95vw;
     float: none;
     margin: 0 auto;
 }
 .person-icon {
     grid-area: icon;
-    margin-left: 5em;
 }
 .person-icon img {
     margin: 2em;
@@ -54,6 +76,7 @@
       "icon text text"
       "icon button buttonA";
       background-color: rgb(238, 238, 238);
+      justify-content: center;
   }
   .conversation p {
       grid-area: text;

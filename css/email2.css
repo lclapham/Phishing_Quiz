@@ -1,15 +1,23 @@
 .em-template {
-  width: 900px;
+  /* width: 900px; */
   /* specific to email2 */
   /* max-width: 700px; */
   margin: 0 auto;
   /* font-size: .7em; */
 }
+.em-template h1,
+.em-template h2,
+.em-template h3,
+.em-template h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}  
+
 /* Tooltip button*/
 
 .tooltip-button {
 padding: 10px 0 10px;
 background-color: rgb(61, 112, 232);
+border: none; 
 }
 
 /* specific to email2 */

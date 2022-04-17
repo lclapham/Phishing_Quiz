@@ -142,7 +142,7 @@ p {
     height: 50px;
     margin-top: 10px;
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 1800px){
     .quiz-header {
         height: 100px;
     }
@@ -207,7 +207,7 @@ p {
     color: rgb(175, 212, 222);
     line-height: .8em;
 }
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 1800px){
     .quiz-header--toolbar h4 {
         font-size: 2em;
         margin-top: 10px;

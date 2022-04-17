@@ -3,7 +3,36 @@
     border: 1px solid lightgray;
     font-size: 16px;
   }
-  
+.em-template h1,
+.em-template h2,
+.em-template h4 {
+  font-family: Arial, Helvetica, sans-serif;
+}  
+
+.em-from-div {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas:
+    "dot from"
+    "dot date"
+    "to to";
+}
+.em-dot {
+  grid-area: dot;
+}
+.em-from {
+  grid-area: from;
+}
+/* .em-em {
+  grid-area: em;
+} */
+.em-date {
+  grid-area: date;
+}
+.em-to {
+  grid-area: to;
+}
+
     /* Tooltip button*/
   .tooltip-button {
   /* email1 specific */
@@ -15,6 +44,12 @@
     border: none;
     border-radius: 10px;
   }
+  @media  screen and (max-width: 500px) {
+    .tooltip-button {
+      width: 90vw;
+    }
+  }
+  
   .tooltip-content::before {
     top: -11%;
     left: 2%;
@@ -36,8 +71,8 @@
     margin: 0 auto;
     padding: 2em 0;
   }  
-  h4.em-dot-date {
+  /* h4.em-date {
     display: block;
     margin: -15px 80px 0px;
-   }
+   } */
    
