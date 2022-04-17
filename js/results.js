@@ -46,7 +46,7 @@ window.onload = (event) => {
         tryAgain.style.display = 'inline-block';
         getDownload.style.display = 'none';
         certMultClick.style.display = 'none';
-        document.getElementById("results-h1").innerHTML = "Yikes! You took the bait.";
+        document.getElementById("results-h1").innerHTML = "Yikes! Took the bait.";
 
 
     }
