@@ -23,7 +23,7 @@
     margin: auto;
     padding: 20px;
     /* border: 1px solid #888; */
-    width: 80%;
+    width: 80vw;
   }
    .modal-content h1 {
       text-align: center;
@@ -32,25 +32,65 @@
       background-color: #1d304b;
   }
   .sad {
-      display: grid;
+    display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr 4fr;
-    width: 60%;
-    justify-items: center;
+    grid-template-areas: 
+      "sad dang"
+      "sad scroll";
+    /* width: 60%; */
+    /* justify-items: center; */
   }
-  .sad p {
-    grid-column: 2 / 3;
+  @media screen and (max-width:640px){
+    .sad {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "sad"
+        "dang"
+        "scroll";
+  
+        justify-items: center;
+    }
+}
+
+  .sad img {
+    grid-area: sad;
+    align-self: center;
+    justify-self: right;
+  }  
+  @media screen and (max-width:640px){
+    .sad img {
+      justify-self: center;
+    }
+  }
+  .sad h1 {
     padding-bottom: 20px;
-    /* color: #243e50; */
+    grid-area: dang;
+    justify-self: center;
+  }
+  @media screen and (max-width:870px){
+    .sad h1 {
+        font-size: 2em;
+    }
+}
+
+  .sad p {
+    /* grid-column: 2 / 3; */
+    /* padding-bottom: 20px; */
+
+    grid-area: scroll;
+    justify-self: center;
   }
  .mistakes {
       overflow: scroll;
-      width: 950px;
-      height: 300px;
-      margin: 0 auto;
+      width: 80vw;
+      max-height: 300px;
+      margin: 0 auto 30px;
   }
   .mistakes img {
-      width: 933px;
+      /* width: 933px; */
+      width:80vw;
+      zoom: 150%;
   }
   .yay {
       display: grid;
