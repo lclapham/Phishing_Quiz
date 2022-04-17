@@ -44,6 +44,12 @@
     border: none;
     border-radius: 10px;
   }
+  @media  screen and (max-width: 500px) {
+    .tooltip-button {
+      width: 90vw;
+    }
+  }
+  
   .tooltip-content::before {
     top: -11%;
     left: 2%;
