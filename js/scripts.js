@@ -99,13 +99,13 @@ window.onload = () => {
             console.log("This is the answer Value " + answerValue)
             answer = "C"
             console.log("THis is the correct if")
-            correct.style.display = "block";
+            correct.style.display = "grid";
 
             updateLocalStore(answer)
         } else {
             answer = "X"
             console.log("this is the incorrect")
-            incorrect.style.display = "block";
+            incorrect.style.display = "grid";
             updateLocalStore(answer)
         }
 
