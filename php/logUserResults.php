@@ -9,7 +9,7 @@ $C = $_POST["userResults"];
 // echo "<br>";
 // echo "You are prepared to defeat phishing attempts!";
 
-header("../pages/thankyou.html");
+header("Location: https://phish-test.com/pages/thankyou.html");
 
 $myfile = fopen("phishQuizLog.txt", "a") or die("Unable to open file!");
 $date = date('l jS \of F Y h:i:s A');
