@@ -57,7 +57,7 @@ window.onload = () => {
 
     // Try again
     // EVENT to start quiz again if FAIL quiz
-    $('#tryAgain').click(function () {
+    $('#tryAgain2').click(function () {
         tryAgainFunc();
 
     })
@@ -84,6 +84,13 @@ window.onload = () => {
         newPageFunc()
 
     });
+
+    // Retry function
+    function tryAgainFunc() {
+        localStorage.removeItem('numQ')
+        localStorage.removeItem('userRepo')
+        window.location.replace("../pages/instructions.html")
+    }
 
     // User Button Listner
     $('.submitBtn').click(function () {
