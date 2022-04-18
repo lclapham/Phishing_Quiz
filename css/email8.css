@@ -1,7 +1,7 @@
 .em-template {
   display: block;
-  margin: 30px auto;
-  height: 365px;
+  margin: 10px auto 75px;
+  height: 325px;
   width: 80%;
   background: none;
   }
@@ -61,6 +61,8 @@
 }
 .fone:hover {
   transform: scale(1.5);
+  position: relative;
+  z-index: 1;
 }
     footer {
         position: relative;
