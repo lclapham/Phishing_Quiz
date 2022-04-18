@@ -48,14 +48,33 @@ window.onload = () => {
         fnSignUp(event);
     });
 
-    $('#takeQuiz').click(function() {
+    $('#takeQuiz').click(function () {
+        console.log("Clicked Take Quiz Button")
         localStorage.clear();
         window.location.replace("./pages/register.html");
 
     });
 
+    // Try again
+    // EVENT to start quiz again if FAIL quiz
+    $('#tryAgain2').click(function () {
+        tryAgainFunc();
+
+    })
+
+
+    // Learn More about 227
+
+    $('#learnMoreBtn').click(function () {
+        console.log("Clicked Learn More Button")
+        localStorage.clear();
+        window.location.assign("http://www.227infosec.com");
+
+    });
+
     // Start quiz button listner
     $('#startQuizBtn').click(function () {
+        console.log("Clicked Start Quiz Button")
 
         let questionBank = 11 // this is how many total questions are available to randomly select. Not number of questions presented to user.
         // Set up question bank
@@ -66,24 +85,34 @@ window.onload = () => {
 
     });
 
+    // Retry function
+    function tryAgainFunc() {
+        localStorage.removeItem('numQ')
+        localStorage.removeItem('userRepo')
+        window.location.replace("../pages/instructions.html")
+    }
+
     // User Button Listner
     $('.submitBtn').click(function () {
+        console.log("Clicked Submit button")
 
 
         test = document.getElementsByTagName('iframe')
         test2 = document.getElementsByTagName('img')
-        console.log("This is the length of test " + test)
+        console.log("This is the length of test " + test.length)
 
         if (test.length == 0) {
-
+            console.log("In the length 0 if statement")
             answerBtn = document.querySelectorAll('[data-selected=selected]')
-            ansValue = document.querySelector('[data-answer]')
-            answerValue = ansValue.dataset.answer
-            console.log("test length section " + answerValue)
-
-            console.log("This is the answerbutton value before the if's " + answerBtn[0].dataset.value)
-            // answerValue = "A"
             answerBtn = answerBtn[0].dataset.value
+            initialAnswerValue = document.querySelector('[data-answer]')
+            answerValue = initialAnswerValue.dataset.answer
+            // answerValue = ansValue.dataset.answer
+            // console.log("test length section " + answerValue)
+
+            // console.log("This is the answerbutton value before the if's " + answerBtn[0].dataset.value)
+            // // answerValue = "A"
+            // answerBtn = answerBtn[0].dataset.value
 
         } else {
 
@@ -121,6 +150,7 @@ window.onload = () => {
     })
 
     $('.next-btn').click(function () {
+        console.log("Clicked Next button")
         newPageFunc()
 
     })
@@ -144,7 +174,7 @@ window.onload = () => {
         console.log("This is the answer Final " + answerFinal)
 
         console.log("This is the target.value " + e.target.value)
-
+        console.log("this is e.target.value " + e.target.dataset.value)
         if (e.target.value == 'A') {
             console.log("In the else if  #1 A")
             this.style.backgroundColor = "#c82255"
@@ -158,8 +188,14 @@ window.onload = () => {
             buttons[0].style.backgroundColor = "#cfd3d7"
             buttons[0].style.color = '#4f606c'
 
+            // notes:
+            // || (e.target.dataset.value == 'A')
+            // || (e.target.dataset.value == 'B'))
+
         } else if (answerFinal == 'A') {
             console.log("In the else if A")
+            console.log("In the else if A the target is " + this.id)
+
             this.style.border = "5px solid #c82255"
             this.style.borderRadius = "10px"
             buttons[1].style.border = "none"
@@ -187,9 +223,9 @@ window.onload = () => {
     function progressBar() {
         let userProgress = localStorage.getItem('userRepo');
         let userProgressArr = JSON.parse(userProgress);
-        console.log("Length of user arr " +userProgressArr.length)
+        console.log("Length of user arr " + userProgressArr.length)
         if (userProgressArr.length == 10) {
-            window.location.assign("../pages/results.html")
+            window.location.replace("../pages/results.html")
 
         } else {
 
@@ -221,18 +257,18 @@ window.onload = () => {
     function newPageFunc() {
         pgNumbers = localStorage.getItem('numQ')
         pgNumArr = JSON.parse(pgNumbers);
-        myURL = 
-        // Get the random number
-        ranNum = randomNumberGen(10)
+        myURL =
+            // Get the random number
+            ranNum = randomNumberGen(10)
 
         if (pgNumArr.length == 0) {
             //For production need to make assign = replace
 
-            window.location.assign("../pages/results.html")
+            window.location.replace("../pages/results.html")
 
         } else {
             //For production need to make assign = replace
-            window.location.assign("../pages/question" + pgNumArr[0] + ".html")
+            window.location.replace("../pages/question" + pgNumArr[0] + ".html")
 
         }
 
