@@ -68,7 +68,7 @@ window.onload = () => {
     $('#learnMoreBtn').click(function () {
         console.log("Clicked Learn More Button")
         localStorage.clear();
-        window.location.replace("http://www.227infosec.com");
+        window.location.assign("http://www.227infosec.com");
 
     });
 
