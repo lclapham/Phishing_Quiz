@@ -30,9 +30,14 @@ window.onload = (event) => {
     getDownload = document.querySelector('#certBtn');
     certMultClick = document.querySelector('#certMultClick');
     tryAgain = document.querySelector('#tryAgain');
+    octopus = document.querySelector('#over80img');
+    bummerFish = document.querySelector('#under80img');
+
 
     // Make sure the page presented has next buttons
     if (results >= 80) {
+        octopus.style.display = 'inline-block';
+        bummerFish.style.display = 'none';
         tryAgain.style.display = 'none';
         getDownload.style.display = 'inline-block';
         certMultClick.style.display = 'inline-block';
@@ -43,6 +48,8 @@ window.onload = (event) => {
         getDownload.disabled = true;
         certMultClick.disabled = true;
         // alert("You must get 80% or higher to get a certificate.")
+        octopus.style.display = 'none';
+        bummerFish.style.display = 'inline-block';
         tryAgain.style.display = 'inline-block';
         getDownload.style.display = 'none';
         certMultClick.style.display = 'none';
