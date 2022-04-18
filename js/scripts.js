@@ -55,6 +55,15 @@ window.onload = () => {
 
     });
 
+    // Learn More about 227
+
+    $('#learnMoreBtn').click(function() {
+        console.log("Clicked Learn More Button")
+        localStorage.clear();
+        window.location.replace("http://www.227infosec.com");
+
+    });
+
     // Start quiz button listner
     $('#startQuizBtn').click(function () {
         console.log("Clicked Start Quiz Button")
