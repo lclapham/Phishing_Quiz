@@ -48,16 +48,24 @@ window.onload = () => {
         fnSignUp(event);
     });
 
-    $('#takeQuiz').click(function() {
+    $('#takeQuiz').click(function () {
         console.log("Clicked Take Quiz Button")
         localStorage.clear();
         window.location.replace("./pages/register.html");
 
     });
 
+    // Try again
+    // EVENT to start quiz again if FAIL quiz
+    $('#tryAgain').click(function () {
+        tryAgainFunc();
+
+    })
+
+
     // Learn More about 227
 
-    $('#learnMoreBtn').click(function() {
+    $('#learnMoreBtn').click(function () {
         console.log("Clicked Learn More Button")
         localStorage.clear();
         window.location.replace("http://www.227infosec.com");
@@ -160,22 +168,22 @@ window.onload = () => {
 
         console.log("This is the target.value " + e.target.value)
         console.log("this is e.target.value " + e.target.dataset.value)
-        if (e.target.value == 'A')  {
+        if (e.target.value == 'A') {
             console.log("In the else if  #1 A")
             this.style.backgroundColor = "#c82255"
             this.style.color = 'white'
             buttons[1].style.backgroundColor = "#cfd3d7"
             buttons[1].style.color = '#4f606c'
-        } else if (e.target.value == 'B')  {
+        } else if (e.target.value == 'B') {
             console.log("In the else if  #1 b")
             this.style.backgroundColor = "#008181"
             this.style.color = 'white'
             buttons[0].style.backgroundColor = "#cfd3d7"
             buttons[0].style.color = '#4f606c'
 
-// notes:
-// || (e.target.dataset.value == 'A')
-// || (e.target.dataset.value == 'B'))
+            // notes:
+            // || (e.target.dataset.value == 'A')
+            // || (e.target.dataset.value == 'B'))
 
         } else if (answerFinal == 'A') {
             console.log("In the else if A")
@@ -208,7 +216,7 @@ window.onload = () => {
     function progressBar() {
         let userProgress = localStorage.getItem('userRepo');
         let userProgressArr = JSON.parse(userProgress);
-        console.log("Length of user arr " +userProgressArr.length)
+        console.log("Length of user arr " + userProgressArr.length)
         if (userProgressArr.length == 10) {
             window.location.replace("../pages/results.html")
 
@@ -242,9 +250,9 @@ window.onload = () => {
     function newPageFunc() {
         pgNumbers = localStorage.getItem('numQ')
         pgNumArr = JSON.parse(pgNumbers);
-        myURL = 
-        // Get the random number
-        ranNum = randomNumberGen(10)
+        myURL =
+            // Get the random number
+            ranNum = randomNumberGen(10)
 
         if (pgNumArr.length == 0) {
             //For production need to make assign = replace
